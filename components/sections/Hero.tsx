@@ -18,7 +18,7 @@ export function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[68%_top]"
+        className="object-cover object-[68%_32%]"
       />
       {/* Vertical scrim (deeper toward the bottom) keeps the centered cream
           text legible; the horizontal layer fades both side edges so the
