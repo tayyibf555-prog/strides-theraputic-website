@@ -12,7 +12,6 @@ import {
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { StatStrip } from "@/components/sections/StatStrip";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import Image from "next/image";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
@@ -214,10 +213,15 @@ export default function AboutPage() {
               aria-hidden
               className="absolute -left-4 -top-4 h-2/3 w-2/3 rounded-card bg-gradient-to-br from-moss/15 to-clay/25"
             />
-            <ImagePlaceholder
-              label="Who We Serve photo"
-              className="relative aspect-[4/3] w-full shadow-2xl ring-1 ring-sage-deep/40"
-            />
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card shadow-2xl ring-1 ring-sage-deep/40">
+              <Image
+                src="/who-we-serve.jpg"
+                alt="Children and Strides staff together in the sensory play space"
+                fill
+                sizes="(min-width: 1024px) 44vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </Reveal>
         </div>
       </Section>
