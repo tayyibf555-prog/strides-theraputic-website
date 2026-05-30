@@ -6,17 +6,22 @@ import { RevealGroup, RevealItem } from "@/components/motion/Reveal";
 function ServiceCard({
   service,
   withBubble,
+  side,
 }: {
   service: Service;
   withBubble?: boolean;
+  // Which side the hover bubble opens toward. Left-column cards open "right"
+  // so the bubble never runs off the left page edge; everyone else opens left.
+  side?: "left" | "right";
 }) {
   const Icon = service.icon;
-  // Bubble copy is only wired up on the Our Services page (withBubble). The
-  // Home and Contact grids reuse this card without the hover bubble.
+  // Bubble copy is only wired up where withBubble is passed (the Home grid).
+  // The Services and Contact grids reuse this card without the hover bubble.
   const bubble = withBubble ? SERVICE_BUBBLES[service.slug] : undefined;
+  const openRight = side === "right";
   return (
-    // hover:z-30 lifts the hovered card (and its overflowing bubble) above
-    // its grid neighbours so the bubble is never clipped behind them.
+    // hover:z-30 lifts the hovered card (and its overflowing bubble) above its
+    // grid neighbours so the side bubble can overlap them without being clipped.
     <RevealItem as="article" className="relative h-full hover:z-30">
       <Link
         href={`/services/${service.slug}`}
@@ -24,8 +29,12 @@ function ServiceCard({
       >
         {bubble && (
           <span
-            className="pointer-events-none absolute bottom-full left-1/2 z-30 mb-4 w-[min(20rem,calc(100vw-2.5rem))] -translate-x-1/2 translate-y-2 rounded-2xl bg-forest px-5 py-4 text-left text-cream opacity-0 shadow-xl transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
             role="presentation"
+            className={`pointer-events-none absolute top-1/2 z-30 w-72 -translate-y-1/2 rounded-2xl bg-forest px-5 py-4 text-left text-cream opacity-0 shadow-xl transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 ${
+              openRight
+                ? "left-full ml-4 -translate-x-2"
+                : "right-full mr-4 translate-x-2"
+            }`}
           >
             {bubble.title && (
               <span className="block font-display text-base font-semibold leading-snug text-[#e7bca8]">
@@ -42,9 +51,14 @@ function ServiceCard({
                 {para}
               </span>
             ))}
+            {/* Little diamond tail pointing toward the card. */}
             <span
               aria-hidden
-              className="absolute left-1/2 top-full h-3 w-3 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-forest"
+              className={`absolute top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 bg-forest ${
+                openRight
+                  ? "right-full translate-x-1/2"
+                  : "left-full -translate-x-1/2"
+              }`}
             />
           </span>
         )}
@@ -69,11 +83,14 @@ function ServiceCard({
 export function ServiceGrid({ withBubble = false }: { withBubble?: boolean }) {
   return (
     <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {SERVICES.map((service) => (
+      {SERVICES.map((service, i) => (
         <ServiceCard
           key={service.slug}
           service={service}
           withBubble={withBubble}
+          // 3-col layout: the left column (every 3rd card) opens its bubble to
+          // the right; all others open to the left.
+          side={i % 3 === 0 ? "right" : "left"}
         />
       ))}
     </RevealGroup>
