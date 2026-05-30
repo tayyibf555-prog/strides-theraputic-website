@@ -4,7 +4,7 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { FundingSources } from "@/components/sections/FundingSources";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { HOME } from "@/lib/content";
@@ -33,10 +33,15 @@ export default function ServicesPage() {
               aria-hidden
               className="absolute -left-4 -bottom-4 h-2/3 w-2/3 rounded-card bg-gradient-to-tr from-moss/15 to-clay/25"
             />
-            <ImagePlaceholder
-              label="Care in action"
-              className="relative aspect-[4/3] w-full shadow-2xl ring-1 ring-sage-deep/40"
-            />
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card shadow-2xl ring-1 ring-sage-deep/40">
+              <Image
+                src="/care-in-action.jpg"
+                alt="A Strides clinician working one-on-one with a client"
+                fill
+                sizes="(min-width: 1024px) 44vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </Reveal>
           <Reveal>
             <SectionHeading
