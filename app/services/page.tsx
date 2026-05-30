@@ -24,7 +24,7 @@ export default function ServicesPage() {
       />
 
       <Section tone="sage">
-        <ServiceGrid withBubble />
+        <ServiceGrid />
         <Reveal className="mx-auto mt-12 max-w-3xl text-center text-muted">
           <p>{HOME.continuity}</p>
         </Reveal>

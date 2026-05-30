@@ -84,7 +84,7 @@ export default function HomePage() {
         subtitle="From early intervention to crisis support, Strides provides comprehensive services for individuals with diverse behavioral and developmental needs."
       />
       <Section tone="sage">
-        <ServiceGrid />
+        <ServiceGrid withBubble />
       </Section>
 
       {/* Testimonials */}

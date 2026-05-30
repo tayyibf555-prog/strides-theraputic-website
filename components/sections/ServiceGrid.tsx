@@ -58,7 +58,7 @@ function ServiceCard({
           {service.summary}
         </p>
         <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest">
-          {withBubble ? "Learn More" : service.cardCta}
+          {service.cardCta}
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </Link>
