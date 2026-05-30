@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f3f0e8;
+  --color-cream-deep: #e9e5d8;
+  --color-sage: #e4e2d4;
+  --color-sage-deep: #d4d3c0;
+  --color-moss: #515b42;
+  --color-moss-light: #6b7554;
+  --color-forest: #515b42;
+  --color-forest-deep: #515b42;
+  --color-ink: #2c2c26;
+  --color-muted: #6f6f63;
+  --color-clay: #c9836b;
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-nunito);
+
+  --radius-card: 1.25rem;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-moss);
+  color: var(--color-cream);
+}
+
+/* Testimonials marquee */
+@keyframes strides-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 9%,
+    #000 91%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 9%,
+    #000 91%,
+    transparent
+  );
+}
+
+.marquee-track {
+  animation: strides-marquee var(--marquee-duration, 45s) linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}
