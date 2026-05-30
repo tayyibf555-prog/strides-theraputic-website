@@ -41,6 +41,9 @@ export type Service = {
   availability?: string;
   serving?: string;
   intro: string[];
+  // Optional real photo for the intro section; falls back to a placeholder
+  // when not set. Path is relative to /public.
+  introImage?: string;
   features?: FeatureBlock[];
   featuresHeading?: string;
   differentiators?: Differentiator[];
@@ -367,6 +370,7 @@ export const SERVICES: Service[] = [
       "We believe community programming should be more than simple supervision or unstructured social time. Individuals deserve environments where they can safely participate, build relationships, practice real-world skills, and feel genuinely included.",
       "Our center-based social groups and community respite services are designed to provide structured, supportive opportunities for individuals with developmental, behavioral, and related support needs to engage meaningfully with peers and their community. While these services share a similar philosophy and environment, they are structured differently to meet varying support needs and funding pathways.",
     ],
+    introImage: "/service-social-groups.jpg",
     features: [
       {
         title: "Social Groups",

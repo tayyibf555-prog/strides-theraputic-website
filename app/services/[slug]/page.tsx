@@ -91,10 +91,22 @@ export default async function ServiceDetailPage({
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <ImagePlaceholder
-              label="Service photography"
-              className="aspect-[4/3] w-full"
-            />
+            {service.introImage ? (
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card shadow-lg ring-1 ring-sage-deep/40">
+                <Image
+                  src={service.introImage}
+                  alt={service.title}
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <ImagePlaceholder
+                label="Service photography"
+                className="aspect-[4/3] w-full"
+              />
+            )}
           </Reveal>
         </div>
       </Section>
