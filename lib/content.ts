@@ -436,7 +436,6 @@ export type ServiceBubble = {
 
 export const SERVICE_BUBBLES: Record<string, ServiceBubble> = {
   "aba-therapy": {
-    title: "Evidence-Based Care for Meaningful Growth",
     body: [
       "Our ABA services are individualized, compassionate, and designed to support communication, independence, emotional regulation, social development, and daily living skills across home, clinic, school, and community settings.",
       "As a locally owned, BCBA-operated organization, we combine relationship-centered care with innovative technology and evidence-based practices to deliver meaningful, individualized outcomes for every family we serve.",
