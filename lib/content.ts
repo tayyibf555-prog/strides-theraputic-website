@@ -438,7 +438,10 @@ export const SERVICE_BUBBLES: Record<string, ServiceBubble> = {
     ],
   },
   "wa-dda": {
-    body: ["Life skills, respite, and stabilization for WA DDA participants."],
+    body: [
+      "Strides provides Washington State Developmental Disabilities Administration (DDA) services designed to help individuals build greater independence, safety, communication, coping, and community connection.",
+      "From life skills and caregiver consultation to stabilization and community respite, our clinically led team supports individuals with complex needs through practical, person-centered services that create meaningful progress at home and in everyday life.",
+    ],
   },
   "autism-diagnostic-assessments": {
     body: ["Faster autism evaluations — answers in as little as 2 weeks."],
