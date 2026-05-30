@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Hero } from "@/components/sections/Hero";
 import { RotatingText } from "@/components/sections/RotatingText";
 import { CtaCards } from "@/components/sections/CtaCards";
@@ -102,10 +103,15 @@ export default function HomePage() {
       {/* Community photo band — full-bleed image divider before the closing CTA */}
       <Section tone="cream">
         <Reveal>
-          <ImagePlaceholder
-            label="Our community"
-            className="aspect-[21/9] w-full shadow-lg ring-1 ring-sage-deep/40"
-          />
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-card shadow-lg ring-1 ring-sage-deep/40">
+            <Image
+              src="/our-community.jpg"
+              alt="Strides clients and staff gathered together in a community circle"
+              fill
+              sizes="(min-width: 1152px) 1088px, 100vw"
+              className="object-cover"
+            />
+          </div>
         </Reveal>
       </Section>
 
