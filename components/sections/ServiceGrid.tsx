@@ -51,6 +51,16 @@ function ServiceCard({
                 {para}
               </span>
             ))}
+            {bubble.price && (
+              <span className="mt-3 block font-display text-base font-semibold text-[#e7bca8]">
+                {bubble.price}
+              </span>
+            )}
+            {bubble.note && (
+              <span className="mt-1 block text-[0.78rem] italic leading-relaxed text-cream/70">
+                {bubble.note}
+              </span>
+            )}
             {/* Little diamond tail pointing toward the card. */}
             <span
               aria-hidden

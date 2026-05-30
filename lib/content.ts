@@ -427,7 +427,12 @@ export function getService(slug: string): Service | undefined {
 // Hover speech-bubble copy for the Our Services cards, keyed by service slug.
 // Edit the text below freely — it appears when hovering a card on /services.
 // Each entry has an optional `title` and one or more `body` paragraphs.
-export type ServiceBubble = { title?: string; body: string[] };
+export type ServiceBubble = {
+  title?: string;
+  body: string[];
+  price?: string; // emphasized price line, e.g. "Flat Fee: $1,495"
+  note?: string; // small follow-up note under the price
+};
 
 export const SERVICE_BUBBLES: Record<string, ServiceBubble> = {
   "aba-therapy": {
@@ -444,10 +449,18 @@ export const SERVICE_BUBBLES: Record<string, ServiceBubble> = {
     ],
   },
   "autism-diagnostic-assessments": {
-    body: ["Faster autism evaluations — answers in as little as 2 weeks."],
+    body: [
+      "Get assessed in as little as 2 weeks through our technology-enhanced autism evaluation program, combining experienced clinicians with innovative EarliTec Diagnostics EarliPoint™ technology.",
+      "We believe families deserve more than long waitlists, vague answers, and being left to navigate next steps alone. Our multidisciplinary diagnostic team provides clear answers, individualized recommendations, and ongoing support designed to help families move forward with confidence.",
+    ],
+    price: "Flat Fee: $1,495",
+    note: "Comprehensive assessments also available upon consultation.",
   },
   "or-dds": {
-    body: ["FBAs, Positive Behavior Support Plans, and ongoing consultation."],
+    body: [
+      "Strides provides Oregon Department of Human Services (DDS) behavioral services designed to improve safety, stability, independence, and quality of life for individuals with intellectual and developmental disabilities.",
+      "Through comprehensive Functional Behavior Assessments (FBA), Positive Behavior Support Plans (PBSP), ongoing plan maintenance, and collaborative consultation, our clinically led team helps individuals and support systems build meaningful, sustainable progress.",
+    ],
   },
   "consultation-training": {
     body: ["Expert consultation for hospitals, providers, and complex cases."],
