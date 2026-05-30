@@ -532,8 +532,8 @@ export const HOME = {
 export type FundingSource = { name: string; logo?: string };
 
 export const FUNDING_SOURCES: FundingSource[] = [
-  { name: "PacificSource" },
-  { name: "BlueCross BlueShield" },
+  { name: "PacificSource", logo: "/funding/pacificsource.png" },
+  { name: "BlueCross BlueShield", logo: "/funding/bluecross.jpg" },
 ];
 
 // Placeholder testimonials — replace with real client quotes when available.

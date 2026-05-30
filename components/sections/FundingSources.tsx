@@ -5,14 +5,14 @@ import { Reveal } from "@/components/motion/Reveal";
 
 function FundingTile({ source }: { source: FundingSource }) {
   return (
-    <div className="flex h-[88px] w-[220px] shrink-0 items-center justify-center rounded-card bg-cream px-6 shadow-sm ring-1 ring-sage-deep/50">
+    <div className="flex h-[96px] w-[240px] shrink-0 items-center justify-center rounded-card bg-white px-6 shadow-sm ring-1 ring-sage-deep/40">
       {source.logo ? (
-        <span className="relative h-12 w-full">
+        <span className="relative h-16 w-full">
           <Image
             src={source.logo}
             alt={source.name}
             fill
-            sizes="220px"
+            sizes="240px"
             className="object-contain"
           />
         </span>
