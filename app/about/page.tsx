@@ -12,6 +12,7 @@ import {
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { StatStrip } from "@/components/sections/StatStrip";
+import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import Image from "next/image";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
@@ -192,21 +193,32 @@ export default function AboutPage() {
                 <p key={p}>{p}</p>
               ))}
             </div>
-            <p className="mt-5 text-[1.02rem] leading-relaxed text-ink/80">
+            <RevealGroup className="mt-7 grid gap-3 sm:grid-cols-2" stagger={0.06}>
+              {ABOUT.whoWeServe.services.map((s) => (
+                <RevealItem
+                  key={s}
+                  className="flex items-center gap-3 rounded-2xl bg-sage/60 px-5 py-4 text-sm font-medium text-ink ring-1 ring-sage-deep/50"
+                >
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-moss" />
+                  {s}
+                </RevealItem>
+              ))}
+            </RevealGroup>
+            <p className="mt-7 text-[1.02rem] leading-relaxed text-ink/80">
               {ABOUT.whoWeServe.close}
             </p>
           </Reveal>
-          <RevealGroup className="grid gap-3 sm:grid-cols-2" stagger={0.06}>
-            {ABOUT.whoWeServe.services.map((s) => (
-              <RevealItem
-                key={s}
-                className="flex items-center gap-3 rounded-2xl bg-sage/60 px-5 py-4 text-sm font-medium text-ink ring-1 ring-sage-deep/50"
-              >
-                <span className="h-2 w-2 shrink-0 rounded-full bg-moss" />
-                {s}
-              </RevealItem>
-            ))}
-          </RevealGroup>
+          <Reveal delay={0.1} className="relative">
+            {/* Warm accent shapes echoing the Our Story photo treatment */}
+            <div
+              aria-hidden
+              className="absolute -left-4 -top-4 h-2/3 w-2/3 rounded-card bg-gradient-to-br from-moss/15 to-clay/25"
+            />
+            <ImagePlaceholder
+              label="Who We Serve photo"
+              className="relative aspect-[4/3] w-full shadow-2xl ring-1 ring-sage-deep/40"
+            />
+          </Reveal>
         </div>
       </Section>
 

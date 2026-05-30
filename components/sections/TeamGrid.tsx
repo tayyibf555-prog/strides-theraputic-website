@@ -40,9 +40,13 @@ export function FounderCards({ members }: { members: TeamMember[] }) {
 export function TeamList({
   members,
   columns = 3,
+  withPortrait = false,
 }: {
   members: TeamMember[];
   columns?: 2 | 3;
+  // When true, each card shows a circular portrait placeholder above the
+  // name — used for Clinical Leadership so it reads like a team of faces.
+  withPortrait?: boolean;
 }) {
   const cols = columns === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3";
   return (
@@ -50,8 +54,15 @@ export function TeamList({
       {members.map((m) => (
         <RevealItem
           key={m.name}
-          className="rounded-2xl bg-cream p-5 text-center shadow-sm ring-1 ring-sage-deep/50"
+          className="flex flex-col items-center rounded-2xl bg-cream p-5 text-center shadow-sm ring-1 ring-sage-deep/50"
         >
+          {withPortrait && (
+            <ImagePlaceholder
+              label="Portrait"
+              rounded={false}
+              className="mb-4 h-24 w-24 rounded-full"
+            />
+          )}
           <p className="font-display text-lg font-semibold text-ink">
             {m.name}
           </p>

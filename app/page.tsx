@@ -99,6 +99,16 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* Community photo band — full-bleed image divider before the closing CTA */}
+      <Section tone="cream">
+        <Reveal>
+          <ImagePlaceholder
+            label="Our community"
+            className="aspect-[21/9] w-full shadow-lg ring-1 ring-sage-deep/40"
+          />
+        </Reveal>
+      </Section>
+
       {/* Closing CTA */}
       <div className="bg-forest text-cream">
         <Reveal className="mx-auto max-w-3xl px-5 py-16 text-center lg:px-8">

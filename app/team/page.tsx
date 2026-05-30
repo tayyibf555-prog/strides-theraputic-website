@@ -41,7 +41,7 @@ export default function TeamPage() {
           title="The people guiding our care"
         />
         <div className="mt-12">
-          <TeamList members={LEADERSHIP} />
+          <TeamList members={LEADERSHIP} withPortrait />
         </div>
       </Section>
 
