@@ -526,7 +526,15 @@ export const HOME = {
     "Strides offers services that fit most individuals’ needs and funding source options. That means when you no longer need a certain service, you can stay on the Strides team for the next step of your journey.",
 };
 
-export const FUNDING_SOURCES = ["PacificSource", "BlueCross BlueShield"];
+// Funding sources shown in the scrolling marquee. Drop a logo image into
+// /public/funding/ and set its path on `logo` to show the logo instead of the
+// text pill, e.g. { name: "PacificSource", logo: "/funding/pacificsource.png" }.
+export type FundingSource = { name: string; logo?: string };
+
+export const FUNDING_SOURCES: FundingSource[] = [
+  { name: "PacificSource" },
+  { name: "BlueCross BlueShield" },
+];
 
 // Placeholder testimonials — replace with real client quotes when available.
 export type Testimonial = { quote: string; name: string; location: string };
