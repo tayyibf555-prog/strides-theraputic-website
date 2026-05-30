@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, BadgeCheck, MapPin, Languages, Tag } from "lucide-react";
 import { SERVICES, getService } from "@/lib/content";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -122,30 +123,59 @@ export default async function ServiceDetailPage({
             eyebrow="Seasonal Programs"
             title="Now Enrolling"
           />
-          <RevealGroup className="mt-12 grid gap-6 md:grid-cols-2">
-            {service.programs.map((p) => (
-              <RevealItem
-                key={p.name}
-                className="flex flex-col overflow-hidden rounded-card shadow-sm ring-1 ring-sage-deep/50"
-              >
-                <ImagePlaceholder label={p.name} className="h-40 w-full" rounded={false} />
-                <div className="flex flex-1 flex-col bg-cream p-7">
-                  <h3 className="font-display text-2xl font-semibold text-ink">
-                    {p.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted">{p.blurb}</p>
-                  <ul className="mt-4 space-y-2">
-                    {p.details.map((d) => (
-                      <li key={d} className="flex items-start gap-2 text-sm text-ink/80">
-                        <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-moss-light" />
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
-                  <CtaButton className="mt-6 self-start">Complete Intake Today</CtaButton>
-                </div>
-              </RevealItem>
-            ))}
+          <RevealGroup className="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-2">
+            {service.programs.map((p) =>
+              p.image ? (
+                // The flyer image already contains the program's dates, pricing,
+                // and details, so it becomes the whole card with an intake button
+                // overlaid on it.
+                <RevealItem
+                  key={p.name}
+                  className="group relative overflow-hidden rounded-card shadow-md ring-1 ring-sage-deep/50"
+                >
+                  <Image
+                    src={p.image}
+                    alt={`${p.name} — June 22 to August 21. ${p.blurb}`}
+                    width={1100}
+                    height={1424}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-ink/80 via-ink/35 to-transparent p-5 pt-16">
+                    <CtaButton
+                      variant="light"
+                      size="lg"
+                      withArrow
+                      className="pointer-events-auto shadow-lg"
+                    >
+                      Complete Intake Today
+                    </CtaButton>
+                  </div>
+                </RevealItem>
+              ) : (
+                <RevealItem
+                  key={p.name}
+                  className="flex flex-col overflow-hidden rounded-card shadow-sm ring-1 ring-sage-deep/50"
+                >
+                  <ImagePlaceholder label={p.name} className="h-40 w-full" rounded={false} />
+                  <div className="flex flex-1 flex-col bg-cream p-7">
+                    <h3 className="font-display text-2xl font-semibold text-ink">
+                      {p.name}
+                    </h3>
+                    <p className="mt-2 text-sm text-muted">{p.blurb}</p>
+                    <ul className="mt-4 space-y-2">
+                      {p.details.map((d) => (
+                        <li key={d} className="flex items-start gap-2 text-sm text-ink/80">
+                          <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-moss-light" />
+                          {d}
+                        </li>
+                      ))}
+                    </ul>
+                    <CtaButton className="mt-6 self-start">Complete Intake Today</CtaButton>
+                  </div>
+                </RevealItem>
+              )
+            )}
           </RevealGroup>
         </Section>
       )}

@@ -22,6 +22,10 @@ export type Program = {
   name: string;
   blurb: string;
   details: string[];
+  // When set, the program renders as this full flyer image (which already
+  // contains the dates/pricing/details) with an intake button, instead of a
+  // text card. Path is relative to /public.
+  image?: string;
 };
 
 export type Service = {
@@ -394,6 +398,7 @@ export const SERVICES: Service[] = [
     programs: [
       {
         name: "Summer Respite Program",
+        image: "/programs/summer-respite.jpg",
         blurb:
           "Small-group support, structured fun, and meaningful peer connection. DDA funding eligible.",
         details: [
@@ -406,6 +411,7 @@ export const SERVICES: Service[] = [
       },
       {
         name: "Summer Social Group",
+        image: "/programs/summer-social.jpg",
         blurb:
           "Four-hour groups built around structured activities and social skill-building.",
         details: [
