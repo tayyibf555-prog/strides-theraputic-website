@@ -129,19 +129,16 @@ export default async function ServiceDetailPage({
                 // The flyer image already contains the program's dates, pricing,
                 // and details, so it becomes the whole card with an intake button
                 // overlaid on it.
-                <RevealItem
-                  key={p.name}
-                  className="group relative overflow-hidden rounded-card shadow-md ring-1 ring-sage-deep/50"
-                >
+                <RevealItem key={p.name} className="group relative">
                   <Image
                     src={p.image}
                     alt={`${p.name} — June 22 to August 21. ${p.blurb}`}
                     width={1100}
                     height={1424}
                     sizes="(min-width: 768px) 50vw, 100vw"
-                    className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="h-auto w-full"
                   />
-                  <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-ink/80 via-ink/35 to-transparent p-5 pt-16">
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center p-5">
                     <CtaButton
                       variant="light"
                       size="lg"
