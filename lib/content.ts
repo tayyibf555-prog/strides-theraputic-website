@@ -463,10 +463,16 @@ export const SERVICE_BUBBLES: Record<string, ServiceBubble> = {
     ],
   },
   "consultation-training": {
-    body: ["Expert consultation for hospitals, providers, and complex cases."],
+    body: [
+      "Strides provides high-level behavioral consultation, stabilization support, and training services for individuals experiencing significant behavioral, environmental, medical, or placement-related challenges.",
+      "Our clinically led team partners with families, hospitals, providers, schools, residential programs, and care teams to develop practical, compassionate solutions for situations requiring advanced behavioral expertise and coordinated support.",
+    ],
   },
   "social-groups-respite": {
-    body: ["Structured social groups and community respite in East Vancouver."],
+    body: [
+      "Strides offers both structured social groups and center-based community respite services designed to help individuals build confidence, strengthen social and adaptive skills, and participate in meaningful community experiences within a supportive environment.",
+      "Led by behavioral health professionals, our programs combine engaging activities with intentional skill-building and individualized support tailored to each participant’s needs.",
+    ],
   },
 };
 
