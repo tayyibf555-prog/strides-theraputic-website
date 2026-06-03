@@ -544,6 +544,13 @@ export type FundingSource = { name: string; logo?: string };
 export const FUNDING_SOURCES: FundingSource[] = [
   { name: "PacificSource", logo: "/funding/pacificsource.png" },
   { name: "BlueCross BlueShield", logo: "/funding/bluecross.jpg" },
+  { name: "Aetna", logo: "/funding/aetna.png" },
+  { name: "Cigna", logo: "/funding/cigna.png" },
+  { name: "UnitedHealthcare", logo: "/funding/uhc.png" },
+  { name: "Kaiser Permanente", logo: "/funding/kaiser.png" },
+  { name: "TRICARE", logo: "/funding/tricare.png" },
+  { name: "Oregon DHS — Developmental Disabilities Services", logo: "/funding/or-dds.png" },
+  { name: "Washington State DSHS — DDA", logo: "/funding/wa-dda.jpg" },
 ];
 
 // Placeholder testimonials — replace with real client quotes when available.
