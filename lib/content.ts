@@ -112,6 +112,7 @@ export const SERVICES: Service[] = [
       "At Strides, our Washington DDA services are designed around one central question: what would improve this individual’s quality of life?",
       "From there, we build individualized support systems that help individuals develop practical skills, increase independence, improve safety, strengthen communication, and navigate everyday challenges more successfully.",
     ],
+    introImage: "/service-wa-dda.jpg",
     features: [
       {
         title: "Staff & Family Consultation",
