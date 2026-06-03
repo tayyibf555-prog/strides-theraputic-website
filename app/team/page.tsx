@@ -5,7 +5,7 @@ import { SectionBand } from "@/components/sections/SectionBand";
 import { FounderCards, TeamList } from "@/components/sections/TeamGrid";
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
-import { ABOUT, FOUNDERS, LEADERSHIP, PARTNERS } from "@/lib/content";
+import { ABOUT, FOUNDERS, PARTNERS } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Our Team",
@@ -33,20 +33,8 @@ export default function TeamPage() {
         </div>
       </Section>
 
-      {/* Clinical Leadership */}
-      <Section tone="sage">
-        <SectionHeading
-          align="center"
-          eyebrow="Clinical Leadership"
-          title="The people guiding our care"
-        />
-        <div className="mt-12">
-          <TeamList members={LEADERSHIP} withPortrait />
-        </div>
-      </Section>
-
       {/* Partners */}
-      <Section tone="cream">
+      <Section tone="sage">
         <SectionHeading
           align="center"
           eyebrow="Partners"
