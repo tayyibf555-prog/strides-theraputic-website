@@ -154,7 +154,13 @@ export default async function ServiceDetailPage({
             eyebrow="Seasonal Programs"
             title="Now Enrolling"
           />
-          <RevealGroup className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2">
+          <RevealGroup
+            className={`mx-auto mt-12 grid gap-8 ${
+              service.programs.length > 1
+                ? "max-w-5xl md:grid-cols-2"
+                : "max-w-md"
+            }`}
+          >
             {service.programs.map((p) =>
               p.image ? (
                 // The flyer image already contains the program's dates, pricing,

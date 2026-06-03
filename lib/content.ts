@@ -421,19 +421,6 @@ export const SERVICES: Service[] = [
           "Limited spots — complete intake today",
         ],
       },
-      {
-        name: "Summer Social Group",
-        image: "/programs/summer-social.jpg",
-        blurb:
-          "Four-hour groups built around structured activities and social skill-building.",
-        details: [
-          "June 22 – August 21",
-          "Morning 8:30 AM – 12:30 PM · Afternoon 12:30 PM – 4:30 PM",
-          "Try 1 for $75 · 4 for $240 · 10 for $500",
-          "Designed for consistency and relationship building",
-          "Limited spots — complete intake today",
-        ],
-      },
     ],
   },
 ];
