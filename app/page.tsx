@@ -8,7 +8,6 @@ import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { PlayCircle } from "lucide-react";
@@ -39,13 +38,20 @@ export default function HomePage() {
       <Section tone="cream">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <Reveal>
-            <div className="group relative overflow-hidden rounded-card">
-              <ImagePlaceholder
-                label="Founder video"
-                className="aspect-video w-full"
+            <div className="group relative aspect-video w-full overflow-hidden rounded-card shadow-lg ring-1 ring-sage-deep/40">
+              <Image
+                src="/founder-video.jpg"
+                alt="A Strides clinician working with children in the therapy center"
+                fill
+                sizes="(min-width: 1024px) 48vw, 100vw"
+                className="object-cover"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-t from-ink/30 via-ink/0 to-ink/0"
               />
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <PlayCircle className="h-16 w-16 text-cream/90 transition-transform duration-300 group-hover:scale-110" />
+                <PlayCircle className="h-16 w-16 text-cream drop-shadow-lg transition-transform duration-300 group-hover:scale-110" />
               </div>
             </div>
           </Reveal>
