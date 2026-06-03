@@ -14,7 +14,6 @@ function ServiceCard({
   // so the bubble never runs off the left page edge; everyone else opens left.
   side?: "left" | "right";
 }) {
-  const Icon = service.icon;
   // Bubble copy is only wired up where withBubble is passed (the Home grid).
   // The Services and Contact grids reuse this card without the hover bubble.
   const bubble = withBubble ? SERVICE_BUBBLES[service.slug] : undefined;
@@ -72,10 +71,7 @@ function ServiceCard({
             />
           </span>
         )}
-        <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-moss/10 text-moss transition-colors group-hover:bg-moss group-hover:text-cream">
-          <Icon className="h-6 w-6" />
-        </span>
-        <h3 className="mt-5 font-display text-xl font-semibold text-ink">
+        <h3 className="font-display text-xl font-semibold text-ink">
           {service.title}
         </h3>
         <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
