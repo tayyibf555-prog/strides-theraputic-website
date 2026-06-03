@@ -674,8 +674,8 @@ export const LEADERSHIP: TeamMember[] = [
 ];
 
 export const PARTNERS: TeamMember[] = [
-  { name: "Adam Huelit", credentials: "MD", role: "Developmental Pediatrician" },
-  { name: "Jessica T.", credentials: "PsyD, BCBA", role: "Clinical Partner" },
+  { name: "Adam Huillet", credentials: "MD", role: "Developmental Pediatrician" },
+  { name: "Jessica Taverniti", credentials: "PsyD, BCBA", role: "Clinical Partner" },
 ];
 
 // ---------------------------------------------------------------------------
