@@ -14,6 +14,8 @@ export type FeatureBlock = {
   subtitle?: string;
   body?: string;
   items?: string[];
+  // Optional pricing tag shown as a badge in the corner of the feature card.
+  tag?: { heading: string; lines: string[] };
 };
 
 export type Differentiator = { title: string; body: string };
@@ -383,6 +385,10 @@ export const SERVICES: Service[] = [
       {
         title: "Social Groups",
         subtitle: "Structured Peer Connection & Skill Development",
+        tag: {
+          heading: "4-Hour Groups",
+          lines: ["Try 1 for $75", "4 for $240", "10 for $500"],
+        },
         body: "Our social groups are designed for individuals who benefit from guided peer interaction, structured activities, and clinically informed social support within a group setting, facilitated by behavioral health professionals.",
         items: [
           "Build friendships and social confidence",

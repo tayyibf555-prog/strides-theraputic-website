@@ -13,14 +13,35 @@ export function FeatureList({ features }: { features: FeatureBlock[] }) {
           as="article"
           className="flex flex-col rounded-card border border-sage-deep/60 bg-cream p-7 shadow-sm"
         >
-          <h3 className="font-display text-xl font-semibold text-ink">
-            {f.title}
-          </h3>
-          {f.subtitle && (
-            <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-moss">
-              {f.subtitle}
-            </p>
-          )}
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h3 className="font-display text-xl font-semibold text-ink">
+                {f.title}
+              </h3>
+              {f.subtitle && (
+                <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-moss">
+                  {f.subtitle}
+                </p>
+              )}
+            </div>
+            {f.tag && (
+              <div className="shrink-0 rounded-2xl bg-clay/15 px-4 py-3 text-center ring-1 ring-clay/30">
+                <p className="font-display text-xs font-semibold uppercase tracking-wide text-clay">
+                  {f.tag.heading}
+                </p>
+                {f.tag.lines.map((line, i) => (
+                  <p
+                    key={line}
+                    className={`text-sm leading-tight text-ink/80 ${
+                      i === 0 ? "mt-1 font-semibold text-forest" : ""
+                    }`}
+                  >
+                    {line}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
           {f.body && (
             <p className="mt-3 text-[0.95rem] leading-relaxed text-ink/80">
               {f.body}
