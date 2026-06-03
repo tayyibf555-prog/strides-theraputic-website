@@ -37,7 +37,7 @@ export function FounderCards({ members }: { members: TeamMember[] }) {
                 </span>
               )}
             </h3>
-            <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-moss">
+            <p className="mt-1 whitespace-nowrap text-[0.7rem] font-semibold uppercase tracking-normal text-moss sm:text-xs">
               {m.role}
             </p>
             {m.bio && (
