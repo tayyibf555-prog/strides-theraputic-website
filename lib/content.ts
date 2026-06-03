@@ -307,6 +307,7 @@ export const SERVICES: Service[] = [
       "Some situations require more than traditional outpatient services. When safety concerns escalate, placements become unstable, support teams feel overwhelmed, or medical and behavioral needs begin impacting quality of life, families and providers need experienced professionals capable of stepping into complexity with confidence, structure, and compassion.",
       "At Strides Therapeutic Services, our consultation and training services are designed for individuals with high-acuity and complex support needs across home, hospital, school, residential, and community settings. Our team specializes in helping systems move from crisis management toward long-term stabilization, safety, and meaningful progress.",
     ],
+    introImage: "/service-consultation-training.jpg",
     featuresHeading: "What We Offer",
     features: [
       {
