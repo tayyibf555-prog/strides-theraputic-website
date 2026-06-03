@@ -503,7 +503,7 @@ export const HOME = {
   },
   weHelp: [
     "families find a path forward.",
-    "adults feel empowered and seen.",
+    "individuals feel empowered and seen.",
     "individuals communicate their needs.",
   ],
   founder: {
