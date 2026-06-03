@@ -185,6 +185,7 @@ export const SERVICES: Service[] = [
       "At Strides, we believe autism evaluations should be different. Our diagnostic program combines experienced clinicians, advanced technology, and integrated care pathways to provide families with faster answers, clearer insight, and meaningful next steps.",
       "Using innovative EarliTec Diagnostics EarliPoint™ technology alongside comprehensive clinical evaluation, our team delivers a modern, evidence-based diagnostic experience designed to improve both accuracy and long-term outcomes. We are among the first providers in the region integrating this level of objective technology into both autism diagnosis and ongoing treatment measurement.",
     ],
+    introImage: "/service-autism-diagnostics.jpg",
     featuresHeading: "What Is EarliPoint?",
     featuresVideo: "/videos/earlipoint.mp4",
     featuresVideoPoster: "/videos/earlipoint-poster.jpg",
