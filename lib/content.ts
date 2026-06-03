@@ -239,6 +239,7 @@ export const SERVICES: Service[] = [
       "Our Oregon DDS services are designed to support individuals with complex behavioral, developmental, medical, environmental, and support needs through practical, collaborative, and evidence-based approaches.",
       "Whether we are developing a Positive Behavior Support Plan, helping maintain long-term stability, or supporting teams through difficult transitions, our focus remains the same: creating realistic support systems that lead to meaningful progress over time.",
     ],
+    introImage: "/service-or-dds.jpg",
     features: [
       {
         title: "Functional Behavior Assessments",
