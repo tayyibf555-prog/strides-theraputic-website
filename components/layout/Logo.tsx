@@ -21,8 +21,8 @@ export function Logo({
       <Image
         src={light ? "/strides-logo-light.png" : "/strides-logo.png"}
         alt="Strides Therapeutic Services"
-        width={1173}
-        height={528}
+        width={1317}
+        height={621}
         priority={priority}
         className={`${className} w-auto transition-transform duration-300 group-hover:-translate-y-0.5`}
       />

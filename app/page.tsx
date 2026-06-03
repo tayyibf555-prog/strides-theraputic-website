@@ -21,9 +21,8 @@ export default function HomePage() {
       {/* We Help — rotating phrases */}
       <div className="bg-moss text-cream">
         {/* The rotating box is sized to the widest phrase so nothing shifts as
-            phrases cycle; the small lg translate re-centers the block on its
-            mid-length phrase (tuned to the current three phrases). */}
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 lg:flex-row lg:items-center lg:justify-center lg:gap-4 lg:px-8 lg:translate-x-[90px]">
+            phrases cycle. */}
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-14 lg:flex-row lg:items-center lg:justify-center lg:gap-4 lg:px-8">
           <h2 className="shrink-0 whitespace-nowrap font-display text-3xl font-medium sm:text-4xl lg:text-5xl">
             We Help
           </h2>

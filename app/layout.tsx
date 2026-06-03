@@ -42,7 +42,7 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${nunito.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-cream text-ink">
+      <body className="min-h-full flex flex-col overflow-x-clip bg-cream text-ink">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
