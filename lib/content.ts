@@ -553,27 +553,26 @@ export const FUNDING_SOURCES: FundingSource[] = [
   { name: "Washington State DSHS — DDA", logo: "/funding/wa-dda.jpg" },
 ];
 
-// Placeholder testimonials — replace with real client quotes when available.
 export type Testimonial = { quote: string; name: string; location: string };
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "The Strides team met us exactly where we were. For the first time, we felt like someone actually understood our son and had a real plan to help him.",
-    name: "Parent of an ABA client",
-    location: "Vancouver, WA",
+      "Finding Strides felt like finally finding the right fit. Everyone we’ve worked with has been kind, responsive, and genuinely invested in helping our family succeed.",
+    name: "Kristina K.",
+    location: "Parent",
   },
   {
     quote:
-      "After years of being told our situation was “too complex,” Strides stepped in with patience and a plan. The difference in stability has been life-changing.",
-    name: "Residential care coordinator",
-    location: "Portland, OR",
+      "What I appreciate most is that they meet people where they’re at. We never felt judged, and the support has been practical and realistic for our everyday life.",
+    name: "Haley V.",
+    location: "Parent",
   },
   {
     quote:
-      "Fast, clear, and genuinely supportive. The diagnostic process gave us answers in weeks instead of years, and we never felt left to figure it out alone.",
-    name: "Parent, autism evaluation",
-    location: "Clark County, WA",
+      "We’ve worked with a lot of providers over the years, and Strides has been by far the easiest to work with. The staff genuinely care and have always made us feel like our family matters.",
+    name: "Donna B.",
+    location: "Parent",
   },
 ];
 
