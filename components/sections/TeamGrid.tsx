@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { type TeamMember } from "@/lib/content";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { RevealGroup, RevealItem } from "@/components/motion/Reveal";
@@ -11,10 +12,22 @@ export function FounderCards({ members }: { members: TeamMember[] }) {
           as="article"
           className="flex flex-col gap-5 rounded-card bg-cream p-6 shadow-sm ring-1 ring-sage-deep/50 sm:flex-row"
         >
-          <ImagePlaceholder
-            label="Portrait"
-            className="h-40 w-full shrink-0 sm:h-44 sm:w-40"
-          />
+          {m.image ? (
+            <div className="relative h-52 w-full shrink-0 overflow-hidden rounded-card sm:h-44 sm:w-40">
+              <Image
+                src={m.image}
+                alt={m.name}
+                fill
+                sizes="(min-width: 640px) 160px, 100vw"
+                className="object-cover object-top"
+              />
+            </div>
+          ) : (
+            <ImagePlaceholder
+              label="Portrait"
+              className="h-40 w-full shrink-0 sm:h-44 sm:w-40"
+            />
+          )}
           <div>
             <h3 className="font-display text-xl font-semibold text-ink">
               {m.name}

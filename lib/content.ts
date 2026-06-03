@@ -643,6 +643,8 @@ export type TeamMember = {
   credentials: string;
   role: string;
   bio?: string;
+  // Optional portrait photo; falls back to a placeholder when not set.
+  image?: string;
 };
 
 export const FOUNDERS: TeamMember[] = [
@@ -650,12 +652,14 @@ export const FOUNDERS: TeamMember[] = [
     name: "Hannah Schmidt",
     credentials: "M.S., BCBA, LBA",
     role: "Founder | Executive Clinical Director",
+    image: "/team/hannah-schmidt.jpg",
     bio: "Hannah is a Board Certified Behavior Analyst with a master’s degree in Psychology and a specialization in Applied Behavior Analysis. Throughout her career, she has worked across clinic, home, school, foster care, and child welfare settings, supporting individuals with a wide range of behavioral and developmental needs. At the heart of Hannah’s work is compassion — she believes meaningful care begins with making individuals and families feel genuinely seen, supported, and valued.",
   },
   {
     name: "Elsie Herring",
     credentials: "M.S., BCBA, LBA",
     role: "Founder | Executive Operations Director",
+    image: "/team/elsie-herring.jpg",
     bio: "Elsie is a Board Certified Behavior Analyst with a master’s degree in Psychology and a specialization in Applied Behavior Analysis. Her background spans hospice advocacy, behavioral healthcare, and intensive ABA services across home, clinic, and community settings. Elsie is driven by innovation and clinical excellence, overseeing organizational strategy and leading Strides’ clinical development and research initiatives with a strong focus on mentoring the next generation of clinicians.",
   },
 ];
