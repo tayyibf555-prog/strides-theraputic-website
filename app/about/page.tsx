@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Fingerprint,
   HandHeart,
   HeartHandshake,
   ShieldCheck,
   Sprout,
-  Telescope,
   Users,
 } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -42,7 +40,7 @@ export default function AboutPage() {
       <Section tone="cream">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start">
           <Reveal>
-            <SectionHeading eyebrow="Our Story" title="So we built the organization we wished existed." />
+            <SectionHeading eyebrow="Our Story" title="We built the organization we wished existed." />
 
             {/* Lead paragraph: larger, darker, with a warm accent rule to draw
                 the eye in and break the four-paragraph monotony. */}
@@ -234,9 +232,6 @@ export default function AboutPage() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
           <Reveal>
             <div className="flex h-full flex-col rounded-card bg-sage/40 p-8 ring-1 ring-sage-deep/40 lg:p-10">
-              <span className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-moss/12 text-moss ring-1 ring-moss/20">
-                <Fingerprint className="h-6 w-6" />
-              </span>
               <SectionHeading eyebrow="Why Strides Is Different" title="People, not productivity metrics." />
               <div className="mt-5 space-y-4 text-[1.02rem] leading-relaxed text-muted">
                 {ABOUT.whyDifferent.map((p, i) => (
@@ -254,9 +249,6 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="flex h-full flex-col rounded-card bg-sage/40 p-8 ring-1 ring-sage-deep/40 lg:p-10">
-              <span className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-clay/15 text-clay ring-1 ring-clay/25">
-                <Telescope className="h-6 w-6" />
-              </span>
               <SectionHeading eyebrow="Looking Forward" title="Building the community every individual deserves." />
               <div className="mt-5 space-y-4 text-[1.02rem] leading-relaxed text-muted">
                 {ABOUT.lookingForward.map((p, i) => (

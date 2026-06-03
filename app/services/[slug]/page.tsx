@@ -122,7 +122,26 @@ export default async function ServiceDetailPage({
             />
           )}
           <div className={service.featuresHeading ? "mt-12" : ""}>
-            <FeatureList features={service.features} />
+            {service.featuresVideo ? (
+              <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+                <FeatureList features={service.features} />
+                <Reveal delay={0.1}>
+                  <div className="overflow-hidden rounded-card shadow-lg ring-1 ring-sage-deep/40">
+                    <video
+                      controls
+                      preload="metadata"
+                      poster={service.featuresVideoPoster}
+                      className="aspect-video w-full bg-ink"
+                    >
+                      <source src={service.featuresVideo} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </Reveal>
+              </div>
+            ) : (
+              <FeatureList features={service.features} />
+            )}
           </div>
         </Section>
       )}

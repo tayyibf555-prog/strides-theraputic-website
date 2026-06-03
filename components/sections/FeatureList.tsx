@@ -4,7 +4,9 @@ import { RevealGroup, RevealItem } from "@/components/motion/Reveal";
 
 export function FeatureList({ features }: { features: FeatureBlock[] }) {
   return (
-    <RevealGroup className="grid gap-6 md:grid-cols-2">
+    <RevealGroup
+      className={`grid gap-6 ${features.length > 1 ? "md:grid-cols-2" : ""}`}
+    >
       {features.map((f) => (
         <RevealItem
           key={f.title}

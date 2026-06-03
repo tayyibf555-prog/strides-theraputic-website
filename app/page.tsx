@@ -10,7 +10,6 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
-import { PlayCircle } from "lucide-react";
 import { HOME } from "@/lib/content";
 
 export default function HomePage() {
@@ -45,13 +44,6 @@ export default function HomePage() {
                 sizes="(min-width: 1024px) 48vw, 100vw"
                 className="object-cover"
               />
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-gradient-to-t from-ink/30 via-ink/0 to-ink/0"
-              />
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <PlayCircle className="h-16 w-16 text-cream drop-shadow-lg transition-transform duration-300 group-hover:scale-110" />
-              </div>
             </div>
           </Reveal>
           <Reveal delay={0.1}>

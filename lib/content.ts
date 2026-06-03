@@ -46,6 +46,10 @@ export type Service = {
   introImage?: string;
   features?: FeatureBlock[];
   featuresHeading?: string;
+  // Optional video shown beside the features in the "What We Provide" section.
+  // Paths are relative to /public.
+  featuresVideo?: string;
+  featuresVideoPoster?: string;
   differentiators?: Differentiator[];
   approach?: { heading: string; body: string[] };
   programs?: Program[];
@@ -68,6 +72,7 @@ export const SERVICES: Service[] = [
       "From our East Vancouver clinic to in-home and community-based support throughout Oregon and Washington, our clinicians work closely with families and support systems to create meaningful, sustainable progress.",
       "As a BCBA-owned and operated organization, clinical quality and relationships remain at the center of everything we do. We prioritize consistent, engaged clinical oversight and meaningful in-person support whenever possible, rather than relying heavily on telehealth models.",
     ],
+    introImage: "/service-aba-therapy.jpg",
     featuresHeading: "What ABA Supports",
     features: [
       {
@@ -181,6 +186,8 @@ export const SERVICES: Service[] = [
       "Using innovative EarliTec Diagnostics EarliPoint™ technology alongside comprehensive clinical evaluation, our team delivers a modern, evidence-based diagnostic experience designed to improve both accuracy and long-term outcomes. We are among the first providers in the region integrating this level of objective technology into both autism diagnosis and ongoing treatment measurement.",
     ],
     featuresHeading: "What Is EarliPoint?",
+    featuresVideo: "/videos/earlipoint.mp4",
+    featuresVideoPoster: "/videos/earlipoint-poster.jpg",
     features: [
       {
         title: "FDA-Authorized Eye-Tracking Technology",
