@@ -29,7 +29,7 @@ function ServiceCard({
         {bubble && (
           <span
             role="presentation"
-            className={`pointer-events-none absolute top-1/2 z-30 w-72 -translate-y-1/2 rounded-2xl bg-forest px-5 py-4 text-left text-cream opacity-0 shadow-xl transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 ${
+            className={`pointer-events-none absolute top-1/2 z-30 hidden w-72 -translate-y-1/2 rounded-2xl bg-forest px-5 py-4 text-left text-cream opacity-0 shadow-xl transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 lg:block ${
               openRight
                 ? "left-full ml-4 -translate-x-2"
                 : "right-full mr-4 translate-x-2"
