@@ -81,12 +81,22 @@ export function Footer() {
       </div>
 
       <div className="border-t border-cream/10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-5 py-5 text-xs text-cream/50 sm:flex-row lg:px-8">
-          <p>
-            © {new Date().getFullYear()} Strides Therapeutic Services. All rights
-            reserved.
-          </p>
-          <p>{CONTACT.responseNote}</p>
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 py-5 lg:px-8">
+          <a
+            href="https://www.azen.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full border border-cream/15 px-4 py-1.5 text-xs font-medium text-cream/70 transition-colors hover:border-cream/40 hover:text-cream"
+          >
+            Built by <span className="font-semibold text-cream">Azen</span>
+          </a>
+          <div className="flex w-full flex-col items-center justify-between gap-2 text-xs text-cream/50 sm:flex-row">
+            <p>
+              © {new Date().getFullYear()} Strides Therapeutic Services. All
+              rights reserved.
+            </p>
+            <p>{CONTACT.responseNote}</p>
+          </div>
         </div>
       </div>
     </footer>
