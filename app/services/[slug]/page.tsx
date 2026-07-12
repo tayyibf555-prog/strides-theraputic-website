@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, BadgeCheck, MapPin, Languages, Tag } from "lucide-react";
 import { SERVICES, getService } from "@/lib/content";
+import { serviceSchema, jsonLd } from "@/lib/schema";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { FeatureList, Differentiators } from "@/components/sections/FeatureList";
@@ -26,6 +27,7 @@ export async function generateMetadata({
   return {
     title: service.title,
     description: service.tagline,
+    alternates: { canonical: `/services/${service.slug}` },
   };
 }
 
@@ -38,8 +40,16 @@ export default async function ServiceDetailPage({
   const service = getService(slug);
   if (!service) notFound();
 
+  const schema = serviceSchema(slug);
+
   return (
     <>
+      {schema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
+        />
+      )}
       {/* Hero */}
       <div className="bg-moss text-cream">
         <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20">

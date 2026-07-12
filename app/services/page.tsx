@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "Our Services",
   description:
     "ABA therapy, autism diagnostics, WA DDA and Oregon DDS services, behavioral consultation, and community programs — comprehensive care that adapts to the individual.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

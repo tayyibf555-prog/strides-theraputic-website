@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Our Team",
   description:
     "Meet the Board Certified Behavior Analysts and multidisciplinary clinical leadership behind Strides Therapeutic Services, serving Oregon and Washington.",
+  alternates: { canonical: "/team" },
 };
 
 export default function TeamPage() {

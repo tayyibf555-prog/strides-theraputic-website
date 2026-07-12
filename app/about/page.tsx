@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Strides Therapeutic Services is locally owned and operated by Board Certified Behavior Analysts, supporting over 300 individuals across Oregon and Washington.",
+  alternates: { canonical: "/about" },
 };
 
 // Each belief gets a distinct icon + short headline so the grid reads as a set
