@@ -11,7 +11,9 @@ export const SITE = {
     "ABA Therapy & Autism Assessments | Vancouver WA & Portland OR — Strides",
   description:
     "Compassionate, evidence-based ABA therapy, autism diagnostics, DDA/DDS services, consultation, and community programs across Oregon and Washington. Locally owned and operated by Board Certified Behavior Analysts.",
-  url: "https://stridestherapeutics.com",
+  // www is the served host (apex 308-redirects to www on Vercel), so canonicals,
+  // sitemap, og:url, and schema must all use it.
+  url: "https://www.stridestherapeutics.com",
 };
 
 // Analytics container IDs (provided by the client). GA4 is configured inside
