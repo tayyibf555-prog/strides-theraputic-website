@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Reach the Strides Therapeutic Services team in Vancouver, WA. Most inquiries receive a response within 1 business day.",
+  alternates: { canonical: "/contact" },
 };
 
 const items = [
