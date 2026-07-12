@@ -5,10 +5,9 @@ import path from "node:path";
 // Wix → Next.js migration. Preserves whatever link equity those old URLs held
 // and stops Google serving dead "| Mysite" pages.
 //
-// The slugs below are the ones confirmed from the live `site:` index check.
-// TODO (once GSC access lands): pull the full "Pages" report and add any
-// remaining legacy slugs — Wix commonly emits /service-page/*, /post/*, and
-// auto-numbered slugs like /copy-of-*.
+// Complete legacy-URL list confirmed from GSC Search Analytics (16 months of
+// page-level data, pulled 2026-07-12). Targets chosen by matching each old
+// page's actual query profile: PBS pages ranked for "dda ..." queries → wa-dda.
 const legacyRedirects = [
   { source: "/home", destination: "/", permanent: true },
   { source: "/about-us-1", destination: "/about", permanent: true },
@@ -18,8 +17,36 @@ const legacyRedirects = [
   { source: "/our-team", destination: "/team", permanent: true },
   { source: "/team-1", destination: "/team", permanent: true },
   { source: "/services-1", destination: "/services", permanent: true },
-  // Wix service-page pattern → new services hub (narrow to individual service
-  // slugs once GSC confirms which existed).
+  // GSC-confirmed Wix pages (impressions in the last 16 months):
+  { source: "/aba-therapy", destination: "/services/aba-therapy", permanent: true },
+  {
+    source: "/positive-behavior-supports",
+    destination: "/services/wa-dda",
+    permanent: true,
+  },
+  {
+    source: "/copy-of-positive-behavior-supports",
+    destination: "/services/wa-dda",
+    permanent: true,
+  },
+  {
+    source: "/social-groups",
+    destination: "/services/social-groups-respite",
+    permanent: true,
+  },
+  {
+    source: "/social-group-registration",
+    destination: "/services/social-groups-respite",
+    permanent: true,
+  },
+  // ~25 Wix event pages (bowling nights, paint nights, etc.) all map to the
+  // social groups & respite service that hosted them.
+  {
+    source: "/event-details/:slug*",
+    destination: "/services/social-groups-respite",
+    permanent: true,
+  },
+  // Wix service-page pattern (none had impressions, kept as a safety net).
   { source: "/service-page/:slug*", destination: "/services", permanent: true },
 ];
 
