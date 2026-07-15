@@ -121,6 +121,38 @@ export function serviceSchema(slug: string) {
   };
 }
 
+// Article node for long-form content pages (blog / insurance / location
+// guides). Author + publisher point at the practice; reviewedBy carries the
+// clinician sign-off shown in the on-page byline.
+export function articleSchema(a: {
+  headline: string;
+  description: string;
+  path: string;
+  datePublished: string; // ISO date, e.g. "2026-07-14"
+  dateModified?: string;
+}) {
+  const url = `${SITE.url}${a.path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.headline,
+    description: a.description,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    datePublished: a.datePublished,
+    dateModified: a.dateModified ?? a.datePublished,
+    author: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    reviewedBy: {
+      "@type": "Person",
+      name: "Hannah Schmidt",
+      honorificSuffix: "M.S., BCBA, LBA",
+      jobTitle: "Board Certified Behavior Analyst",
+      worksFor: { "@id": ORG_ID },
+    },
+  };
+}
+
 // FAQPage builder for pages that expose Q&A content (money pages, service pages).
 export function faqSchema(faqs: Array<{ question: string; answer: string }>) {
   return {

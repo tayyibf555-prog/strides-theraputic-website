@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
-import { SERVICES } from "@/lib/content";
+import { ARTICLES, SERVICES } from "@/lib/content";
 
 // Programmatic sitemap. Add new marketing/content routes to STATIC_ROUTES as
 // they ship (blog, insurance, locations pages, etc.) so Google discovers them.
@@ -34,5 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...serviceEntries];
+  // Long-form SEO content pages (blog / insurance / location guides).
+  const articleEntries: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
+    url: `${base}${a.path}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticEntries, ...serviceEntries, ...articleEntries];
 }
