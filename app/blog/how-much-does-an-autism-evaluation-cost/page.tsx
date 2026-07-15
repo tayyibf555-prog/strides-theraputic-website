@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CONTACT } from "@/lib/site";
 import { articleSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import {
   ArticleAnswer,
   ArticleBody,
@@ -130,9 +130,12 @@ export default function AutismEvaluationCostPage() {
             actually includes, and how to decide whether insurance, private
             pay, or a free option makes the most sense for your family.
           </p>
-          <ImagePlaceholder
-            label="Assessment session photography"
-            className="aspect-[16/9] w-full"
+          <Image
+            src="/images/articles/cost-hero.png"
+            alt="Illustration of a clinician sitting across a small table from a young child during an autism assessment session"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
           />
 
           <h2>Typical autism evaluation costs, at a glance</h2>
@@ -288,9 +291,12 @@ export default function AutismEvaluationCostPage() {
             </Link>{" "}
             covers how that process differs.
           </p>
-          <ImagePlaceholder
-            label="EarliPoint eye-tracking session"
-            className="aspect-[16/9] w-full"
+          <Image
+            src="/images/articles/cost-inline.png"
+            alt="Illustration of a toddler watching a screen during an EarliPoint eye-tracking evaluation while a clinician observes"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
           />
 
           <h2 id="does-insurance-cover-autism-testing">
