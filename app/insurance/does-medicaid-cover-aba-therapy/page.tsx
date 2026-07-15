@@ -150,7 +150,7 @@ export default function MedicaidAbaCoveragePage() {
           <p>Here’s how the whole system works, piece by piece.</p>
           <Image
             src="/images/articles/medicaid-hero.png"
-            alt="Illustration of a parent at a kitchen table sorting through Medicaid and insurance paperwork for ABA therapy funding"
+            alt="Illustration of a parent and child walking together under a large umbrella, representing insurance coverage and protection"
             width={1600}
             height={1600}
             className="rounded-card w-full h-auto"
@@ -415,7 +415,7 @@ export default function MedicaidAbaCoveragePage() {
           </p>
           <Image
             src="/images/articles/medicaid-inline.png"
-            alt="Illustration of a behavior technician and a young child playing with blocks together during an ABA therapy session"
+            alt="Illustration of a winding path splitting into three signposted routes, representing the different funding paths for ABA therapy"
             width={1600}
             height={1600}
             className="rounded-card w-full h-auto"

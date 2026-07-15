@@ -132,7 +132,7 @@ export default function AutismEvaluationCostPage() {
           </p>
           <Image
             src="/images/articles/cost-hero.png"
-            alt="Illustration of a clinician sitting across a small table from a young child during an autism assessment session"
+            alt="Illustration of a parent at a kitchen table reviewing paperwork with a calculator and a cup of tea"
             width={1600}
             height={1600}
             className="rounded-card w-full h-auto"
@@ -293,7 +293,7 @@ export default function AutismEvaluationCostPage() {
           </p>
           <Image
             src="/images/articles/cost-inline.png"
-            alt="Illustration of a toddler watching a screen during an EarliPoint eye-tracking evaluation while a clinician observes"
+            alt="Illustration of a balance scale weighing a clock against a stack of coins, representing waitlist time versus evaluation cost"
             width={1600}
             height={1600}
             className="rounded-card w-full h-auto"

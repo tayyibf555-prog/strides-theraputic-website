@@ -122,7 +122,7 @@ export default function AdultAutismDiagnosisVancouverPage() {
           </p>
           <Image
             src="/images/articles/adult-hero.png"
-            alt="Illustration of the Strides clinic building exterior in East Vancouver, Washington, with trees and a welcoming entrance"
+            alt="Illustration of an adult standing at an open door with soft light coming through, representing a new chapter after an adult autism diagnosis"
             width={1600}
             height={1600}
             className="rounded-card w-full h-auto"
@@ -295,7 +295,7 @@ export default function AdultAutismDiagnosisVancouverPage() {
           </ul>
           <Image
             src="/images/articles/adult-inline.png"
-            alt="Illustration of a stylized street map marking the Strides clinic location in Vancouver, WA"
+            alt="Illustration of two adults in a calm, unhurried conversation across a small table, representing an adult autism consultation"
             width={1600}
             height={1600}
             className="rounded-card w-full h-auto"
