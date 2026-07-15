@@ -17,7 +17,9 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <>
+      {/* headingLevel="h1": this band is the page's primary heading. */}
       <SectionBand
+        headingLevel="h1"
         title="Our Team"
         subtitle="Locally owned and led by Board Certified Behavior Analysts, our multidisciplinary team brings together clinical expertise, compassion, and real-world problem-solving."
       />

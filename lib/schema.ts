@@ -1,7 +1,7 @@
 // JSON-LD (schema.org) builders. Rendered into a <script type="application/ld+json">
 // so Google's rich results, local pack, and AI Overviews can parse the practice,
 // its clinicians, and its service lines.
-import { SITE, CONTACT, POSTAL } from "@/lib/site";
+import { SITE, CONTACT, POSTAL, PROFILES, GEO } from "@/lib/site";
 import { FOUNDERS, PARTNERS, SERVICES, type TeamMember } from "@/lib/content";
 
 const ORG_ID = `${SITE.url}/#organization`;
@@ -67,6 +67,11 @@ export function organizationSchema() {
     email: CONTACT.email,
     priceRange: "$$",
     address: postalAddress(),
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: GEO.latitude,
+      longitude: GEO.longitude,
+    },
     areaServed: POSTAL.areaServed.map((name) => ({
       "@type": "AdministrativeArea",
       name,
@@ -89,15 +94,20 @@ export function organizationSchema() {
     ],
     founder: FOUNDERS.map((f) => ({ "@type": "Person", name: f.name })),
     employee: people,
-    sameAs: [] as string[], // TODO: add GBP, Psychology Today, socials once live.
+    // Verified public profiles (LinkedIn, Instagram, Google Maps, NPI registry)
+    // so search engines and AI assistants can disambiguate the entity.
+    sameAs: [...PROFILES],
   };
 }
 
 // One Service node per service line, linked back to the practice as provider.
+// Dual-typed Service + MedicalTherapy: `provider` and `areaServed` are Service
+// properties, so the Service type keeps them valid while MedicalTherapy keeps
+// the clinical specificity.
 export function servicesSchema() {
   return SERVICES.map((s) => ({
     "@context": "https://schema.org",
-    "@type": "MedicalTherapy",
+    "@type": ["Service", "MedicalTherapy"],
     name: s.title,
     description: s.summary,
     url: `${SITE.url}/services/${s.slug}`,
@@ -112,7 +122,7 @@ export function serviceSchema(slug: string) {
   if (!s) return null;
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalTherapy",
+    "@type": ["Service", "MedicalTherapy"],
     name: s.title,
     description: s.summary,
     url: `${SITE.url}/services/${s.slug}`,

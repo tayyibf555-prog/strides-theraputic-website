@@ -4,9 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, BadgeCheck, MapPin, Languages, Tag } from "lucide-react";
 import { SERVICES, getService } from "@/lib/content";
-import { serviceSchema, jsonLd } from "@/lib/schema";
+import { serviceSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { FeatureList, Differentiators } from "@/components/sections/FeatureList";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
@@ -25,7 +26,9 @@ export async function generateMetadata({
   const service = getService(slug);
   if (!service) return {};
   return {
-    title: service.title,
+    // seoTitle is a complete, keyword-targeted title — render it absolute so
+    // the layout's "| Strides Therapeutic Services" template doesn't bloat it.
+    title: service.seoTitle ? { absolute: service.seoTitle } : service.title,
     description: service.tagline,
     alternates: { canonical: `/services/${service.slug}` },
   };
@@ -41,6 +44,7 @@ export default async function ServiceDetailPage({
   if (!service) notFound();
 
   const schema = serviceSchema(slug);
+  const faqs = service.faqs;
 
   return (
     <>
@@ -48,6 +52,12 @@ export default async function ServiceDetailPage({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
+        />
+      )}
+      {faqs && faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema(faqs)) }}
         />
       )}
       {/* Hero */}
@@ -253,6 +263,9 @@ export default async function ServiceDetailPage({
           </Reveal>
         </div>
       )}
+
+      {/* FAQ band (also emitted as FAQPage JSON-LD above) */}
+      {faqs && faqs.length > 0 && <FaqSection faqs={faqs} />}
 
       {/* CTA */}
       <SectionBand title="Ready to take the next step?" />
