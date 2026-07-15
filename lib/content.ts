@@ -30,9 +30,16 @@ export type Program = {
   image?: string;
 };
 
+// On-page FAQ entry; also feeds FAQPage JSON-LD via faqSchema().
+export type Faq = { question: string; answer: string };
+
 export type Service = {
   slug: string;
   title: string;
+  // Optional keyword-targeted <title>. Rendered with `title.absolute` so the
+  // "| Strides Therapeutic Services" template suffix doesn't bloat it past
+  // 60ish chars. H1s/taglines are unaffected.
+  seoTitle?: string;
   navLabel: string;
   icon: LucideIcon;
   tagline: string;
@@ -55,12 +62,15 @@ export type Service = {
   differentiators?: Differentiator[];
   approach?: { heading: string; body: string[] };
   programs?: Program[];
+  // Rendered as an on-page FAQ band + FAQPage schema when present.
+  faqs?: Faq[];
 };
 
 export const SERVICES: Service[] = [
   {
     slug: "aba-therapy",
     title: "ABA Therapy",
+    seoTitle: "ABA Therapy in Clinic, Home & School — Vancouver WA | Strides",
     navLabel: "ABA Therapy",
     icon: Brain,
     tagline: "Individualized Support for Meaningful, Lasting Growth",
@@ -94,10 +104,38 @@ export const SERVICES: Service[] = [
         body: "Beginning services can feel overwhelming — our team is here to help guide the process. We work with families to navigate assessments, insurance authorizations, funding options, and service recommendations with transparency and support every step of the way.",
       },
     ],
+    faqs: [
+      {
+        question: "Where does ABA therapy take place?",
+        answer:
+          "Wherever it will help most. Strides provides ABA in our East Vancouver clinic and in home, school, and community settings throughout Oregon and Washington, so skills are practiced in the environments where your family actually uses them.",
+      },
+      {
+        question: "What skills does ABA therapy at Strides focus on?",
+        answer:
+          "Programs are individualized, and most focus on communication, independence, emotional regulation, social development, daily living skills, and safety across environments. Goals are set collaboratively with each family rather than pulled from a standard template.",
+      },
+      {
+        question: "Does insurance cover ABA therapy?",
+        answer:
+          "Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, as well as Oregon DHS–DDS and Washington DSHS–DDA funding. Coverage and authorization requirements vary by plan, so call (360) 622-2253 and we will help you verify your benefits.",
+      },
+      {
+        question: "Who oversees my child's ABA program?",
+        answer:
+          "Strides is locally owned and operated by Board Certified Behavior Analysts who stay actively involved in clinical oversight. We prioritize consistent, engaged supervision and meaningful in-person support rather than relying heavily on telehealth models.",
+      },
+      {
+        question: "How do we get started with ABA services?",
+        answer:
+          "Request an intake through our Google Form or call (360) 622-2253. From there, our team walks you through assessments, insurance authorizations, funding options, and service recommendations step by step.",
+      },
+    ],
   },
   {
     slug: "wa-dda",
     title: "WA DDA Services",
+    seoTitle: "WA DDA Services & Positive Behavior Support Plans | Vancouver",
     navLabel: "WA DDA Services",
     icon: HeartHandshake,
     tagline: "Support Built Around Real Life",
@@ -171,10 +209,39 @@ export const SERVICES: Service[] = [
         "At Strides, we believe individuals deserve support systems built around possibility, not limitations. Our role is not simply to manage challenges, but to help individuals and the people supporting them build safer, more connected, and more independent lives over time.",
       ],
     },
+    faqs: [
+      {
+        question: "What is a positive behavior support plan (PBSP)?",
+        answer:
+          "A positive behavior support plan is an individualized, written plan built from a functional assessment. Instead of only reacting to challenging behavior, it lays out proactive strategies, skill-building goals, communication supports, and environmental changes that caregivers and staff can use consistently across settings — with the goal of improving quality of life, not just reducing behaviors.",
+      },
+      {
+        question: "What services does Strides provide through WA DDA?",
+        answer:
+          "We provide staff and family consultation, life skills services, stabilization services, community respite, and functional assessments with positive behavior support plans — a connected continuum that can evolve as an individual's needs change.",
+      },
+      {
+        question: "Which Washington counties do you serve?",
+        answer:
+          "Our WA DDA services cover Clark and Cowlitz Counties from our East Vancouver center. Spanish-speaking and ASL clinicians are available.",
+      },
+      {
+        question: "What are stabilization services?",
+        answer:
+          "Stabilization services support individuals and their support systems during periods of increased behavioral, emotional, environmental, or placement-related challenges. The goal is not short-term crisis response alone — it is building sustainable systems that improve safety, reduce overwhelm, and support long-term success.",
+      },
+      {
+        question: "What do life skills services work on?",
+        answer:
+          "Life skills services help individuals build the abilities needed for daily life: communication, coping and emotional regulation, community safety, daily living skills, social interaction, self-advocacy, routine building, and independence at home and in the community.",
+      },
+    ],
   },
   {
     slug: "autism-diagnostic-assessments",
     title: "Autism Diagnostic Assessments",
+    seoTitle:
+      "Autism Testing & Evaluation — Vancouver WA & Portland OR | $1,495 Flat Fee",
     navLabel: "Autism Diagnostics",
     icon: ScanEye,
     tagline: "A Smarter, More Connected Approach to Autism Evaluation",
@@ -222,10 +289,38 @@ export const SERVICES: Service[] = [
         body: "For individuals receiving ABA services through Strides, reassessments using EarliPoint™ technology are included every 6 months, allowing families and clinicians to monitor objective developmental progress over time.",
       },
     ],
+    faqs: [
+      {
+        question: "How much does an autism evaluation cost at Strides?",
+        answer:
+          "Our autism diagnostic assessment is a $1,495 flat fee — one transparent price, with no surprise add-ons. Comprehensive assessments are also available upon consultation. Call (360) 622-2253 with any questions about what the fee covers.",
+      },
+      {
+        question: "How long does autism testing take?",
+        answer:
+          "Families can complete the assessment process in as little as 2 weeks, compared to the months-long waitlists common for autism evaluations. That speed matters — earlier answers mean earlier access to intervention during critical developmental windows.",
+      },
+      {
+        question: "What ages do you evaluate?",
+        answer:
+          "The FDA-authorized EarliPoint™ eye-tracking evaluation is designed for children up to age 8. Our integrated clinical team — MDs, PsyD-level clinicians, and Board Certified Behavior Analysts — completes evaluations across a range of ages, so contact us to discuss the right assessment path for your family.",
+      },
+      {
+        question: "Is autism testing covered by insurance?",
+        answer:
+          "Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, along with Oregon DHS–DDS and Washington DSHS–DDA funding. Coverage for diagnostic testing varies by plan, so call (360) 622-2253 to verify your benefits. Many families choose the $1,495 flat fee to skip authorization delays entirely.",
+      },
+      {
+        question: "What areas do you serve near me?",
+        answer:
+          "Our diagnostic clinic is located at 204 SE Stonemill Drive, STE 270 in East Vancouver, WA. Families come to us from Vancouver, Camas, and across Clark County, as well as the Portland, OR metro area — many Portland families cross the river for the shorter timeline.",
+      },
+    ],
   },
   {
     slug: "or-dds",
     title: "Oregon DDS Services",
+    seoTitle: "Oregon DDS Services — Behavior Consultation & PBSP | Strides",
     navLabel: "Oregon DDS",
     icon: ClipboardList,
     tagline: "Individualized Support Systems Built for Real Life",
@@ -292,6 +387,33 @@ export const SERVICES: Service[] = [
         "At Strides, we believe every individual deserves support built around possibility, dignity, and meaningful progress. Our role is not simply to react to difficult moments — it is to help build safer, more sustainable systems that allow individuals and the people supporting them to move forward with greater confidence, stability, and connection.",
       ],
     },
+    faqs: [
+      {
+        question: "What is a positive behavior support plan (PBSP)?",
+        answer:
+          "A positive behavior support plan is an individualized, written plan developed from a functional behavior assessment. It focuses on proactive strategies rather than reaction: skill development, communication supports, environmental modifications, safety planning, crisis prevention, and consistency across caregivers and staff — all designed to be sustainable long-term.",
+      },
+      {
+        question: "What is a functional behavior assessment (FBA)?",
+        answer:
+          "An FBA is a comprehensive assessment designed to understand the factors influencing behavior — environmental challenges, communication barriers, and support needs impacting daily life. It is the foundation the PBSP is built on, and at Strides it is individualized, collaborative, and focused on practical strategies.",
+      },
+      {
+        question: "What Oregon DDS services does Strides provide?",
+        answer:
+          "We complete functional behavior assessments, develop positive behavior support plans, and provide ongoing PBSP maintenance and behavioral consultation — including caregiver coaching, coordination with provider teams, crisis prevention support, and help navigating transitions.",
+      },
+      {
+        question: "Which Oregon counties do you serve?",
+        answer:
+          "Our Oregon DDS services are available in all counties. Spanish- and Amharic-speaking clinicians and ASL clinicians are available.",
+      },
+      {
+        question: "What happens after a PBSP is written?",
+        answer:
+          "Support needs evolve, so plans should too. Our team reviews progress and outcomes, updates support strategies, coaches caregivers and staff, and collaborates with provider teams as needs, environments, and goals change over time.",
+      },
+    ],
   },
   {
     slug: "consultation-training",
@@ -372,6 +494,7 @@ export const SERVICES: Service[] = [
   {
     slug: "social-groups-respite",
     title: "Social Groups & Community Respite",
+    seoTitle: "Social Skills Groups & Respite Care — Vancouver WA | Strides",
     navLabel: "Social & Respite",
     icon: Users,
     tagline: "Supportive Community Experiences Designed with Purpose",
@@ -429,6 +552,33 @@ export const SERVICES: Service[] = [
           "Supervised by trained behavioral health staff",
           "Limited spots — complete intake today",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Where can I find social skills groups near me in Vancouver, WA?",
+        answer:
+          "Strides runs structured social skills groups at our East Vancouver center at 204 SE Stonemill Drive, STE 270, Vancouver, WA 98684. Families join us from Vancouver, Camas, Clark County, and the Portland, OR metro. Groups are facilitated by behavioral health professionals — not just supervised free time.",
+      },
+      {
+        question: "How much do social groups cost?",
+        answer:
+          "Social groups run as 4-hour sessions: try one for $75, buy four for $240, or ten for $500. Call (360) 622-2253 or request an intake to check current group openings.",
+      },
+      {
+        question: "What's the difference between social groups and community respite?",
+        answer:
+          "Social groups are structured sessions built around guided peer interaction and clinically informed social skill development. Community respite gives caregivers trusted support while individuals take part in structured recreational, social, and community-based activities — and it can be funded through WA DDA waiver funds. Both share the same supportive environment and professional staff.",
+      },
+      {
+        question: "Can DDA waiver funds pay for respite?",
+        answer:
+          "Yes — our community respite services are structured to use Washington DDA waiver funding. Eligibility depends on the individual's DDA plan, so contact our team at Respite@StridesTherapeutics.com or (360) 622-2253 and we'll help you confirm what applies.",
+      },
+      {
+        question: "What skills do the groups help build?",
+        answer:
+          "Participants work on friendships and social confidence, communication, emotional regulation, flexibility and problem-solving, community participation, and independence in group settings.",
       },
     ],
   },

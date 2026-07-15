@@ -62,6 +62,18 @@ export const POSTAL = {
   ],
 };
 
+// Verified public profiles for Organization sameAs (see
+// seoagent/clients/strides/entity-assets.md — confirmed 2026-07-14).
+export const PROFILES = [
+  "https://www.linkedin.com/company/strides-therapeutic-services/",
+  "https://www.instagram.com/strides_therapeutic_services/",
+  "https://www.google.com/maps/search/?api=1&query=Strides%20Therapeutic%20Services&query_place_id=ChIJBTcBC6aplVQRnnpshkUGOsc",
+  "https://npiregistry.cms.hhs.gov/provider-view/1992444335",
+];
+
+// Exact clinic coordinates (from the Google Business Profile listing).
+export const GEO = { latitude: 45.62125, longitude: -122.53489 };
+
 export type NavItem = { label: string; href: string };
 
 export const NAV: NavItem[] = [
