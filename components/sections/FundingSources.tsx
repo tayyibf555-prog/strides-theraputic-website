@@ -38,6 +38,13 @@ export function FundingSources() {
         <h2 className="font-display text-2xl font-medium text-ink">
           We Accept Most Funding Sources
         </h2>
+        {/* Text version of the payer list so search engines and AI assistants
+            can read it (the logos alone aren't extractable). */}
+        <p className="mx-auto mt-4 max-w-3xl text-muted">
+          We accept PacificSource, BlueCross BlueShield, Aetna, Cigna,
+          UnitedHealthcare, Kaiser Permanente, TRICARE, Oregon DHS–DDS, and
+          Washington DSHS–DDA funding.
+        </p>
       </Reveal>
       <div className="marquee group relative mt-10 -mx-5 overflow-hidden lg:-mx-8">
         <div className="marquee-track flex w-max items-center gap-6 py-2">

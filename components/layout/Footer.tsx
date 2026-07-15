@@ -95,7 +95,15 @@ export function Footer() {
               © {new Date().getFullYear()} Strides Therapeutic Services. All
               rights reserved.
             </p>
-            <p>{CONTACT.responseNote}</p>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/privacy"
+                className="transition-colors hover:text-cream"
+              >
+                Privacy Policy
+              </Link>
+              <p>{CONTACT.responseNote}</p>
+            </div>
           </div>
         </div>
       </div>
