@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CONTACT } from "@/lib/site";
 import { articleSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import {
   ArticleAnswer,
   ArticleBody,
@@ -148,9 +148,12 @@ export default function MedicaidAbaCoveragePage() {
             for families who can’t afford to wait.
           </p>
           <p>Here’s how the whole system works, piece by piece.</p>
-          <ImagePlaceholder
-            label="Family funding paperwork photography"
-            className="aspect-[16/9] w-full"
+          <Image
+            src="/images/articles/medicaid-hero.png"
+            alt="Illustration of a parent at a kitchen table sorting through Medicaid and insurance paperwork for ABA therapy funding"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
           />
 
           <h2>How Medicaid Coverage for ABA Therapy Actually Works</h2>
@@ -410,9 +413,12 @@ export default function MedicaidAbaCoveragePage() {
             enrollment. They fund different things, and having both open gives
             you more options.
           </p>
-          <ImagePlaceholder
-            label="ABA session photography"
-            className="aspect-[16/9] w-full"
+          <Image
+            src="/images/articles/medicaid-inline.png"
+            alt="Illustration of a behavior technician and a young child playing with blocks together during an ABA therapy session"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
           />
 
           <h2>Stuck on a Waitlist? The $1,495 Fast-Track Assessment</h2>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CONTACT } from "@/lib/site";
 import { articleSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import {
   ArticleAnswer,
   ArticleBody,
@@ -120,9 +120,12 @@ export default function AdultAutismDiagnosisVancouverPage() {
             right on time for the version of autism understanding that actually
             includes adults.
           </p>
-          <ImagePlaceholder
-            label="East Vancouver clinic exterior"
-            className="aspect-[16/9] w-full"
+          <Image
+            src="/images/articles/adult-hero.png"
+            alt="Illustration of the Strides clinic building exterior in East Vancouver, Washington, with trees and a welcoming entrance"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
           />
 
           <h2>Why so many adults are seeking a diagnosis now</h2>
@@ -290,9 +293,12 @@ export default function AdultAutismDiagnosisVancouverPage() {
               wait time difference alone justifies it.
             </li>
           </ul>
-          <ImagePlaceholder
-            label="Clinic location map"
-            className="aspect-[16/9] w-full"
+          <Image
+            src="/images/articles/adult-inline.png"
+            alt="Illustration of a stylized street map marking the Strides clinic location in Vancouver, WA"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
           />
 
           <h2>Cost, and the waitlist problem</h2>
