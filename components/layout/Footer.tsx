@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { CONTACT, NAV } from "@/lib/site";
-import { SERVICES } from "@/lib/content";
+import { ARTICLES, SERVICES } from "@/lib/content";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -38,6 +38,21 @@ export function Footer() {
                   className="text-cream/55 transition-colors hover:text-cream"
                 >
                   {s.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <h3 className="mt-7 font-display text-sm font-semibold uppercase tracking-[0.2em] text-cream/80">
+            Resources
+          </h3>
+          <ul className="mt-4 space-y-2.5 text-sm">
+            {ARTICLES.map((a) => (
+              <li key={a.path}>
+                <Link
+                  href={a.path}
+                  className="text-cream/55 transition-colors hover:text-cream"
+                >
+                  {a.label}
                 </Link>
               </li>
             ))}

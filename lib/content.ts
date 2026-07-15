@@ -845,3 +845,26 @@ export const CONTACT_PAGE = {
     body: "Families and providers often reach out to us during overwhelming or uncertain moments. Whether you are seeking answers, support, or a more comprehensive approach to care, our team is here to help you understand your options and identify meaningful next steps.",
   },
 };
+
+// Long-form SEO content pages (blog / insurance / location guides). Used by
+// the sitemap and footer so every new article is discoverable + internally
+// linked the moment it ships.
+export type Article = {
+  path: string;
+  label: string; // short label for footer / internal link lists
+};
+
+export const ARTICLES: Article[] = [
+  {
+    path: "/blog/how-much-does-an-autism-evaluation-cost",
+    label: "Autism Evaluation Costs",
+  },
+  {
+    path: "/insurance/does-medicaid-cover-aba-therapy",
+    label: "Medicaid & ABA Therapy",
+  },
+  {
+    path: "/adult-autism-diagnosis/vancouver-wa",
+    label: "Adult Autism Diagnosis",
+  },
+];
