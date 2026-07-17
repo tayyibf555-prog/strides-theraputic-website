@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, BadgeCheck, MapPin, Languages, Tag } from "lucide-react";
+import { ArrowLeft, ArrowRight, BadgeCheck, MapPin, Languages, Tag } from "lucide-react";
 import { SERVICES, getService } from "@/lib/content";
 import { serviceSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -266,6 +266,32 @@ export default async function ServiceDetailPage({
 
       {/* FAQ band (also emitted as FAQPage JSON-LD above) */}
       {faqs && faqs.length > 0 && <FaqSection faqs={faqs} />}
+
+      {/* Related guides — links this money page down into the content silo */}
+      {service.guides && service.guides.length > 0 && (
+        <Section tone="cream-deep">
+          <SectionHeading
+            align="center"
+            eyebrow="Guides & Resources"
+            title="Answers families ask us for"
+          />
+          <RevealGroup className="mx-auto mt-10 flex max-w-3xl flex-col gap-4">
+            {service.guides.map((g) => (
+              <RevealItem key={g.path}>
+                <Link
+                  href={g.path}
+                  className="group flex items-center justify-between gap-4 rounded-card bg-cream p-5 shadow-sm ring-1 ring-sage-deep/50 transition-all hover:-translate-y-0.5 hover:shadow-md lg:p-6"
+                >
+                  <span className="font-display text-lg font-semibold text-ink transition-colors group-hover:text-moss">
+                    {g.label}
+                  </span>
+                  <ArrowRight className="h-5 w-5 shrink-0 text-moss transition-transform group-hover:translate-x-1" />
+                </Link>
+              </RevealItem>
+            ))}
+          </RevealGroup>
+        </Section>
+      )}
 
       {/* CTA */}
       <SectionBand title="Ready to take the next step?" />

@@ -64,11 +64,19 @@ export type Service = {
   programs?: Program[];
   // Rendered as an on-page FAQ band + FAQPage schema when present.
   faqs?: Faq[];
+  // Related long-form guides. Rendered as a "Guides & Resources" band so
+  // money pages link down into the content silo (interlinking audit 2026-07-17).
+  guides?: { path: string; label: string }[];
 };
 
 export const SERVICES: Service[] = [
   {
     slug: "aba-therapy",
+    guides: [
+      { path: "/blog/aba-therapy-for-toddlers", label: "ABA Therapy for Toddlers: A Parent\u2019s Guide" },
+      { path: "/blog/does-insurance-cover-aba-therapy", label: "Does Insurance Cover ABA Therapy?" },
+      { path: "/insurance/does-medicaid-cover-aba-therapy", label: "Medicaid & ABA Therapy in WA and OR" },
+    ],
     title: "ABA Therapy",
     seoTitle: "ABA Therapy in Clinic, Home & School — Vancouver WA | Strides",
     navLabel: "ABA Therapy",
@@ -134,6 +142,10 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "wa-dda",
+    guides: [
+      { path: "/insurance/does-medicaid-cover-aba-therapy", label: "Medicaid vs. DDA: How the Funding Paths Differ" },
+      { path: "/blog/does-insurance-cover-aba-therapy", label: "Does Insurance Cover ABA Therapy?" },
+    ],
     title: "WA DDA Services",
     seoTitle: "WA DDA Services & Positive Behavior Support Plans | Vancouver",
     navLabel: "WA DDA Services",
@@ -239,6 +251,11 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "autism-diagnostic-assessments",
+    guides: [
+      { path: "/blog/how-much-does-an-autism-evaluation-cost", label: "How Much Does an Autism Assessment Cost?" },
+      { path: "/blog/aba-therapy-for-toddlers", label: "ABA Therapy for Toddlers: A Parent\u2019s Guide" },
+      { path: "/blog/does-insurance-cover-aba-therapy", label: "Does Insurance Cover ABA Therapy?" },
+    ],
     title: "Autism Diagnostic Assessments",
     seoTitle:
       "Autism Testing & Evaluation — Vancouver WA & Portland OR | $795 Flat Fee",
@@ -319,6 +336,10 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "or-dds",
+    guides: [
+      { path: "/insurance/does-medicaid-cover-aba-therapy", label: "Medicaid & ABA Therapy in WA and OR" },
+      { path: "/blog/does-insurance-cover-aba-therapy", label: "Does Insurance Cover ABA Therapy?" },
+    ],
     title: "Oregon DDS Services",
     seoTitle: "Oregon DDS Services — Behavior Consultation & PBSP | Strides",
     navLabel: "Oregon DDS",
@@ -493,6 +514,9 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "social-groups-respite",
+    guides: [
+      { path: "/blog/aba-therapy-for-toddlers", label: "ABA Therapy for Toddlers: A Parent\u2019s Guide" },
+    ],
     title: "Social Groups & Community Respite",
     seoTitle: "Social Skills Groups & Respite Care — Vancouver WA | Strides",
     navLabel: "Social & Respite",
