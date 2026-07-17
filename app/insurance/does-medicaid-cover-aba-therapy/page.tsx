@@ -18,7 +18,7 @@ import {
 const PATH = "/insurance/does-medicaid-cover-aba-therapy";
 const TITLE = "Does Medicaid Cover ABA Therapy? WA & OR Guide (2026)";
 const DESCRIPTION =
-  "Does Medicaid cover ABA therapy? Yes, for eligible children in all 50 states. What Apple Health & OHP require, plus a $1,495 two-week fast-track option.";
+  "Does Medicaid cover ABA therapy? Yes, for eligible children in all 50 states. What Apple Health & OHP require, plus a $795 two-week fast-track option.";
 const PUBLISHED = "2026-07-14";
 const UPDATED_LABEL = "July 14, 2026";
 
@@ -38,7 +38,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Does Medicaid cover autism testing too, or just ABA therapy?",
     answer:
-      "Under EPSDT, medically necessary diagnostic services for children under 21 are covered, and that generally includes autism diagnostic evaluations. Each state controls which providers can perform a covered evaluation, and appointment availability is often the real constraint. If the covered pathway means months of waiting, Strides' $1,495 flat-fee assessment is typically completed in as little as two weeks.",
+      "Under EPSDT, medically necessary diagnostic services for children under 21 are covered, and that generally includes autism diagnostic evaluations. Each state controls which providers can perform a covered evaluation, and appointment availability is often the real constraint. If the covered pathway means months of waiting, Strides' $795 flat-fee assessment is typically completed in as little as two weeks.",
   },
   {
     question: "Are there age limits on Medicaid ABA coverage?",
@@ -105,6 +105,7 @@ export default function MedicaidAbaCoveragePage() {
         eyebrow="Insurance & Funding Guide"
         title="Does Medicaid Cover ABA Therapy? What Families in Washington and Oregon Need to Know"
         updated={UPDATED_LABEL}
+        reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
       <Section tone="cream">
@@ -142,7 +143,7 @@ export default function MedicaidAbaCoveragePage() {
             through <strong>Washington DSHS-DDA and Oregon DHS-DDS</strong>,
             and we offer a{" "}
             <strong>
-              $1,495 flat-fee diagnostic assessment completed in as little as
+              $795 flat-fee diagnostic assessment completed in as little as
               two weeks
             </strong>{" "}
             for families who can’t afford to wait.
@@ -282,14 +283,16 @@ export default function MedicaidAbaCoveragePage() {
           </ul>
           <p>
             <strong>
-              Strides is not currently a confirmed Apple Health payer.
+              Apple Health participation is plan-specific and changes over
+              time, so call before you assume anything either way.
             </strong>{" "}
-            Our confirmed insurance list includes PacificSource, BlueCross
-            BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and
-            TRICARE, along with the state developmental disability programs
-            below. If you’re on Apple Health, call us at{" "}
+            Strides’ confirmed insurance list includes PacificSource,
+            BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser
+            Permanente, and TRICARE, along with the state developmental
+            disability programs below. If you’re on Apple Health, call us at{" "}
             <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> and we’ll tell you
-            exactly where things stand and what your options are.
+            exactly where things stand for your specific managed care plan and
+            what your options are.
           </p>
 
           <h2>Oregon: OHP and ABA Therapy</h2>
@@ -421,7 +424,7 @@ export default function MedicaidAbaCoveragePage() {
             className="rounded-card w-full h-auto"
           />
 
-          <h2>Stuck on a Waitlist? The $1,495 Fast-Track Assessment</h2>
+          <h2>Stuck on a Waitlist? The $795 Fast-Track Assessment</h2>
           <p>
             Every funding path above shares one gate: the diagnosis. And
             diagnosis is where the system is slowest. Hospital-based autism
@@ -435,7 +438,7 @@ export default function MedicaidAbaCoveragePage() {
           </p>
           <ul>
             <li>
-              <strong>$1,495 flat fee.</strong> One number, no surprise
+              <strong>$795 flat fee.</strong> One number, no surprise
               billing.
             </li>
             <li>
@@ -522,7 +525,7 @@ export default function MedicaidAbaCoveragePage() {
             Certified Behavior Analysts and serves families across Vancouver,
             Camas, Clark County, and the Portland metro in clinic, home,
             school, and community settings. If a diagnosis is what’s standing
-            between your child and services, ask about the $1,495 two-week
+            between your child and services, ask about the $795 two-week
             assessment.
           </p>
         }
