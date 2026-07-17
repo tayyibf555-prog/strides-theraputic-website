@@ -48,6 +48,14 @@ const legacyRedirects = [
   },
   // Wix service-page pattern (none had impressions, kept as a safety net).
   { source: "/service-page/:slug*", destination: "/services", permanent: true },
+  // Adult-diagnosis page retired 2026-07-16: client confirmed diagnostics
+  // serve children up to age 8 only. Page was live ~2 days; redirect any
+  // crawled/linked traffic to the diagnostics pillar.
+  {
+    source: "/adult-autism-diagnosis/:slug*",
+    destination: "/services/autism-diagnostic-assessments",
+    permanent: true,
+  },
 ];
 
 const nextConfig: NextConfig = {

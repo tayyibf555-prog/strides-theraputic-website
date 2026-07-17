@@ -23,13 +23,29 @@ function postalAddress() {
 }
 
 // A BCBA/clinician as a schema.org Person with their credentials expressed as
-// EducationalOccupationalCredential. Add `licenseNumber` once the client
-// provides BCBA / LBA license numbers.
+// EducationalOccupationalCredential. License numbers (client-confirmed) are
+// attached as credential identifiers where provided.
 function clinician(member: TeamMember) {
   const credentials = (member.credentials || "")
     .split(",")
     .map((c) => c.trim())
     .filter(Boolean);
+
+  const licensed = (member.licenses || []).map((l) => ({
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: l.label,
+    identifier: l.number,
+  }));
+
+  const generic = credentials
+    // Skip categories already covered by a numbered license (e.g. BCBA, LBA).
+    .filter((c) => !licensed.some((l) => c.includes(l.credentialCategory)))
+    .map((c) => ({
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: c,
+    }));
+
+  const hasCredential = [...licensed, ...generic];
 
   return {
     "@type": "Person",
@@ -37,14 +53,7 @@ function clinician(member: TeamMember) {
     jobTitle: member.role,
     ...(member.image ? { image: `${SITE.url}${member.image}` } : {}),
     worksFor: { "@id": ORG_ID },
-    ...(credentials.length
-      ? {
-          hasCredential: credentials.map((c) => ({
-            "@type": "EducationalOccupationalCredential",
-            credentialCategory: c,
-          })),
-        }
-      : {}),
+    ...(hasCredential.length ? { hasCredential } : {}),
     ...(member.bio ? { description: member.bio } : {}),
   };
 }

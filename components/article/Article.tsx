@@ -9,17 +9,20 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 // location guides). Mirrors the service-detail template: moss hero band,
 // cream prose sections, sage FAQ block, and the recurring CTA bands.
 
-const REVIEWER = "Hannah Schmidt, M.S., BCBA, LBA";
+const DEFAULT_REVIEWER = "Hannah Schmidt, M.S., BCBA, LBA";
 
-// Moss hero band with title block + medical-review byline.
+// Moss hero band with title block + medical-review byline. The reviewer must
+// be the clinician who actually signed off on the piece (client-confirmed).
 export function ArticleHero({
   eyebrow,
   title,
   updated,
+  reviewer = DEFAULT_REVIEWER,
 }: {
   eyebrow: string;
   title: string;
   updated: string; // human-readable date, e.g. "July 14, 2026"
+  reviewer?: string;
 }) {
   return (
     <div className="bg-moss text-cream">
@@ -34,7 +37,7 @@ export function ArticleHero({
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-sm text-cream/85">
             <span className="inline-flex items-center gap-2">
               <ShieldCheck className="h-4 w-4 shrink-0 text-cream/70" />
-              Medically reviewed by {REVIEWER}
+              Medically reviewed by {reviewer}
             </span>
             <span className="inline-flex items-center gap-2">
               <CalendarDays className="h-4 w-4 shrink-0 text-cream/70" />

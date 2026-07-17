@@ -241,7 +241,7 @@ export const SERVICES: Service[] = [
     slug: "autism-diagnostic-assessments",
     title: "Autism Diagnostic Assessments",
     seoTitle:
-      "Autism Testing & Evaluation — Vancouver WA & Portland OR | $1,495 Flat Fee",
+      "Autism Testing & Evaluation — Vancouver WA & Portland OR | $795 Flat Fee",
     navLabel: "Autism Diagnostics",
     icon: ScanEye,
     tagline: "A Smarter, More Connected Approach to Autism Evaluation",
@@ -249,7 +249,7 @@ export const SERVICES: Service[] = [
       "Technology-enhanced autism evaluations with fast turnaround times.",
     cardCta: "Schedule an Assessment",
     ctaLabel: "Schedule an Assessment",
-    price: "$1,495 Flat Fee",
+    price: "$795 Flat Fee",
     intro: [
       "For many families, the diagnostic journey can feel overwhelming. Long waitlists. Limited communication. Minimal follow-up. Months — sometimes years — spent searching for answers while critical developmental windows continue to pass.",
       "At Strides, we believe autism evaluations should be different. Our diagnostic program combines experienced clinicians, advanced technology, and integrated care pathways to provide families with faster answers, clearer insight, and meaningful next steps.",
@@ -293,7 +293,7 @@ export const SERVICES: Service[] = [
       {
         question: "How much does an autism evaluation cost at Strides?",
         answer:
-          "Our autism diagnostic assessment is a $1,495 flat fee — one transparent price, with no surprise add-ons. Comprehensive assessments are also available upon consultation. Call (360) 622-2253 with any questions about what the fee covers.",
+          "Our autism diagnostic assessment is a $795 flat fee — one transparent price, with no surprise add-ons. Comprehensive assessments are also available upon consultation. Call (360) 622-2253 with any questions about what the fee covers.",
       },
       {
         question: "How long does autism testing take?",
@@ -303,12 +303,12 @@ export const SERVICES: Service[] = [
       {
         question: "What ages do you evaluate?",
         answer:
-          "The FDA-authorized EarliPoint™ eye-tracking evaluation is designed for children up to age 8. Our integrated clinical team — MDs, PsyD-level clinicians, and Board Certified Behavior Analysts — completes evaluations across a range of ages, so contact us to discuss the right assessment path for your family.",
+          "Strides’ diagnostic program evaluates children up to age 8, pairing the FDA-authorized EarliPoint™ eye-tracking evaluation with comprehensive clinical assessment by our integrated team of MDs, PsyD-level clinicians, and Board Certified Behavior Analysts. If your child is older, call us and we’ll point you in the right direction.",
       },
       {
         question: "Is autism testing covered by insurance?",
         answer:
-          "Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, along with Oregon DHS–DDS and Washington DSHS–DDA funding. Coverage for diagnostic testing varies by plan, so call (360) 622-2253 to verify your benefits. Many families choose the $1,495 flat fee to skip authorization delays entirely.",
+          "Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, along with Oregon DHS–DDS and Washington DSHS–DDA funding. Coverage for diagnostic testing varies by plan, so call (360) 622-2253 to verify your benefits. Many families choose the $795 flat fee to skip authorization delays entirely.",
       },
       {
         question: "What areas do you serve near me?",
@@ -594,7 +594,7 @@ export function getService(slug: string): Service | undefined {
 export type ServiceBubble = {
   title?: string;
   body: string[];
-  price?: string; // emphasized price line, e.g. "Flat Fee: $1,495"
+  price?: string; // emphasized price line, e.g. "Flat Fee: $795"
   note?: string; // small follow-up note under the price
 };
 
@@ -616,7 +616,7 @@ export const SERVICE_BUBBLES: Record<string, ServiceBubble> = {
       "Get assessed in as little as 2 weeks through our technology-enhanced autism evaluation program, combining experienced clinicians with innovative EarliTec Diagnostics EarliPoint™ technology.",
       "We believe families deserve more than long waitlists, vague answers, and being left to navigate next steps alone. Our multidisciplinary diagnostic team provides clear answers, individualized recommendations, and ongoing support designed to help families move forward with confidence.",
     ],
-    price: "Flat Fee: $1,495",
+    price: "Flat Fee: $795",
     note: "Comprehensive assessments also available upon consultation.",
   },
   "or-dds": {
@@ -796,6 +796,10 @@ export type TeamMember = {
   bio?: string;
   // Optional portrait photo; falls back to a placeholder when not set.
   image?: string;
+  // Professional license numbers (client-confirmed 2026-07-16). Rendered into
+  // Person schema as EducationalOccupationalCredential identifiers — never
+  // displayed in page copy.
+  licenses?: { label: string; number: string }[];
 };
 
 export const FOUNDERS: TeamMember[] = [
@@ -804,6 +808,10 @@ export const FOUNDERS: TeamMember[] = [
     credentials: "M.S., BCBA, LBA",
     role: "Founder | Executive Clinical Director",
     image: "/team/hannah-schmidt.jpg",
+    licenses: [
+      { label: "BCBA", number: "1-21-47929" },
+      { label: "WA LBA", number: "BA61162922" },
+    ],
     bio: "Hannah is a Board Certified Behavior Analyst with a master’s degree in Psychology and a specialization in Applied Behavior Analysis. Throughout her career, she has worked across clinic, home, school, foster care, and child welfare settings, supporting individuals with a wide range of behavioral and developmental needs. At the heart of Hannah’s work is compassion — she believes meaningful care begins with making individuals and families feel genuinely seen, supported, and valued.",
   },
   {
@@ -811,6 +819,11 @@ export const FOUNDERS: TeamMember[] = [
     credentials: "M.S., BCBA, LBA",
     role: "Founder | Executive Operations Director",
     image: "/team/elsie-herring.jpg",
+    licenses: [
+      { label: "BCBA", number: "1-20-40705" },
+      { label: "WA LBA", number: "BA61045773" },
+      { label: "OR LBA", number: "ABA-B-10222572" },
+    ],
     bio: "Elsie is a Board Certified Behavior Analyst with a master’s degree in Psychology and a specialization in Applied Behavior Analysis. Her background spans hospice advocacy, behavioral healthcare, and intensive ABA services across home, clinic, and community settings. Elsie is driven by innovation and clinical excellence, overseeing organizational strategy and leading Strides’ clinical development and research initiatives with a strong focus on mentoring the next generation of clinicians.",
   },
 ];
@@ -862,9 +875,5 @@ export const ARTICLES: Article[] = [
   {
     path: "/insurance/does-medicaid-cover-aba-therapy",
     label: "Medicaid & ABA Therapy",
-  },
-  {
-    path: "/adult-autism-diagnosis/vancouver-wa",
-    label: "Adult Autism Diagnosis",
   },
 ];
