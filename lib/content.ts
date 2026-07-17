@@ -876,4 +876,12 @@ export const ARTICLES: Article[] = [
     path: "/insurance/does-medicaid-cover-aba-therapy",
     label: "Medicaid & ABA Therapy",
   },
+  {
+    path: "/blog/aba-therapy-for-toddlers",
+    label: "ABA Therapy for Toddlers",
+  },
+  {
+    path: "/blog/does-insurance-cover-aba-therapy",
+    label: "Insurance & ABA Coverage",
+  },
 ];
