@@ -341,7 +341,11 @@ export default function MedicaidAbaCoveragePage() {
             weighing) commercial insurance. Short version: every state now
             requires state-regulated private health plans to cover ABA therapy
             for autism, though self-funded employer plans follow federal rather
-            than state rules, and cost-sharing varies widely.
+            than state rules, and cost-sharing varies widely. Our guide to{" "}
+            <Link href="/blog/does-insurance-cover-aba-therapy">
+              how private insurance covers ABA therapy
+            </Link>{" "}
+            walks through that side in detail.
           </p>
           <p>
             Strides directly accepts{" "}

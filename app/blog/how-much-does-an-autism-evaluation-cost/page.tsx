@@ -380,7 +380,16 @@ export default function AutismEvaluationCostPage() {
           </p>
           <p>
             This is the honest case for private-pay evaluation, and it’s why
-            Strides built its assessment program the way it did.
+            Strides built its assessment program the way it did. (For what
+            happens after diagnosis, see our guides to{" "}
+            <Link href="/blog/aba-therapy-for-toddlers">
+              ABA therapy for toddlers
+            </Link>{" "}
+            and{" "}
+            <Link href="/blog/does-insurance-cover-aba-therapy">
+              how insurance covers ABA
+            </Link>
+            .)
           </p>
 
           <h2>How Strides prices an autism evaluation</h2>

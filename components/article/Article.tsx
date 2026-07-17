@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CalendarDays, Phone, ShieldCheck } from "lucide-react";
 import { CONTACT } from "@/lib/site";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -37,7 +38,13 @@ export function ArticleHero({
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-sm text-cream/85">
             <span className="inline-flex items-center gap-2">
               <ShieldCheck className="h-4 w-4 shrink-0 text-cream/70" />
-              Medically reviewed by {reviewer}
+              Medically reviewed by{" "}
+              <Link
+                href="/team"
+                className="underline decoration-cream/40 underline-offset-4 transition-colors hover:decoration-cream"
+              >
+                {reviewer}
+              </Link>
             </span>
             <span className="inline-flex items-center gap-2">
               <CalendarDays className="h-4 w-4 shrink-0 text-cream/70" />
