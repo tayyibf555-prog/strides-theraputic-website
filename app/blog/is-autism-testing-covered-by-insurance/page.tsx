@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     type: "article",
     url: PATH,
+    images: [{ url: "/images/articles/testing-hero.png", width: 1600, height: 1600 }],
   },
 };
 
