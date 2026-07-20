@@ -177,8 +177,8 @@ export default function DoesInsuranceCoverAbaPage() {
             </li>
             <li>
               <strong>Self-funded employer plans</strong> (common at large
-              companies) follow federal ERISA rules instead of state mandates
-            , most still cover ABA, but the details are set by the employer.
+              companies) follow federal ERISA rules instead of state mandates,
+            most still cover ABA, but the details are set by the employer.
             </li>
             <li>
               <strong>TRICARE</strong> covers ABA through its own Autism Care
