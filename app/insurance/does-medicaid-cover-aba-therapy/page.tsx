@@ -10,6 +10,7 @@ import {
   ArticleCtaBand,
   ArticleEndCta,
   ArticleHero,
+  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -80,6 +81,16 @@ const FAQS: ArticleFaq[] = [
   },
 ];
 
+const TOC_SECTIONS = [
+  { id: "how-medicaid-coverage-for-aba-therapy-actually-works", label: "How Medicaid Coverage for ABA Therapy Actually Works" },
+  { id: "washington-apple-health-and-aba-therapy", label: "Washington: Apple Health and ABA Therapy" },
+  { id: "oregon-ohp-and-aba-therapy", label: "Oregon: OHP and ABA Therapy" },
+  { id: "what-does-insurance-cover-aba-therapy-means-beyond-medicaid", label: "What “Does Insurance Cover ABA Therapy” Means Beyond Medicaid" },
+  { id: "the-ddadds-route-the-medicaid-adjacent-funding-most-families", label: "The DDA/DDS Route: The Medicaid-Adjacent Funding Most Families Miss" },
+  { id: "stuck-on-a-waitlist-the-795-fast-track-assessment", label: "Stuck on a Waitlist? The $795 Fast-Track Assessment" },
+  { id: "how-to-verify-your-child-s-aba-coverage-5-steps", label: "How to Verify Your Child’s ABA Coverage: 5 Steps" },
+];
+
 export default function MedicaidAbaCoveragePage() {
   return (
     <>
@@ -136,6 +147,8 @@ export default function MedicaidAbaCoveragePage() {
               for evaluations, prior authorization, and approved hours.
             </p>
           </ArticleAnswer>
+
+          <ArticleToc sections={TOC_SECTIONS} />
           <p>
             Two things determine whether your child’s ABA gets covered: a
             formal autism diagnosis from a qualified provider, and a finding
@@ -169,7 +182,7 @@ export default function MedicaidAbaCoveragePage() {
             className="rounded-card w-full h-auto"
           />
 
-          <h2>How Medicaid Coverage for ABA Therapy Actually Works</h2>
+          <h2 id="how-medicaid-coverage-for-aba-therapy-actually-works">How Medicaid Coverage for ABA Therapy Actually Works</h2>
           <p>
             Medicaid is a joint federal-state program, which is why the answer
             to “does Medicaid cover ABA therapy” starts in federal law but ends
@@ -260,7 +273,7 @@ export default function MedicaidAbaCoveragePage() {
             a separate door. That route is covered below.
           </p>
 
-          <h2>Washington: Apple Health and ABA Therapy</h2>
+          <h2 id="washington-apple-health-and-aba-therapy">Washington: Apple Health and ABA Therapy</h2>
           <p>
             Apple Health is Washington’s Medicaid program, administered by the
             Washington State Health Care Authority (HCA). In general terms,
@@ -307,7 +320,7 @@ export default function MedicaidAbaCoveragePage() {
             what your options are.
           </p>
 
-          <h2>Oregon: OHP and ABA Therapy</h2>
+          <h2 id="oregon-ohp-and-aba-therapy">Oregon: OHP and ABA Therapy</h2>
           <p>
             The Oregon Health Plan is Oregon’s Medicaid program, and most
             members receive their care through a regional{" "}
@@ -349,7 +362,7 @@ export default function MedicaidAbaCoveragePage() {
 
       <Section tone="cream">
         <ArticleBody>
-          <h2>What “Does Insurance Cover ABA Therapy” Means Beyond Medicaid</h2>
+          <h2 id="what-does-insurance-cover-aba-therapy-means-beyond-medicaid">What “Does Insurance Cover ABA Therapy” Means Beyond Medicaid</h2>
           <p>
             Families searching for Medicaid answers often also have (or are
             weighing) commercial insurance. Short version: every state now
@@ -381,7 +394,7 @@ export default function MedicaidAbaCoveragePage() {
             .
           </p>
 
-          <h2>The DDA/DDS Route: The Medicaid-Adjacent Funding Most Families Miss</h2>
+          <h2 id="the-ddadds-route-the-medicaid-adjacent-funding-most-families">The DDA/DDS Route: The Medicaid-Adjacent Funding Most Families Miss</h2>
           <p>
             Here’s a distinction worth understanding, because it changes what’s
             available to your family: Medicaid’s medical benefit (Apple Health,
@@ -442,7 +455,7 @@ export default function MedicaidAbaCoveragePage() {
             className="rounded-card w-full h-auto"
           />
 
-          <h2>Stuck on a Waitlist? The $795 Fast-Track Assessment</h2>
+          <h2 id="stuck-on-a-waitlist-the-795-fast-track-assessment">Stuck on a Waitlist? The $795 Fast-Track Assessment</h2>
           <p>
             Every funding path above shares one gate: the diagnosis. And
             diagnosis is where the system is slowest. Hospital-based autism
@@ -496,7 +509,7 @@ export default function MedicaidAbaCoveragePage() {
             with and without insurance.
           </p>
 
-          <h2>How to Verify Your Child’s ABA Coverage: 5 Steps</h2>
+          <h2 id="how-to-verify-your-child-s-aba-coverage-5-steps">How to Verify Your Child’s ABA Coverage: 5 Steps</h2>
           <ol>
             <li>
               <strong>Confirm enrollment.</strong> Check that your child’s

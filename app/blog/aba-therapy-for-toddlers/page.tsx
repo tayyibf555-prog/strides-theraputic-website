@@ -9,6 +9,7 @@ import {
   ArticleCtaBand,
   ArticleEndCta,
   ArticleHero,
+  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -80,6 +81,14 @@ const FAQS: ArticleFaq[] = [
   },
 ];
 
+const TOC_SECTIONS = [
+  { id: "why-the-toddler-years-matter-so-much", label: "Why the toddler years matter so much" },
+  { id: "what-aba-actually-looks-like-at-2-3-and-4", label: "What ABA actually looks like at 2, 3, and 4" },
+  { id: "the-role-of-parents-bigger-than-you-think", label: "The role of parents (bigger than you think)" },
+  { id: "step-one-is-a-diagnosis-and-it-s-the-usual-bottleneck", label: "Step one is a diagnosis — and it’s the usual bottleneck" },
+  { id: "starting-toddler-aba-in-vancouver-wa-and-portland-or", label: "Starting toddler ABA in Vancouver, WA and Portland, OR" },
+];
+
 export default function AbaTherapyForToddlersPage() {
   return (
     <>
@@ -137,7 +146,9 @@ export default function AbaTherapyForToddlersPage() {
             </p>
           </ArticleAnswer>
 
-          <h2>Why the toddler years matter so much</h2>
+          <ArticleToc sections={TOC_SECTIONS} />
+
+          <h2 id="why-the-toddler-years-matter-so-much">Why the toddler years matter so much</h2>
           <p>
             Between roughly 18 months and age 5, a child&rsquo;s brain is doing
             its heaviest construction. Language, imitation, social
@@ -157,7 +168,7 @@ export default function AbaTherapyForToddlersPage() {
             time.
           </p>
 
-          <h2>What ABA actually looks like at 2, 3, and 4</h2>
+          <h2 id="what-aba-actually-looks-like-at-2-3-and-4">What ABA actually looks like at 2, 3, and 4</h2>
           <p>
             Forget the image of a child at a desk. Toddler ABA, done well,
             looks like play — because for a 2-year-old, play <em>is</em>{" "}
@@ -196,7 +207,7 @@ export default function AbaTherapyForToddlersPage() {
             while celebrating what makes them unique.&rdquo;
           </p>
 
-          <h2>The role of parents (bigger than you think)</h2>
+          <h2 id="the-role-of-parents-bigger-than-you-think">The role of parents (bigger than you think)</h2>
           <p>
             Toddler ABA is a team sport, and caregivers are on the field.
             Parent training and coaching are built into good early-intervention
@@ -224,7 +235,7 @@ export default function AbaTherapyForToddlersPage() {
 
       <Section tone="cream">
         <ArticleBody>
-          <h2>Step one is a diagnosis — and it&rsquo;s the usual bottleneck</h2>
+          <h2 id="step-one-is-a-diagnosis-and-it-s-the-usual-bottleneck">Step one is a diagnosis — and it&rsquo;s the usual bottleneck</h2>
           <p>
             Health plans won&rsquo;t authorize ABA without a formal autism
             diagnosis, which makes the diagnostic evaluation the gate to
@@ -262,7 +273,7 @@ export default function AbaTherapyForToddlersPage() {
             </li>
           </ul>
 
-          <h2>Starting toddler ABA in Vancouver, WA and Portland, OR</h2>
+          <h2 id="starting-toddler-aba-in-vancouver-wa-and-portland-or">Starting toddler ABA in Vancouver, WA and Portland, OR</h2>
           <p>
             Strides serves families across Vancouver, Camas, Clark County, and
             the Portland metro, with services in clinic, home, school, and

@@ -9,6 +9,7 @@ import {
   ArticleCtaBand,
   ArticleEndCta,
   ArticleHero,
+  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -82,6 +83,14 @@ const FAQS: ArticleFaq[] = [
   },
 ];
 
+const TOC_SECTIONS = [
+  { id: "why-most-plans-cover-aba-now", label: "Why most plans cover ABA now" },
+  { id: "the-three-things-every-plan-wants-before-approving-aba", label: "The three things every plan wants before approving ABA" },
+  { id: "how-to-verify-your-aba-benefits-10-minute-phone-call", label: "How to verify your ABA benefits (10-minute phone call)" },
+  { id: "what-you-ll-actually-pay", label: "What you’ll actually pay" },
+  { id: "if-coverage-falls-through", label: "If coverage falls through" },
+];
+
 export default function DoesInsuranceCoverAbaPage() {
   return (
     <>
@@ -141,7 +150,9 @@ export default function DoesInsuranceCoverAbaPage() {
             </p>
           </ArticleAnswer>
 
-          <h2>Why most plans cover ABA now</h2>
+          <ArticleToc sections={TOC_SECTIONS} />
+
+          <h2 id="why-most-plans-cover-aba-now">Why most plans cover ABA now</h2>
           <p>
             A decade-plus of state autism insurance mandates changed the
             landscape: every state now requires meaningful coverage of
@@ -179,7 +190,7 @@ export default function DoesInsuranceCoverAbaPage() {
             </li>
           </ul>
 
-          <h2>The three things every plan wants before approving ABA</h2>
+          <h2 id="the-three-things-every-plan-wants-before-approving-aba">The three things every plan wants before approving ABA</h2>
           <ol>
             <li>
               <strong>A formal autism diagnosis.</strong> Not a screening — a
@@ -220,7 +231,7 @@ export default function DoesInsuranceCoverAbaPage() {
 
       <Section tone="cream">
         <ArticleBody>
-          <h2>How to verify your ABA benefits (10-minute phone call)</h2>
+          <h2 id="how-to-verify-your-aba-benefits-10-minute-phone-call">How to verify your ABA benefits (10-minute phone call)</h2>
           <p>
             Call the member-services number on your insurance card and ask
             these questions. Write the answers down, along with the date and
@@ -240,7 +251,7 @@ export default function DoesInsuranceCoverAbaPage() {
             we&rsquo;ll translate.
           </p>
 
-          <h2>What you&rsquo;ll actually pay</h2>
+          <h2 id="what-you-ll-actually-pay">What you&rsquo;ll actually pay</h2>
           <p>
             &ldquo;Covered&rdquo; doesn&rsquo;t mean free. Once approved, ABA
             runs through your plan&rsquo;s normal cost-sharing: you pay toward
@@ -252,7 +263,7 @@ export default function DoesInsuranceCoverAbaPage() {
             around.
           </p>
 
-          <h2>If coverage falls through</h2>
+          <h2 id="if-coverage-falls-through">If coverage falls through</h2>
           <p>
             A denial isn&rsquo;t the end of the road. Plans must state the
             reason and offer an appeal path, and the most common causes —

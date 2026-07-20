@@ -80,6 +80,7 @@ export const NAV: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Our Services", href: "/services" },
+  { label: "Locations", href: "/locations" },
   { label: "Our Team", href: "/team" },
   { label: "Contact Us", href: "/contact" },
 ];
