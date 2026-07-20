@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CONTACT } from "@/lib/site";
 import { articleSchema, breadcrumbSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
@@ -9,6 +10,7 @@ import {
   ArticleCtaBand,
   ArticleEndCta,
   ArticleHero,
+  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -78,6 +80,17 @@ const FAQS: ArticleFaq[] = [
   },
 ];
 
+const TOC_SECTIONS = [
+  { id: "what-the-oregon-health-plan-is", label: "What the Oregon Health Plan Is" },
+  { id: "how-ohp-covers-aba-therapy", label: "How OHP Covers ABA Therapy: Two Layers of Law" },
+  { id: "referrals-and-prior-authorization-through-your-cco", label: "Referrals and Prior Authorization Through Your CCO" },
+  { id: "what-aba-therapy-looks-like-once-its-approved", label: "What ABA Therapy Looks Like Once It’s Approved" },
+  { id: "strides-and-ohp-where-things-stand", label: "Strides and OHP: Where Things Stand" },
+  { id: "the-dds-alternative-funding-path", label: "The DDS Alternative: Funding That Doesn’t Run Through Your CCO" },
+  { id: "how-to-verify-your-childs-ohp-aba-coverage", label: "How to Verify Your Child’s OHP ABA Coverage" },
+  { id: "stuck-on-a-waitlist-the-795-fast-track-assessment", label: "Stuck on a Waitlist? The $795 Fast-Track Assessment" },
+];
+
 export default function OhpAbaCoveragePage() {
   return (
     <>
@@ -139,6 +152,8 @@ export default function OhpAbaCoveragePage() {
               diagnosis, referral, prior authorization, then services.
             </p>
           </ArticleAnswer>
+
+          <ArticleToc sections={TOC_SECTIONS} />
           <p>
             That&rsquo;s the direct answer to &ldquo;does OHP cover ABA
             therapy.&rdquo; The rest of this guide is about the part search
@@ -159,10 +174,13 @@ export default function OhpAbaCoveragePage() {
             </strong>
             , for children up to age 8.
           </p>
-          {/* [IMG: Parent and young child crossing a Portland pedestrian
-              bridge on the way to an appointment. Alt: "Portland-area parent
-              and child heading to an autism services appointment covered by
-              the Oregon Health Plan"] */}
+          <Image
+            src="/images/articles/ohp-hero.png"
+            alt="Illustration of a family crossing an arched bridge toward a small clinic among evergreens, representing Oregon families reaching care"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
+          />
 
           <h2 id="what-the-oregon-health-plan-is">
             What the Oregon Health Plan Is
@@ -397,10 +415,13 @@ export default function OhpAbaCoveragePage() {
             families across the Portland metro today. Details are on our{" "}
             <Link href="/services/or-dds">Oregon DDS services page</Link>.
           </p>
-          {/* [IMG: Simple diagram showing two parallel funding doors, "OHP /
-              your CCO" and "Oregon DHS DDS", both leading toward a child
-              receiving support. Alt: "Diagram of the two Oregon funding paths
-              for autism services: OHP and DDS"] */}
+          <Image
+            src="/images/articles/ohp-inline.png"
+            alt="Illustration of three doors with one open and glowing, representing funding options for ABA therapy in Oregon"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
+          />
 
           <h2 id="how-to-verify-your-childs-ohp-aba-coverage">
             How to Verify Your Child&rsquo;s OHP ABA Coverage
