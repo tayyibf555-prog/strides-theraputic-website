@@ -9,8 +9,8 @@ import {
   ArticleBody,
   ArticleCtaBand,
   ArticleEndCta,
+  ArticleGrid,
   ArticleHero,
-  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -132,7 +132,7 @@ export default function AutismEvaluationFastTrackPage() {
         reviewer="Hannah Schmidt, M.S., BCBA, LBA"
       />
 
-      <Section tone="cream">
+      <ArticleGrid sections={TOC_SECTIONS}>
         <ArticleBody>
           <ArticleAnswer>
             <p>
@@ -151,8 +151,6 @@ export default function AutismEvaluationFastTrackPage() {
               while your child is still young enough for it to matter most.
             </p>
           </ArticleAnswer>
-
-          <ArticleToc sections={TOC_SECTIONS} />
           <Image
             src="/images/articles/fasttrack-hero.png"
             alt="Illustration of a parent and child walking toward an open doorway beside a calendar with two weeks circled"
@@ -297,7 +295,6 @@ export default function AutismEvaluationFastTrackPage() {
             videos.
           </p>
         </ArticleBody>
-      </Section>
 
       <ArticleCtaBand
         title="Ready to stop waiting for answers?"
@@ -305,7 +302,6 @@ export default function AutismEvaluationFastTrackPage() {
         ctaLabel="Schedule an Assessment"
       />
 
-      <Section tone="cream">
         <ArticleBody>
           <h2 id="what-as-little-as-2-weeks-means">
             What &ldquo;as little as 2 weeks&rdquo; honestly means
@@ -463,7 +459,7 @@ export default function AutismEvaluationFastTrackPage() {
             Stonemill Drive in Vancouver.
           </p>
         </ArticleBody>
-      </Section>
+      </ArticleGrid>
 
       <FaqSection faqs={FAQS} eyebrow="The 2-Week Evaluation" />
 

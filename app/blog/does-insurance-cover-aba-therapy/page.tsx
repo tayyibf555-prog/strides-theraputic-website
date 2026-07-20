@@ -8,8 +8,8 @@ import {
   ArticleBody,
   ArticleCtaBand,
   ArticleEndCta,
+  ArticleGrid,
   ArticleHero,
-  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -136,7 +136,7 @@ export default function DoesInsuranceCoverAbaPage() {
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
-      <Section tone="cream">
+      <ArticleGrid sections={TOC_SECTIONS}>
         <ArticleBody>
           <ArticleAnswer>
             <p>
@@ -154,8 +154,6 @@ export default function DoesInsuranceCoverAbaPage() {
              , plus Washington DDA and Oregon DDS funding.
             </p>
           </ArticleAnswer>
-
-          <ArticleToc sections={TOC_SECTIONS} />
 
           <h2 id="why-most-plans-cover-aba-now">Why most plans cover ABA now</h2>
           <p>
@@ -226,7 +224,6 @@ export default function DoesInsuranceCoverAbaPage() {
             </li>
           </ol>
         </ArticleBody>
-      </Section>
 
       <ArticleCtaBand
         title="Not sure what your plan covers?"
@@ -234,7 +231,6 @@ export default function DoesInsuranceCoverAbaPage() {
         ctaLabel="Request an Intake"
       />
 
-      <Section tone="cream">
         <ArticleBody>
           <h2 id="how-to-verify-your-aba-benefits-10-minute-phone-call">How to verify your ABA benefits (10-minute phone call)</h2>
           <p>
@@ -285,7 +281,7 @@ export default function DoesInsuranceCoverAbaPage() {
             supports that help people thrive.&rdquo;
           </p>
         </ArticleBody>
-      </Section>
+      </ArticleGrid>
 
       <FaqSection faqs={FAQS} eyebrow="Coverage Questions" />
 

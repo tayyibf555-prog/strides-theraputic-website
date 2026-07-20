@@ -9,8 +9,8 @@ import {
   ArticleBody,
   ArticleCtaBand,
   ArticleEndCta,
+  ArticleGrid,
   ArticleHero,
-  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -136,7 +136,7 @@ export default function MedicaidAbaCoveragePage() {
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
-      <Section tone="cream">
+      <ArticleGrid sections={TOC_SECTIONS}>
         <ArticleBody>
           <ArticleAnswer>
             <p>
@@ -152,8 +152,6 @@ export default function MedicaidAbaCoveragePage() {
               for evaluations, prior authorization, and approved hours.
             </p>
           </ArticleAnswer>
-
-          <ArticleToc sections={TOC_SECTIONS} />
           <p>
             Two things determine whether your child’s ABA gets covered: a
             formal autism diagnosis from a qualified provider, and a finding
@@ -358,14 +356,12 @@ export default function MedicaidAbaCoveragePage() {
             way.
           </p>
         </ArticleBody>
-      </Section>
 
       <ArticleCtaBand
         title="Not sure what your child’s plan covers?"
         body="Call Strides at (360) 622-2253 (Mon–Fri, 8:30 AM–4:30 PM) or request an intake online. We’ll walk through your funding situation honestly, including options we don’t bill directly."
       />
 
-      <Section tone="cream">
         <ArticleBody>
           <h2 id="what-does-insurance-cover-aba-therapy-means-beyond-medicaid">What “Does Insurance Cover ABA Therapy” Means Beyond Medicaid</h2>
           <p>
@@ -549,7 +545,7 @@ export default function MedicaidAbaCoveragePage() {
             </li>
           </ol>
         </ArticleBody>
-      </Section>
+      </ArticleGrid>
 
       <FaqSection faqs={FAQS} title="Frequently Asked Questions" />
 

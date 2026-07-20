@@ -9,8 +9,8 @@ import {
   ArticleBody,
   ArticleCtaBand,
   ArticleEndCta,
+  ArticleGrid,
   ArticleHero,
-  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -136,7 +136,7 @@ export default function AppleHealthAbaCoveragePage() {
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
-      <Section tone="cream">
+      <ArticleGrid sections={TOC_SECTIONS}>
         <ArticleBody>
           <ArticleAnswer>
             <p>
@@ -152,8 +152,6 @@ export default function AppleHealthAbaCoveragePage() {
               your Apple Health managed care plan.
             </p>
           </ArticleAnswer>
-
-          <ArticleToc sections={TOC_SECTIONS} />
           <p>
             So the short answer to &ldquo;does Apple Health cover ABA
             therapy&rdquo; is yes for eligible children. The longer answer is
@@ -341,14 +339,12 @@ export default function AppleHealthAbaCoveragePage() {
             uneventful.
           </p>
         </ArticleBody>
-      </Section>
 
       <ArticleCtaBand
         title="Not sure where to start with Apple Health?"
         body="Call Strides at (360) 622-2253 (Mon–Fri, 8:30 AM–4:30 PM) or request an intake online. We'll walk through your plan, your options, and the fastest realistic path to services, including routes we don't bill directly."
       />
 
-      <Section tone="cream">
         <ArticleBody>
           <h2 id="how-to-verify-your-childs-apple-health-aba-coverage">
             How to Verify Your Child&rsquo;s Apple Health ABA Coverage
@@ -502,7 +498,7 @@ export default function AppleHealthAbaCoveragePage() {
             with and without insurance.
           </p>
         </ArticleBody>
-      </Section>
+      </ArticleGrid>
 
       <FaqSection faqs={FAQS} title="Frequently Asked Questions" />
 

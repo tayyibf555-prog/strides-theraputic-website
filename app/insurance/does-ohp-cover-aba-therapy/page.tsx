@@ -9,8 +9,8 @@ import {
   ArticleBody,
   ArticleCtaBand,
   ArticleEndCta,
+  ArticleGrid,
   ArticleHero,
-  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -136,7 +136,7 @@ export default function OhpAbaCoveragePage() {
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
-      <Section tone="cream">
+      <ArticleGrid sections={TOC_SECTIONS}>
         <ArticleBody>
           <ArticleAnswer>
             <p>
@@ -152,8 +152,6 @@ export default function OhpAbaCoveragePage() {
               diagnosis, referral, prior authorization, then services.
             </p>
           </ArticleAnswer>
-
-          <ArticleToc sections={TOC_SECTIONS} />
           <p>
             That&rsquo;s the direct answer to &ldquo;does OHP cover ABA
             therapy.&rdquo; The rest of this guide is about the part search
@@ -340,14 +338,12 @@ export default function OhpAbaCoveragePage() {
             submits renewals early makes it invisible to you.
           </p>
         </ArticleBody>
-      </Section>
 
       <ArticleCtaBand
         title="Trying to make sense of your CCO's process?"
         body="Call Strides at (360) 622-2253 (Mon–Fri, 8:30 AM–4:30 PM) or request an intake online. We'll walk through your funding situation honestly, including options we don't bill directly."
       />
 
-      <Section tone="cream">
         <ArticleBody>
           <h2 id="strides-and-ohp-where-things-stand">
             Strides and OHP: Where Things Stand
@@ -517,7 +513,7 @@ export default function OhpAbaCoveragePage() {
             .
           </p>
         </ArticleBody>
-      </Section>
+      </ArticleGrid>
 
       <FaqSection faqs={FAQS} title="Frequently Asked Questions" />
 
