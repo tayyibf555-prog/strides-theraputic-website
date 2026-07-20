@@ -117,6 +117,11 @@ export default function IsAutismTestingCoveredByInsurancePage() {
         eyebrow="Insurance & Costs Guide"
         title="Is Autism Testing Covered by Insurance? What Parents Actually Pay"
         updated={UPDATED_LABEL}
+        crumbs={[
+          { name: "Home", path: "/" },
+              { name: "Parent Guides", path: "/blog" },
+              { name: "Is Autism Testing Covered by Insurance?", path: PATH },
+        ]}
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 

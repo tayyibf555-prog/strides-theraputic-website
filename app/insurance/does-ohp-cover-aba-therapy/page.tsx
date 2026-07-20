@@ -115,6 +115,11 @@ export default function OhpAbaCoveragePage() {
         eyebrow="Insurance & Funding Guide"
         title="Does OHP Cover ABA Therapy? What Oregon Health Plan Families Need to Know"
         updated={UPDATED_LABEL}
+        crumbs={[
+          { name: "Home", path: "/" },
+              { name: "Insurance & Funding", path: "/insurance" },
+              { name: "OHP & ABA", path: PATH },
+        ]}
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 

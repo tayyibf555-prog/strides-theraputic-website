@@ -5,6 +5,7 @@ import { CONTACT } from "@/lib/site";
 import { ARTICLES } from "@/lib/content";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
@@ -12,7 +13,7 @@ import { CtaButton } from "@/components/ui/CtaButton";
 export const metadata: Metadata = {
   title: "Parent Guides",
   description:
-    "Plain-English guides from the Strides clinical team — autism evaluation costs, insurance and Medicaid coverage, ABA therapy for toddlers, and more.",
+    "Plain-English guides from the Strides clinical team, autism evaluation costs, insurance and Medicaid coverage, ABA therapy for toddlers, and more.",
   alternates: { canonical: "/blog" },
 };
 
@@ -31,10 +32,14 @@ export default function BlogHubPage() {
         }}
       />
 
+      <div className="mx-auto max-w-6xl px-5 pt-6 lg:px-8">
+        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Parent Guides", path: "/blog" }]} />
+      </div>
+
       <SectionBand
         eyebrow="Parent Guides"
         title="Answers to the questions families actually ask"
-        subtitle="Written and clinically reviewed by the Strides team — costs, coverage, and what to expect, without the runaround."
+        subtitle="Written and clinically reviewed by the Strides team, costs, coverage, and what to expect, without the runaround."
       />
 
       <Section tone="cream">
@@ -76,7 +81,7 @@ export default function BlogHubPage() {
       <Section tone="cream">
         <Reveal className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-2xl text-lg text-muted">
-            Our team answers these questions on the phone every week — no
+            Our team answers these questions on the phone every week, no
             intake required to ask.
           </p>
           <div className="flex flex-col items-center gap-4">
@@ -87,7 +92,7 @@ export default function BlogHubPage() {
               href={CONTACT.phoneHref}
               className="inline-flex items-center gap-2 text-sm font-medium text-moss underline decoration-moss/30 underline-offset-4 hover:text-forest-deep"
             >
-              <Phone className="h-4 w-4" /> {CONTACT.phone} — {CONTACT.hours}
+              <Phone className="h-4 w-4" /> {CONTACT.phone}, {CONTACT.hours}
             </a>
           </div>
         </Reveal>
