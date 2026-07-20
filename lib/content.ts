@@ -258,7 +258,7 @@ export const SERVICES: Service[] = [
     ],
     title: "Autism Diagnostic Assessments",
     seoTitle:
-      "Autism Testing & Evaluation — Vancouver WA & Portland OR | $795 Flat Fee",
+      "Autism Testing & Evaluation — Vancouver WA & Portland OR | From $795",
     navLabel: "Autism Diagnostics",
     icon: ScanEye,
     tagline: "A Smarter, More Connected Approach to Autism Evaluation",
@@ -266,7 +266,7 @@ export const SERVICES: Service[] = [
       "Technology-enhanced autism evaluations with fast turnaround times.",
     cardCta: "Schedule an Assessment",
     ctaLabel: "Schedule an Assessment",
-    price: "$795 Flat Fee",
+    price: "Starting at $795",
     intro: [
       "For many families, the diagnostic journey can feel overwhelming. Long waitlists. Limited communication. Minimal follow-up. Months — sometimes years — spent searching for answers while critical developmental windows continue to pass.",
       "At Strides, we believe autism evaluations should be different. Our diagnostic program combines experienced clinicians, advanced technology, and integrated care pathways to provide families with faster answers, clearer insight, and meaningful next steps.",
@@ -310,7 +310,7 @@ export const SERVICES: Service[] = [
       {
         question: "How much does an autism evaluation cost at Strides?",
         answer:
-          "Our autism diagnostic assessment is a $795 flat fee — one transparent price, with no surprise add-ons. Comprehensive assessments are also available upon consultation. Call (360) 622-2253 with any questions about what the fee covers.",
+          "Our autism diagnostic assessment starts at $795 — one transparent price for the standard assessment, with no surprise add-ons. Comprehensive assessments are also available upon consultation. Call (360) 622-2253 with any questions about what the fee covers.",
       },
       {
         question: "How long does autism testing take?",
@@ -325,7 +325,7 @@ export const SERVICES: Service[] = [
       {
         question: "Is autism testing covered by insurance?",
         answer:
-          "Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, along with Oregon DHS–DDS and Washington DSHS–DDA funding. Coverage for diagnostic testing varies by plan, so call (360) 622-2253 to verify your benefits. Many families choose the $795 flat fee to skip authorization delays entirely.",
+          "Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, along with Oregon DHS–DDS and Washington DSHS–DDA funding. Coverage for diagnostic testing varies by plan, so call (360) 622-2253 to verify your benefits. Many families choose the private-pay assessment, starting at $795, to skip authorization delays entirely.",
       },
       {
         question: "What areas do you serve near me?",
@@ -618,7 +618,7 @@ export function getService(slug: string): Service | undefined {
 export type ServiceBubble = {
   title?: string;
   body: string[];
-  price?: string; // emphasized price line, e.g. "Flat Fee: $795"
+  price?: string; // emphasized price line, e.g. "Starting at $795"
   note?: string; // small follow-up note under the price
 };
 
@@ -640,7 +640,7 @@ export const SERVICE_BUBBLES: Record<string, ServiceBubble> = {
       "Get assessed in as little as 2 weeks through our technology-enhanced autism evaluation program, combining experienced clinicians with innovative EarliTec Diagnostics EarliPoint™ technology.",
       "We believe families deserve more than long waitlists, vague answers, and being left to navigate next steps alone. Our multidisciplinary diagnostic team provides clear answers, individualized recommendations, and ongoing support designed to help families move forward with confidence.",
     ],
-    price: "Flat Fee: $795",
+    price: "Starting at $795",
     note: "Comprehensive assessments also available upon consultation.",
   },
   "or-dds": {

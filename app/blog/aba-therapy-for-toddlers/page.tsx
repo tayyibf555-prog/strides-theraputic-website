@@ -42,7 +42,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Does my toddler need an autism diagnosis before starting ABA?",
     answer:
-      "For insurance-funded ABA, yes — health plans require a formal autism diagnosis before they authorize therapy. That makes the diagnostic evaluation the practical first step. Strides completes diagnostic assessments for children up to age 8 for a flat $795, with results in as little as two weeks, so the diagnosis doesn't become the bottleneck.",
+      "For insurance-funded ABA, yes — health plans require a formal autism diagnosis before they authorize therapy. That makes the diagnostic evaluation the practical first step. Strides completes diagnostic assessments for children up to age 8 starting at $795, with results in as little as two weeks, so the diagnosis doesn't become the bottleneck.",
   },
   {
     question: "How many hours of ABA does a toddler need?",
@@ -118,7 +118,7 @@ export default function AbaTherapyForToddlersPage() {
               months — and it&rsquo;s typically funded through health
               insurance once that diagnosis is in place. In the Vancouver, WA
               and Portland, OR area, Strides Therapeutic Services provides
-              both pieces: a <strong>$795 flat-fee diagnostic assessment</strong>{" "}
+              both pieces: a <strong>diagnostic assessment starting at $795</strong>{" "}
               with results in as little as two weeks, and{" "}
               <Link href="/services/aba-therapy">ABA therapy</Link> delivered
               in clinic, home, school, and community settings.
@@ -229,8 +229,9 @@ export default function AbaTherapyForToddlersPage() {
           </p>
           <ul>
             <li>
-              <strong>$795 flat fee</strong> — evaluation, written report, and
-              feedback session, no add-ons (here&rsquo;s{" "}
+              <strong>Starting at $795</strong> — the standard assessment covers
+              evaluation, written report, and feedback session with no
+              add-ons (here&rsquo;s{" "}
               <Link href="/blog/how-much-does-an-autism-evaluation-cost">
                 how that compares to typical evaluation costs
               </Link>
@@ -297,7 +298,7 @@ export default function AbaTherapyForToddlersPage() {
           <p>
             If you&rsquo;re seeing signs that worry you, you don&rsquo;t need
             to wait for someone else&rsquo;s waitlist to find out where you
-            stand. A Strides diagnostic assessment is a flat $795 with results
+            stand. A Strides diagnostic assessment starts at $795 with results
             in as little as two weeks, and our BCBA-led team serves toddlers
             across Vancouver, Camas, Clark County, and the Portland metro in
             clinic, home, and community settings.

@@ -18,7 +18,7 @@ import {
 const PATH = "/blog/how-much-does-an-autism-evaluation-cost";
 const TITLE = "How Much Does an Autism Assessment Cost? (2026)";
 const DESCRIPTION =
-  "Autism assessments typically run $1,000–$5,000 private-pay in the US. What drives the price, how insurance works, and Strides' $795 flat fee.";
+  "Autism assessments typically run $1,000–$5,000 private-pay in the US. What drives the price, how insurance works, and Strides' assessments starting at $795.";
 const PUBLISHED = "2026-07-14";
 const UPDATED_LABEL = "July 14, 2026";
 
@@ -48,7 +48,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "How much does an autism assessment cost without insurance?",
     answer:
-      "Private-pay evaluations in the US typically range from $1,000 to $5,000, with comprehensive evaluations most often in the $2,000–$3,000 range and neuropsychologist-led batteries at the higher end. Strides charges a flat $795 for a complete diagnostic assessment in Vancouver, WA.",
+      "Private-pay evaluations in the US typically range from $1,000 to $5,000, with comprehensive evaluations most often in the $2,000–$3,000 range and neuropsychologist-led batteries at the higher end. Strides' complete diagnostic assessments start at $795 in Vancouver, WA.",
   },
   {
     question: "Why are autism evaluations so expensive?",
@@ -166,7 +166,7 @@ export default function AutismEvaluationCostPage() {
                 </tr>
                 <tr>
                   <td>Private-pay diagnostic clinic (like Strides)</td>
-                  <td>$795 flat fee</td>
+                  <td>Starting at $795</td>
                   <td>As little as 2 weeks</td>
                 </tr>
                 <tr>
@@ -394,8 +394,11 @@ export default function AutismEvaluationCostPage() {
 
           <h2>How Strides prices an autism evaluation</h2>
           <p>
-            One number, no add-ons: <strong>$795 flat</strong>, covering the
-            full diagnostic assessment, and results in as little as two weeks
+            Starting at <strong>$795</strong> — the standard assessment is one
+            number with no add-ons, covering the full diagnostic evaluation,
+            written report, and feedback session; more comprehensive
+            evaluations are quoted up front at consultation. Results arrive in
+            as little as two weeks
             instead of the months-long waits common at regional centers. The
             evaluation is run by an integrated team of MDs, PsyD-level
             clinicians, and Board Certified Behavior Analysts, and for children
@@ -475,7 +478,7 @@ export default function AutismEvaluationCostPage() {
         body={
           <p>
             You don’t need to spend another season wondering. A Strides autism
-            diagnostic assessment is a flat $795, delivered by an integrated
+            diagnostic assessment starts at $795, delivered by an integrated
             MD, PsyD, and BCBA team, with results in as little as two weeks,
             and a plan for what comes next. Strides Therapeutic Services,{" "}
             {CONTACT.address}, {CONTACT.city}. Serving Vancouver, Camas, Clark

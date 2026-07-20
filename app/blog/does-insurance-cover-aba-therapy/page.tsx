@@ -37,7 +37,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Is ABA therapy covered without an autism diagnosis?",
     answer:
-      "Generally no. Health plans authorize ABA as a treatment for autism spectrum disorder, so a formal diagnosis from a qualified evaluator is the prerequisite. That's why the diagnostic evaluation is the practical first step for families — Strides completes assessments for children up to age 8 for a flat $795, with results in as little as two weeks.",
+      "Generally no. Health plans authorize ABA as a treatment for autism spectrum disorder, so a formal diagnosis from a qualified evaluator is the prerequisite. That's why the diagnostic evaluation is the practical first step for families — Strides completes assessments for children up to age 8 starting at $795, with results in as little as two weeks.",
   },
   {
     question: "How much does ABA cost with insurance?",
@@ -52,7 +52,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Does insurance cover the autism evaluation itself?",
     answer:
-      "Often yes — diagnostic testing is a covered medical service under many plans, subject to your cost-sharing and network rules. The practical constraint is usually access: covered evaluation slots can carry long waitlists. Many families choose a private-pay evaluation like Strides' $795 flat-fee assessment to get answers in weeks instead of months, then use insurance for therapy.",
+      "Often yes — diagnostic testing is a covered medical service under many plans, subject to your cost-sharing and network rules. The practical constraint is usually access: covered evaluation slots can carry long waitlists. Many families choose a private-pay evaluation like Strides' assessment starting at $795 to get answers in weeks instead of months, then use insurance for therapy.",
   },
   {
     question: "What if my plan denies ABA coverage?",
@@ -177,7 +177,7 @@ export default function DoesInsuranceCoverAbaPage() {
               <Link href="/services/autism-diagnostic-assessments">
                 diagnostic assessment
               </Link>{" "}
-              is a flat $795 with results in as little as two weeks for
+              starts at $795 with results in as little as two weeks for
               children up to age 8 (see{" "}
               <Link href="/blog/how-much-does-an-autism-evaluation-cost">
                 what autism evaluations usually cost
