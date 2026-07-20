@@ -21,6 +21,7 @@ const TITLE = "Is Autism Testing Covered by Insurance? (2026 Guide)";
 const DESCRIPTION =
   "Is autism testing covered by insurance? Usually, yes. How coverage works, what you'll owe, and a faster option starting at $795 in Vancouver, WA.";
 const PUBLISHED = "2026-07-20";
+const MODIFIED = "2026-07-20";
 const UPDATED_LABEL = "July 20, 2026";
 
 export const metadata: Metadata = {
@@ -105,6 +106,7 @@ export default function IsAutismTestingCoveredByInsurancePage() {
               description: DESCRIPTION,
               path: PATH,
               datePublished: PUBLISHED,
+              dateModified: MODIFIED,
             })
           ),
         }}

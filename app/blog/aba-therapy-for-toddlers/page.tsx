@@ -20,7 +20,8 @@ const TITLE = "ABA Therapy for Toddlers: What Parents Should Know (2026)";
 const DESCRIPTION =
   "What ABA therapy looks like for toddlers, when to start, and how it's funded, from the BCBA-owned team serving Vancouver WA and Portland OR.";
 const PUBLISHED = "2026-07-17";
-const UPDATED_LABEL = "July 17, 2026";
+const MODIFIED = "2026-07-20";
+const UPDATED_LABEL = "July 20, 2026";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -101,6 +102,7 @@ export default function AbaTherapyForToddlersPage() {
               description: DESCRIPTION,
               path: PATH,
               datePublished: PUBLISHED,
+              dateModified: MODIFIED,
             })
           ),
         }}

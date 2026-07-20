@@ -21,7 +21,8 @@ const TITLE = "How Much Does an Autism Assessment Cost? (2026)";
 const DESCRIPTION =
   "Autism assessments typically run $1,000–$5,000 private-pay in the US. What drives the price, how insurance works, and Strides' assessments starting at $795.";
 const PUBLISHED = "2026-07-14";
-const UPDATED_LABEL = "July 14, 2026";
+const MODIFIED = "2026-07-20";
+const UPDATED_LABEL = "July 20, 2026";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -94,6 +95,7 @@ export default function AutismEvaluationCostPage() {
               description: DESCRIPTION,
               path: PATH,
               datePublished: PUBLISHED,
+              dateModified: MODIFIED,
             })
           ),
         }}

@@ -20,7 +20,8 @@ const TITLE = "Does Insurance Cover ABA Therapy? 2026 Parent Guide";
 const DESCRIPTION =
   "Yes, most health plans cover ABA therapy for autism. What plans require, how to verify benefits, and the plans Strides accepts in Vancouver WA & Portland OR.";
 const PUBLISHED = "2026-07-17";
-const UPDATED_LABEL = "July 17, 2026";
+const MODIFIED = "2026-07-20";
+const UPDATED_LABEL = "July 20, 2026";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -103,6 +104,7 @@ export default function DoesInsuranceCoverAbaPage() {
               description: DESCRIPTION,
               path: PATH,
               datePublished: PUBLISHED,
+              dateModified: MODIFIED,
             })
           ),
         }}

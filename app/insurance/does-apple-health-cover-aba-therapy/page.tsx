@@ -21,6 +21,7 @@ const TITLE = "Does Apple Health Cover ABA Therapy? WA Guide (2026)";
 const DESCRIPTION =
   "Does Apple Health cover ABA therapy? Yes, for enrolled kids under 21. What WA Medicaid requires, how to verify, and a fast assessment starting at $795.";
 const PUBLISHED = "2026-07-20";
+const MODIFIED = "2026-07-20";
 const UPDATED_LABEL = "July 20, 2026";
 
 export const metadata: Metadata = {
@@ -103,6 +104,7 @@ export default function AppleHealthAbaCoveragePage() {
               description: DESCRIPTION,
               path: PATH,
               datePublished: PUBLISHED,
+              dateModified: MODIFIED,
             })
           ),
         }}
