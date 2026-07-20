@@ -1,29 +1,31 @@
 # Strides Therapeutic Services
 
-> Locally owned, BCBA-operated autism and behavioral health clinic at 204 SE Stonemill Drive, STE 270, Vancouver, WA 98684 — ABA therapy, autism diagnostic assessments ($1,495 flat fee, results in as little as 2 weeks), WA DDA and Oregon DDS services, consultation, and community programs serving Vancouver WA, Camas, Clark County, and the Portland OR metro. Phone: (360) 622-2253.
+> BCBA-owned autism and behavioral healthcare clinic in Vancouver, WA, serving Clark County and the Portland, OR metro. Services: ABA therapy (clinic, home, school, community), autism diagnostic assessments for children up to age 8 (starting at $795, results in as little as two weeks, EarliPoint(TM) eye-tracking + MD/PsyD/BCBA team), Washington DDA services, Oregon DDS services, consultation and training, social groups and community respite. Accepted insurance: PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, TRICARE, plus WA DSHS-DDA and Oregon DHS-DDS funding. Phone: (360) 622-2253. Address: 204 SE Stonemill Drive, STE 270, Vancouver, WA 98684.
 
 ## Services
+- [ABA Therapy](https://www.stridestherapeutics.com/services/aba-therapy): Individualized ABA across clinic, home, school, and community settings
+- [Autism Diagnostic Assessments](https://www.stridestherapeutics.com/services/autism-diagnostic-assessments): Evaluations for children up to age 8, starting at $795, results in as little as 2 weeks
+- [WA DDA Services](https://www.stridestherapeutics.com/services/wa-dda): Behavior support, crisis stabilization, and life skills for Washington DDA clients
+- [Oregon DDS Services](https://www.stridestherapeutics.com/services/or-dds): Behavior consultation and positive behavior support plans for Oregon DDS clients
+- [Social Groups & Respite](https://www.stridestherapeutics.com/services/social-groups-respite): Skill-building groups and community respite
 
-- [Our Services](https://www.stridestherapeutics.com/services): Overview of all six service lines with pricing and eligibility starting points.
-- [ABA Therapy](https://www.stridestherapeutics.com/services/aba-therapy): Individualized, evidence-based ABA in clinic, home, school, and community settings across Oregon and Washington.
-- [Autism Diagnostic Assessments](https://www.stridestherapeutics.com/services/autism-diagnostic-assessments): $1,495 flat-fee autism evaluation completed in as little as 2 weeks, using FDA-authorized EarliPoint eye-tracking technology (children up to age 8) alongside MD/PsyD/BCBA clinical evaluation.
-- [WA DDA Services](https://www.stridestherapeutics.com/services/wa-dda): Life skills, staff and family consultation, stabilization, community respite, and positive behavior support plans for Clark and Cowlitz Counties.
-- [Oregon DDS Services](https://www.stridestherapeutics.com/services/or-dds): Functional behavior assessments, positive behavior support plan development, and ongoing behavioral consultation in all Oregon counties.
-- [Consultation & Training](https://www.stridestherapeutics.com/services/consultation-training): Advanced behavioral consultation, crisis stabilization support, and staff training for hospitals, providers, schools, and residential programs.
-- [Social Groups & Community Respite](https://www.stridestherapeutics.com/services/social-groups-respite): Structured social skills groups (4-hour sessions from $75) and DDA-funded community respite at the East Vancouver center.
-
-## About
-
-- [About Strides](https://www.stridestherapeutics.com/about): The practice's story, values, and who it serves — 300+ individuals supported by 40+ clinicians across Oregon and Washington.
-- [Our Team](https://www.stridestherapeutics.com/team): Founders Hannah Schmidt, M.S., BCBA, LBA and Elsie Herring, M.S., BCBA, LBA, plus clinical partners including a developmental pediatrician (MD) and PsyD, BCBA.
-
-## Resources
-
-- [Home](https://www.stridestherapeutics.com/): Practice overview, accepted funding sources, and intake starting points.
-- [Contact](https://www.stridestherapeutics.com/contact): Phone, email, address, hours (Mon–Fri 8:30 AM–4:30 PM), and intake request form.
+## Locations
+- [Vancouver, WA](https://www.stridestherapeutics.com/locations/vancouver-wa): Clinic + services across Clark County
+- [Portland, OR](https://www.stridestherapeutics.com/locations/portland-or): Home-, school-, and community-based services in the Portland metro
+- [Autism Evaluation Vancouver](https://www.stridestherapeutics.com/autism-evaluation-vancouver-wa): Fast-track diagnostic evaluations
+- [Autism Testing Portland](https://www.stridestherapeutics.com/autism-evaluation-portland-or): Evaluations for Oregon families
 
 ## Guides
+- [How Much Does an Autism Assessment Cost?](https://www.stridestherapeutics.com/blog/how-much-does-an-autism-evaluation-cost)
+- [Does Medicaid Cover ABA Therapy? (Apple Health & OHP)](https://www.stridestherapeutics.com/insurance/does-medicaid-cover-aba-therapy)
+- [Does Insurance Cover ABA Therapy?](https://www.stridestherapeutics.com/blog/does-insurance-cover-aba-therapy)
+- [Is Autism Testing Covered by Insurance?](https://www.stridestherapeutics.com/blog/is-autism-testing-covered-by-insurance)
+- [ABA Therapy for Toddlers](https://www.stridestherapeutics.com/blog/aba-therapy-for-toddlers)
+- [The 2-Week Autism Evaluation](https://www.stridestherapeutics.com/blog/autism-evaluation-2-week-fast-track)
+- [Does Apple Health Cover ABA Therapy?](https://www.stridestherapeutics.com/insurance/does-apple-health-cover-aba-therapy)
+- [Does OHP Cover ABA Therapy?](https://www.stridestherapeutics.com/insurance/does-ohp-cover-aba-therapy)
 
-- [How Much Does an Autism Evaluation Cost?](https://www.stridestherapeutics.com/blog/how-much-does-an-autism-evaluation-cost): Typical US autism assessment costs, why prices vary, insurance considerations, and Strides' $1,495 flat-fee option with results in as little as 2 weeks.
-- [Does Medicaid Cover ABA Therapy?](https://www.stridestherapeutics.com/insurance/does-medicaid-cover-aba-therapy): How Medicaid (Apple Health in WA, OHP in OR) covers ABA therapy under EPSDT, prior authorization, and DDA/DDS funding paths.
-- [Adult Autism Diagnosis in Vancouver, WA](https://www.stridestherapeutics.com/adult-autism-diagnosis/vancouver-wa): Autism assessments for adults in Vancouver WA and the Portland OR metro — process, cost, and what a diagnosis changes.
+## About
+- [Our Team](https://www.stridestherapeutics.com/team): Board Certified Behavior Analysts, founders Hannah Schmidt and Elsie Herring
+- [Insurance & Funding](https://www.stridestherapeutics.com/insurance): Accepted plans and funding programs
+- [Contact](https://www.stridestherapeutics.com/contact): Intake and scheduling
