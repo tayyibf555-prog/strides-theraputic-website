@@ -10,6 +10,7 @@ import {
   ArticleCtaBand,
   ArticleEndCta,
   ArticleHero,
+  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -70,6 +71,15 @@ const FAQS: ArticleFaq[] = [
     answer:
       "Reliable diagnosis is possible by around 18–24 months, and research shows earlier evaluation leads to earlier support. Strides' diagnostic program evaluates children up to age 8, combining EarliPoint eye-tracking with clinical assessment by the MD/PsyD/BCBA team. If your child is older, call (360) 622-2253 and we'll point you toward evaluators who can help.",
   },
+];
+
+const TOC_SECTIONS = [
+  { id: "typical-autism-evaluation-costs-at-a-glance", label: "Typical autism evaluation costs, at a glance" },
+  { id: "why-autism-evaluation-prices-vary-so-much", label: "Why autism evaluation prices vary so much" },
+  { id: "what-an-autism-diagnostic-assessment-includes", label: "What an autism diagnostic assessment includes" },
+  { id: "the-cost-nobody-puts-on-the-invoice-time", label: "The cost nobody puts on the invoice: time" },
+  { id: "how-strides-prices-an-autism-evaluation", label: "How Strides prices an autism evaluation" },
+  { id: "free-and-lower-cost-evaluation-options", label: "Free and lower-cost evaluation options" },
 ];
 
 export default function AutismEvaluationCostPage() {
@@ -136,6 +146,8 @@ export default function AutismEvaluationCostPage() {
               starting at $795, with results in as little as two weeks.
             </p>
           </ArticleAnswer>
+
+          <ArticleToc sections={TOC_SECTIONS} />
           <p>
             That’s the summary. The rest of this guide breaks down where those
             numbers come from, why two families in the same city can pay wildly
@@ -151,7 +163,7 @@ export default function AutismEvaluationCostPage() {
             className="rounded-card w-full h-auto"
           />
 
-          <h2>Typical autism evaluation costs, at a glance</h2>
+          <h2 id="typical-autism-evaluation-costs-at-a-glance">Typical autism evaluation costs, at a glance</h2>
           <p>
             Costs vary by region, provider type, and how thorough the
             evaluation is. As a general picture:
@@ -205,7 +217,7 @@ export default function AutismEvaluationCostPage() {
             on both below.
           </p>
 
-          <h2>Why autism evaluation prices vary so much</h2>
+          <h2 id="why-autism-evaluation-prices-vary-so-much">Why autism evaluation prices vary so much</h2>
           <p>
             A $1,200 evaluation and a $5,000 evaluation can both end in the
             same diagnosis. The spread comes from a handful of factors.
@@ -254,7 +266,7 @@ export default function AutismEvaluationCostPage() {
             Portland will be cheaper. It usually isn’t.
           </p>
 
-          <h2>What an autism diagnostic assessment includes</h2>
+          <h2 id="what-an-autism-diagnostic-assessment-includes">What an autism diagnostic assessment includes</h2>
           <p>
             Knowing what you’re paying for makes the price ranges easier to
             judge. A quality evaluation generally covers:
@@ -372,7 +384,7 @@ export default function AutismEvaluationCostPage() {
 
       <Section tone="cream">
         <ArticleBody>
-          <h2>The cost nobody puts on the invoice: time</h2>
+          <h2 id="the-cost-nobody-puts-on-the-invoice-time">The cost nobody puts on the invoice: time</h2>
           <p>
             A $795 evaluation next month can be worth more than a $200 copay
             evaluation in a year and a half, because the diagnosis is not the
@@ -404,7 +416,7 @@ export default function AutismEvaluationCostPage() {
             .)
           </p>
 
-          <h2>How Strides prices an autism evaluation</h2>
+          <h2 id="how-strides-prices-an-autism-evaluation">How Strides prices an autism evaluation</h2>
           <p>
             Starting at <strong>$795</strong> — the standard assessment is one
             number with no add-ons, covering the full diagnostic evaluation,
@@ -439,7 +451,7 @@ export default function AutismEvaluationCostPage() {
             and community settings.
           </p>
 
-          <h2>Free and lower-cost evaluation options</h2>
+          <h2 id="free-and-lower-cost-evaluation-options">Free and lower-cost evaluation options</h2>
           <p>
             Private pay isn’t the right fit for every family, and you should
             know the alternatives.

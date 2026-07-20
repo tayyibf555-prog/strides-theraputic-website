@@ -144,6 +144,7 @@ export const SERVICES: Service[] = [
     slug: "wa-dda",
     guides: [
       { path: "/insurance/does-medicaid-cover-aba-therapy", label: "Medicaid vs. DDA: How the Funding Paths Differ" },
+      { path: "/insurance/does-apple-health-cover-aba-therapy", label: "Does Apple Health Cover ABA Therapy?" },
       { path: "/blog/does-insurance-cover-aba-therapy", label: "Does Insurance Cover ABA Therapy?" },
     ],
     title: "WA DDA Services",
@@ -253,6 +254,8 @@ export const SERVICES: Service[] = [
     slug: "autism-diagnostic-assessments",
     guides: [
       { path: "/blog/how-much-does-an-autism-evaluation-cost", label: "How Much Does an Autism Assessment Cost?" },
+      { path: "/blog/autism-evaluation-2-week-fast-track", label: "Inside the 2-Week Evaluation" },
+      { path: "/blog/is-autism-testing-covered-by-insurance", label: "Is Autism Testing Covered by Insurance?" },
       { path: "/blog/aba-therapy-for-toddlers", label: "ABA Therapy for Toddlers: A Parent\u2019s Guide" },
       { path: "/blog/does-insurance-cover-aba-therapy", label: "Does Insurance Cover ABA Therapy?" },
     ],
@@ -338,6 +341,7 @@ export const SERVICES: Service[] = [
     slug: "or-dds",
     guides: [
       { path: "/insurance/does-medicaid-cover-aba-therapy", label: "Medicaid & ABA Therapy in WA and OR" },
+      { path: "/insurance/does-ohp-cover-aba-therapy", label: "Does OHP Cover ABA Therapy?" },
       { path: "/blog/does-insurance-cover-aba-therapy", label: "Does Insurance Cover ABA Therapy?" },
     ],
     title: "Oregon DDS Services",
@@ -907,5 +911,21 @@ export const ARTICLES: Article[] = [
   {
     path: "/blog/does-insurance-cover-aba-therapy",
     label: "Insurance & ABA Coverage",
+  },
+  {
+    path: "/blog/is-autism-testing-covered-by-insurance",
+    label: "Autism Testing & Insurance",
+  },
+  {
+    path: "/insurance/does-apple-health-cover-aba-therapy",
+    label: "Apple Health & ABA Therapy",
+  },
+  {
+    path: "/insurance/does-ohp-cover-aba-therapy",
+    label: "OHP & ABA Therapy",
+  },
+  {
+    path: "/blog/autism-evaluation-2-week-fast-track",
+    label: "The 2-Week Evaluation",
   },
 ];

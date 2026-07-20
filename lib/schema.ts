@@ -173,6 +173,31 @@ export function articleSchema(a: {
 }
 
 // FAQPage builder for pages that expose Q&A content (money pages, service pages).
+// A city/location page as its own LocalBusiness node, linked to the main
+// organization. Unique @id per page; areaServed names the communities the
+// page actually covers (SAB pattern for Portland — no OR office is claimed).
+export function locationSchema(loc: {
+  path: string;
+  name: string;
+  description: string;
+  areaServed: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["MedicalBusiness", "MedicalClinic"],
+    "@id": `${SITE.url}${loc.path}#localbusiness`,
+    name: loc.name,
+    description: loc.description,
+    url: `${SITE.url}${loc.path}`,
+    parentOrganization: { "@id": ORG_ID },
+    telephone: telE164(),
+    address: postalAddress(),
+    geo: { "@type": "GeoCoordinates", latitude: GEO.latitude, longitude: GEO.longitude },
+    areaServed: loc.areaServed.map((a) => ({ "@type": "City", name: a })),
+    medicalSpecialty: ["Psychiatric", "PublicHealth"],
+  };
+}
+
 // Breadcrumb trail for content pages: Home > hub > page. Paths are
 // site-relative; names are the visible labels.
 export function breadcrumbSchema(items: Array<{ name: string; path: string }>) {

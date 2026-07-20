@@ -57,6 +57,38 @@ export function ArticleHero({
   );
 }
 
+// "On this page" jump navigation. Pass the page's h2 sections; each h2 in
+// the body must carry the matching id. Improves long-page UX and gives Google
+// anchor targets for jump links in results.
+export function ArticleToc({
+  sections,
+}: {
+  sections: Array<{ id: string; label: string }>;
+}) {
+  return (
+    <nav
+      aria-label="On this page"
+      className="mx-auto mt-8 max-w-3xl rounded-card bg-cream-deep/60 p-5 ring-1 ring-sage-deep/40 lg:p-6"
+    >
+      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
+        On this page
+      </p>
+      <ul className="mt-3 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
+        {sections.map((sct) => (
+          <li key={sct.id}>
+            <a
+              href={`#${sct.id}`}
+              className="text-[0.92rem] font-medium text-ink/80 underline decoration-sage-deep underline-offset-4 transition-colors hover:text-moss hover:decoration-moss"
+            >
+              {sct.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 // Measure-width prose column. Pair with the `.article-prose` styles in
 // globals.css — children are plain h2/h3/p/ul/ol/table markup.
 export function ArticleBody({
