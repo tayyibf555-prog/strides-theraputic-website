@@ -21,7 +21,8 @@ const TITLE = "Does Medicaid Cover ABA Therapy? WA & OR Guide (2026)";
 const DESCRIPTION =
   "Does Medicaid cover ABA therapy? Yes, for eligible children in all 50 states. What Apple Health & OHP require, plus a $795 two-week fast-track option.";
 const PUBLISHED = "2026-07-14";
-const UPDATED_LABEL = "July 14, 2026";
+const MODIFIED = "2026-07-20";
+const UPDATED_LABEL = "July 20, 2026";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -103,6 +104,7 @@ export default function MedicaidAbaCoveragePage() {
               description: DESCRIPTION,
               path: PATH,
               datePublished: PUBLISHED,
+              dateModified: MODIFIED,
             })
           ),
         }}

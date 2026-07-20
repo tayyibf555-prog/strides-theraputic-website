@@ -21,6 +21,7 @@ const TITLE = "Fast Autism Diagnosis in Washington: 2-Week Evaluation";
 const DESCRIPTION =
   "Waitlists for autism evaluations can run months. Strides in Vancouver, WA delivers results in as little as 2 weeks, starting at $795, up to age 8.";
 const PUBLISHED = "2026-07-20";
+const MODIFIED = "2026-07-20";
 const UPDATED_LABEL = "July 20, 2026";
 
 export const metadata: Metadata = {
@@ -99,6 +100,7 @@ export default function AutismEvaluationFastTrackPage() {
               description: DESCRIPTION,
               path: PATH,
               datePublished: PUBLISHED,
+              dateModified: MODIFIED,
             })
           ),
         }}

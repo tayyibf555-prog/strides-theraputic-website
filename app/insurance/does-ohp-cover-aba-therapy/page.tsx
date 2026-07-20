@@ -21,6 +21,7 @@ const TITLE = "Does OHP Cover ABA Therapy? Oregon Health Plan Guide (2026)";
 const DESCRIPTION =
   "Does OHP cover ABA therapy? Yes, for members with an autism diagnosis. How CCO referrals work, plus a fast-track assessment starting at $795.";
 const PUBLISHED = "2026-07-20";
+const MODIFIED = "2026-07-20";
 const UPDATED_LABEL = "July 20, 2026";
 
 export const metadata: Metadata = {
@@ -103,6 +104,7 @@ export default function OhpAbaCoveragePage() {
               description: DESCRIPTION,
               path: PATH,
               datePublished: PUBLISHED,
+              dateModified: MODIFIED,
             })
           ),
         }}
