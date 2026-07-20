@@ -162,8 +162,8 @@ export default function AutismEvalVancouverPage() {
             two-year-old miss milestones, &ldquo;call back next year&rdquo;
             isn&rsquo;t an answer. Strides built its diagnostic program in
             East Vancouver specifically for this gap: local, fast, and
-            rigorous enough that the report opens every door that comes after
-          , <Link href="/services/aba-therapy">insurance-funded ABA</Link>,
+            rigorous enough that the report opens every door that comes after,
+          <Link href="/services/aba-therapy">insurance-funded ABA</Link>,
             school supports, and{" "}
             <Link href="/services/wa-dda">Washington DDA</Link> eligibility
             work.

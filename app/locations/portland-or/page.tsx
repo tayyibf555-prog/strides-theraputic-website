@@ -168,8 +168,8 @@ export default function PortlandPage() {
             &ldquo;in-network&rdquo; often means months of waiting followed by
             a clinic across town. Strides works the opposite model: services
             come to your home, your child&rsquo;s school, and your community,
-            scheduled from our clinic just across the river in East Vancouver
-          , closer to much of east Portland than many Portland clinics are.
+            scheduled from our clinic just across the river in East Vancouver,
+          closer to much of east Portland than many Portland clinics are.
           </p>
           <p>
             Oregon families reach us two ways. Most start through{" "}
