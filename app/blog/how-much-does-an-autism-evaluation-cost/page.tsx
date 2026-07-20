@@ -9,8 +9,8 @@ import {
   ArticleBody,
   ArticleCtaBand,
   ArticleEndCta,
+  ArticleGrid,
   ArticleHero,
-  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -127,7 +127,7 @@ export default function AutismEvaluationCostPage() {
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
-      <Section tone="cream">
+      <ArticleGrid sections={TOC_SECTIONS}>
         <ArticleBody>
           <p>
             If you’re asking how much an autism assessment costs, you’ve
@@ -151,8 +151,6 @@ export default function AutismEvaluationCostPage() {
               starting at $795, with results in as little as two weeks.
             </p>
           </ArticleAnswer>
-
-          <ArticleToc sections={TOC_SECTIONS} />
           <p>
             That’s the summary. The rest of this guide breaks down where those
             numbers come from, why two families in the same city can pay wildly
@@ -380,14 +378,12 @@ export default function AutismEvaluationCostPage() {
             plan participation before you book anything.
           </p>
         </ArticleBody>
-      </Section>
 
       <ArticleCtaBand
         title="Ready to stop waiting?"
         body="Strides offers complete autism diagnostic assessments starting at $795, with results in as little as two weeks."
       />
 
-      <Section tone="cream">
         <ArticleBody>
           <h2 id="the-cost-nobody-puts-on-the-invoice-time">The cost nobody puts on the invoice: time</h2>
           <p>
@@ -498,7 +494,7 @@ export default function AutismEvaluationCostPage() {
             rather than assuming.
           </p>
         </ArticleBody>
-      </Section>
+      </ArticleGrid>
 
       <FaqSection faqs={FAQS} title="Frequently Asked Questions" />
 

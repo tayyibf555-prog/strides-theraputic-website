@@ -9,8 +9,8 @@ import {
   ArticleBody,
   ArticleCtaBand,
   ArticleEndCta,
+  ArticleGrid,
   ArticleHero,
-  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -138,7 +138,7 @@ export default function IsAutismTestingCoveredByInsurancePage() {
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
-      <Section tone="cream">
+      <ArticleGrid sections={TOC_SECTIONS}>
         <ArticleBody>
           <ArticleAnswer>
             <p>
@@ -158,8 +158,6 @@ export default function IsAutismTestingCoveredByInsurancePage() {
               results in as little as two weeks.
             </p>
           </ArticleAnswer>
-
-          <ArticleToc sections={TOC_SECTIONS} />
           <Image
             src="/images/articles/testing-hero.png"
             alt="Illustration of a parent on the phone holding an insurance card while a child plays with blocks nearby"
@@ -315,7 +313,6 @@ export default function IsAutismTestingCoveredByInsurancePage() {
             before your child&rsquo;s first appointment.
           </p>
         </ArticleBody>
-      </Section>
 
       <ArticleCtaBand
         title="Not sure what your plan covers?"
@@ -323,7 +320,6 @@ export default function IsAutismTestingCoveredByInsurancePage() {
         ctaLabel="Schedule an Assessment"
       />
 
-      <Section tone="cream">
         <ArticleBody>
           <h2 id="why-covered-slots-have-waitlists">
             Why covered evaluation slots have long waitlists
@@ -491,7 +487,7 @@ export default function IsAutismTestingCoveredByInsurancePage() {
             assumptions.
           </p>
         </ArticleBody>
-      </Section>
+      </ArticleGrid>
 
       <FaqSection faqs={FAQS} eyebrow="Testing & Insurance" />
 

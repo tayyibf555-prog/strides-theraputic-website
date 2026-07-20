@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { CalendarDays, Phone, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { ArticleToc } from "./ArticleToc";
+
+export { ArticleToc } from "./ArticleToc";
 import { CONTACT } from "@/lib/site";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
@@ -65,62 +68,32 @@ export function ArticleHero({
   );
 }
 
-// "On this page" jump navigation. Pass the page's h2 sections; each h2 in
-// the body must carry the matching id. Improves long-page UX and gives Google
-// anchor targets for jump links in results.
-export function ArticleToc({
+
+// Article body wrapper: sticky TOC rail column on xl, single column below.
+// The rail lives INSIDE this grid, so it starts under the header and ends
+// with the article body: it can never overlap the header, CTA bands that
+// follow, or the footer.
+export function ArticleGrid({
   sections,
+  children,
 }: {
   sections: Array<{ id: string; label: string }>;
+  children: React.ReactNode;
 }) {
   return (
-    <>
-      {/* Wide screens: fixed vertical rail to the left of the prose column */}
-      <nav
-        aria-label="On this page"
-        className="fixed top-32 hidden w-52 xl:block"
-        style={{ left: "max(1rem, calc(50vw - 40rem))" }}
-      >
-        <div className="rounded-card bg-cream p-4 shadow-sm ring-1 ring-sage-deep/40">
-          <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-moss">
-            On this page
-          </p>
-          <ul className="mt-3 space-y-2 border-l border-sage-deep/50 pl-3">
-            {sections.map((sct) => (
-              <li key={sct.id}>
-                <a
-                  href={`#${sct.id}`}
-                  className="block text-[0.82rem] font-medium leading-snug text-ink/75 transition-colors hover:text-moss"
-                >
-                  {sct.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+    <Section tone="cream">
+      <div className="xl:grid xl:grid-cols-[230px_minmax(0,1fr)] xl:gap-12">
+        <aside className="hidden xl:block">
+          <div className="sticky top-28">
+            <ArticleToc sections={sections} variant="rail" />
+          </div>
+        </aside>
+        <div className="min-w-0">
+          <ArticleToc sections={sections} variant="inline" />
+          {children}
         </div>
-      </nav>
-      {/* Narrow screens: inline box under the answer block */}
-      <nav
-        aria-label="On this page"
-        className="mx-auto mt-8 max-w-3xl rounded-card bg-cream-deep/60 p-5 ring-1 ring-sage-deep/40 lg:p-6 xl:hidden"
-      >
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
-          On this page
-        </p>
-        <ul className="mt-3 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
-          {sections.map((sct) => (
-            <li key={sct.id}>
-              <a
-                href={`#${sct.id}`}
-                className="text-[0.92rem] font-medium text-ink/80 underline decoration-sage-deep underline-offset-4 transition-colors hover:text-moss hover:decoration-moss"
-              >
-                {sct.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </>
+      </div>
+    </Section>
   );
 }
 
@@ -160,13 +133,13 @@ export function ArticleCtaBand({
   ctaLabel?: string;
 }) {
   return (
-    <div className="bg-moss text-cream">
-      <Reveal className="mx-auto max-w-4xl px-5 py-12 text-center lg:py-14">
-        <h2 className="font-display text-3xl font-medium tracking-wide lg:text-4xl">
+    <div className="mx-auto my-12 max-w-3xl">
+      <Reveal className="rounded-card bg-moss px-6 py-10 text-center text-cream lg:px-10">
+        <h2 className="font-display text-2xl font-medium tracking-wide lg:text-3xl">
           {title}
         </h2>
-        {body && <p className="mx-auto mt-3 max-w-2xl text-cream/80">{body}</p>}
-        <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        {body && <p className="mx-auto mt-3 max-w-xl text-cream/80">{body}</p>}
+        <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <CtaButton variant="light" size="lg" withArrow>
             {ctaLabel}
           </CtaButton>

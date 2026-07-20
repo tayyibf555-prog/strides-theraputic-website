@@ -8,8 +8,8 @@ import {
   ArticleBody,
   ArticleCtaBand,
   ArticleEndCta,
+  ArticleGrid,
   ArticleHero,
-  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -133,7 +133,7 @@ export default function AbaTherapyForToddlersPage() {
         ]}
       />
 
-      <Section tone="cream">
+      <ArticleGrid sections={TOC_SECTIONS}>
         <ArticleBody>
           <ArticleAnswer>
             <p>
@@ -150,8 +150,6 @@ export default function AbaTherapyForToddlersPage() {
               in clinic, home, school, and community settings.
             </p>
           </ArticleAnswer>
-
-          <ArticleToc sections={TOC_SECTIONS} />
 
           <h2 id="why-the-toddler-years-matter-so-much">Why the toddler years matter so much</h2>
           <p>
@@ -230,7 +228,6 @@ export default function AbaTherapyForToddlersPage() {
             meaningful, sustainable progress for the whole family.&rdquo;
           </p>
         </ArticleBody>
-      </Section>
 
       <ArticleCtaBand
         title="Wondering whether ABA is right for your toddler?"
@@ -238,7 +235,6 @@ export default function AbaTherapyForToddlersPage() {
         ctaLabel="Request an Intake"
       />
 
-      <Section tone="cream">
         <ArticleBody>
           <h2 id="step-one-is-a-diagnosis-and-it-s-the-usual-bottleneck">Step one is a diagnosis, and it&rsquo;s the usual bottleneck</h2>
           <p>
@@ -316,7 +312,7 @@ export default function AbaTherapyForToddlersPage() {
             week and always come home smiling.&rdquo;
           </p>
         </ArticleBody>
-      </Section>
+      </ArticleGrid>
 
       <FaqSection faqs={FAQS} eyebrow="Toddler ABA" />
 
