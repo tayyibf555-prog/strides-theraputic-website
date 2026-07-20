@@ -58,7 +58,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "What if my preferred ABA provider doesn't take Medicaid?",
     answer:
-      "You have three realistic options: ask your plan for an in-network provider list and join a network provider's caseload, ask whether your state or plan has any process for out-of-network exceptions when network access is inadequate, or fund services another way, such as DDA/DDS enrollment or private pay. Strides is not a confirmed Apple Health or OHP provider, but we serve DDA and DDS families directly and offer the flat-fee private-pay assessment. Call (360) 622-2253 and we'll help you sort out which path fits.",
+      "You have three realistic options: ask your plan for an in-network provider list and join a network provider's caseload, ask whether your state or plan has any process for out-of-network exceptions when network access is inadequate, or fund services another way, such as DDA/DDS enrollment or private pay. Strides' Apple Health participation is plan-specific (call to verify), our OHP enrollment is in process, and we serve DDA and DDS families directly, plus offer the flat-fee private-pay assessment. Call (360) 622-2253 and we'll help you sort out which path fits.",
   },
   {
     question: "What's the difference between Medicaid and DDA (or DDS) funding?",
@@ -320,10 +320,12 @@ export default function MedicaidAbaCoveragePage() {
             specifics vary. Confirm with OHP or your CCO.
           </p>
           <p>
-            <strong>Strides is not currently a confirmed OHP payer</strong>{" "}
-            either, so the same advice applies: call{" "}
-            <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to verify current
-            participation before assuming coverage.
+            <strong>
+              Strides is currently in process to become an OHP provider
+            </strong>{" "}
+            — call <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to verify
+            current participation and timing before assuming coverage either
+            way.
           </p>
         </ArticleBody>
       </Section>

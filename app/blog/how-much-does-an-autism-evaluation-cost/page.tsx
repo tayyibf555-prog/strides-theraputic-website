@@ -121,7 +121,7 @@ export default function AutismEvaluationCostPage() {
               <Link href="/services/autism-diagnostic-assessments">
                 autism diagnostic assessment
               </Link>{" "}
-              is a flat $795, with results in as little as two weeks.
+              starting at $795, with results in as little as two weeks.
             </p>
           </ArticleAnswer>
           <p>
@@ -355,7 +355,7 @@ export default function AutismEvaluationCostPage() {
 
       <ArticleCtaBand
         title="Ready to stop waiting?"
-        body="Strides offers complete autism diagnostic assessments for a flat $795, with results in as little as two weeks."
+        body="Strides offers complete autism diagnostic assessments starting at $795, with results in as little as two weeks."
       />
 
       <Section tone="cream">
