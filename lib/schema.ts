@@ -173,6 +173,21 @@ export function articleSchema(a: {
 }
 
 // FAQPage builder for pages that expose Q&A content (money pages, service pages).
+// Breadcrumb trail for content pages: Home > hub > page. Paths are
+// site-relative; names are the visible labels.
+export function breadcrumbSchema(items: Array<{ name: string; path: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${SITE.url}${item.path}`,
+    })),
+  };
+}
+
 export function faqSchema(faqs: Array<{ question: string; answer: string }>) {
   return {
     "@context": "https://schema.org",

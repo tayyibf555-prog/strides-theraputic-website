@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CONTACT } from "@/lib/site";
-import { articleSchema, faqSchema, jsonLd } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
 import {
   ArticleAnswer,
@@ -99,6 +99,18 @@ export default function AbaTherapyForToddlersPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema(faqPlainText(FAQS))) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(
+            breadcrumbSchema([
+              { name: "Home", path: "/" },
+              { name: "Parent Guides", path: "/blog" },
+              { name: "ABA Therapy for Toddlers", path: PATH },
+            ])
+          ),
+        }}
       />
 
       <ArticleHero
