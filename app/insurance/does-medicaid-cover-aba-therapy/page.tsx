@@ -38,7 +38,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Does Medicaid cover autism testing too, or just ABA therapy?",
     answer:
-      "Under EPSDT, medically necessary diagnostic services for children under 21 are covered, and that generally includes autism diagnostic evaluations. Each state controls which providers can perform a covered evaluation, and appointment availability is often the real constraint. If the covered pathway means months of waiting, Strides' $795 flat-fee assessment is typically completed in as little as two weeks.",
+      "Under EPSDT, medically necessary diagnostic services for children under 21 are covered, and that generally includes autism diagnostic evaluations. Each state controls which providers can perform a covered evaluation, and appointment availability is often the real constraint. If the covered pathway means months of waiting, Strides' assessment, starting at $795, is typically completed in as little as two weeks.",
   },
   {
     question: "Are there age limits on Medicaid ABA coverage?",
@@ -143,7 +143,7 @@ export default function MedicaidAbaCoveragePage() {
             through <strong>Washington DSHS-DDA and Oregon DHS-DDS</strong>,
             and we offer a{" "}
             <strong>
-              $795 flat-fee diagnostic assessment completed in as little as
+              diagnostic assessment starting at $795, completed in as little as
               two weeks
             </strong>{" "}
             for families who can’t afford to wait.
@@ -444,7 +444,8 @@ export default function MedicaidAbaCoveragePage() {
           </p>
           <ul>
             <li>
-              <strong>$795 flat fee.</strong> One number, no surprise
+              <strong>Starting at $795.</strong> The standard assessment is one
+              number with no surprise
               billing.
             </li>
             <li>
