@@ -112,6 +112,11 @@ export default function AutismEvaluationFastTrackPage() {
         eyebrow="Diagnostic Assessments"
         title="A Fast Autism Diagnosis in Washington: How the 2-Week Evaluation Works"
         updated={UPDATED_LABEL}
+        crumbs={[
+          { name: "Home", path: "/" },
+              { name: "Parent Guides", path: "/blog" },
+              { name: "The 2-Week Autism Evaluation", path: PATH },
+        ]}
         reviewer="Hannah Schmidt, M.S., BCBA, LBA"
       />
 

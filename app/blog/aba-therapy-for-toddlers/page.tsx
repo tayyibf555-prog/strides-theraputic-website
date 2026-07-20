@@ -18,7 +18,7 @@ import {
 const PATH = "/blog/aba-therapy-for-toddlers";
 const TITLE = "ABA Therapy for Toddlers: What Parents Should Know (2026)";
 const DESCRIPTION =
-  "What ABA therapy looks like for toddlers, when to start, and how it's funded — from the BCBA-owned team serving Vancouver WA and Portland OR.";
+  "What ABA therapy looks like for toddlers, when to start, and how it's funded, from the BCBA-owned team serving Vancouver WA and Portland OR.";
 const PUBLISHED = "2026-07-17";
 const UPDATED_LABEL = "July 17, 2026";
 
@@ -43,30 +43,30 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Does my toddler need an autism diagnosis before starting ABA?",
     answer:
-      "For insurance-funded ABA, yes — health plans require a formal autism diagnosis before they authorize therapy. That makes the diagnostic evaluation the practical first step. Strides completes diagnostic assessments for children up to age 8 starting at $795, with results in as little as two weeks, so the diagnosis doesn't become the bottleneck.",
+      "For insurance-funded ABA, yes, health plans require a formal autism diagnosis before they authorize therapy. That makes the diagnostic evaluation the practical first step. Strides completes diagnostic assessments for children up to age 8 starting at $795, with results in as little as two weeks, so the diagnosis doesn't become the bottleneck.",
   },
   {
     question: "How many hours of ABA does a toddler need?",
     answer:
-      "It depends on the child. A BCBA's assessment sets the recommendation based on your toddler's needs and goals, and your health plan reviews it for medical necessity. Programs range from a few focused hours a week to intensive early-intervention schedules. The right number is the one tied to your child's treatment plan — not a one-size-fits-all figure.",
+      "It depends on the child. A BCBA's assessment sets the recommendation based on your toddler's needs and goals, and your health plan reviews it for medical necessity. Programs range from a few focused hours a week to intensive early-intervention schedules. The right number is the one tied to your child's treatment plan, not a one-size-fits-all figure.",
   },
   {
     question: "What does an ABA session look like for a 2- or 3-year-old?",
     answer:
-      "Mostly like structured play, on purpose. Toddler sessions are built around games, toys, songs, and everyday routines, with the therapist folding teaching targets — requesting, imitation, turn-taking, following simple directions — into activities the child already enjoys. Caregiver involvement is a core part of it, so the skills show up at home, not just in session.",
+      "Mostly like structured play, on purpose. Toddler sessions are built around games, toys, songs, and everyday routines, with the therapist folding teaching targets, requesting, imitation, turn-taking, following simple directions, into activities the child already enjoys. Caregiver involvement is a core part of it, so the skills show up at home, not just in session.",
   },
   {
     question: "Is ABA therapy safe and appropriate for toddlers?",
     answer:
-      "Modern ABA for toddlers is play-based, individualized, and centered on skills that make daily life easier — communication, flexibility, independence. At Strides, programs are designed and supervised by Board Certified Behavior Analysts, families are involved throughout, and goals are built around each child's strengths, not around changing who they are.",
+      "Modern ABA for toddlers is play-based, individualized, and centered on skills that make daily life easier, communication, flexibility, independence. At Strides, programs are designed and supervised by Board Certified Behavior Analysts, families are involved throughout, and goals are built around each child's strengths, not around changing who they are.",
   },
   {
     question: "How is toddler ABA therapy paid for?",
     answer:
-      "Most families fund ABA through health insurance — Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE. Washington DDA and Oregon DDS programs fund related behavior supports for eligible families. Coverage details vary by plan, so call (360) 622-2253 and we'll help you sort out what applies to your child.",
+      "Most families fund ABA through health insurance. Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE. Washington DDA and Oregon DDS programs fund related behavior supports for eligible families. Coverage details vary by plan, so call (360) 622-2253 and we'll help you sort out what applies to your child.",
     body: (
       <p>
-        Most families fund ABA through health insurance — Strides works with
+        Most families fund ABA through health insurance. Strides works with
         PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare,
         Kaiser Permanente, and TRICARE; our guide to{" "}
         <Link href="/blog/does-insurance-cover-aba-therapy">
@@ -85,7 +85,7 @@ const TOC_SECTIONS = [
   { id: "why-the-toddler-years-matter-so-much", label: "Why the toddler years matter so much" },
   { id: "what-aba-actually-looks-like-at-2-3-and-4", label: "What ABA actually looks like at 2, 3, and 4" },
   { id: "the-role-of-parents-bigger-than-you-think", label: "The role of parents (bigger than you think)" },
-  { id: "step-one-is-a-diagnosis-and-it-s-the-usual-bottleneck", label: "Step one is a diagnosis — and it’s the usual bottleneck" },
+  { id: "step-one-is-a-diagnosis-and-it-s-the-usual-bottleneck", label: "Step one is a diagnosis, and it’s the usual bottleneck" },
   { id: "starting-toddler-aba-in-vancouver-wa-and-portland-or", label: "Starting toddler ABA in Vancouver, WA and Portland, OR" },
 ];
 
@@ -126,6 +126,11 @@ export default function AbaTherapyForToddlersPage() {
         eyebrow="Early Intervention Guide"
         title="ABA Therapy for Toddlers: What It Looks Like, When to Start, and How to Pay for It"
         updated={UPDATED_LABEL}
+        crumbs={[
+          { name: "Home", path: "/" },
+              { name: "Parent Guides", path: "/blog" },
+              { name: "ABA Therapy for Toddlers", path: PATH },
+        ]}
       />
 
       <Section tone="cream">
@@ -135,8 +140,8 @@ export default function AbaTherapyForToddlersPage() {
               ABA therapy for toddlers is play-based, individualized teaching
               that builds communication, social, and daily-living skills during
               the years when children learn fastest. It can start as soon as a
-              child has an autism diagnosis — reliably possible by 18–24
-              months — and it&rsquo;s typically funded through health
+              child has an autism diagnosis, reliably possible by 18–24
+              months, and it&rsquo;s typically funded through health
               insurance once that diagnosis is in place. In the Vancouver, WA
               and Portland, OR area, Strides Therapeutic Services provides
               both pieces: a <strong>diagnostic assessment starting at $795</strong>{" "}
@@ -152,7 +157,7 @@ export default function AbaTherapyForToddlersPage() {
           <p>
             Between roughly 18 months and age 5, a child&rsquo;s brain is doing
             its heaviest construction. Language, imitation, social
-            back-and-forth, play — the foundations are being poured in real
+            back-and-forth, play, the foundations are being poured in real
             time. That&rsquo;s exactly why early intervention research keeps
             pointing the same direction: support that starts earlier tends to
             produce better long-term outcomes, because it works with that
@@ -160,18 +165,18 @@ export default function AbaTherapyForToddlersPage() {
           </p>
           <p>
             This is also why waiting is the most expensive thing a family can
-            do. Not in dollars — in months. A toddler who is 2½ when parents
+            do. Not in dollars, in months. A toddler who is 2½ when parents
             first get concerned, and 4 by the time a waitlisted evaluation and
             authorization finally clear, has spent a large share of the
-            highest-leverage window in line. Every step you can compress —
-            diagnosis, authorization, starting hours — buys back developmental
+            highest-leverage window in line. Every step you can compress, 
+            diagnosis, authorization, starting hours, buys back developmental
             time.
           </p>
 
           <h2 id="what-aba-actually-looks-like-at-2-3-and-4">What ABA actually looks like at 2, 3, and 4</h2>
           <p>
             Forget the image of a child at a desk. Toddler ABA, done well,
-            looks like play — because for a 2-year-old, play <em>is</em>{" "}
+            looks like play, because for a 2-year-old, play <em>is</em>{" "}
             learning. A session might involve bubbles, cars, a snack routine,
             or a favorite song. Inside those activities, the therapist is
             systematically working on targets from your child&rsquo;s
@@ -179,20 +184,20 @@ export default function AbaTherapyForToddlersPage() {
           </p>
           <ul>
             <li>
-              <strong>Communication</strong> — requesting wants and needs
+              <strong>Communication</strong>: requesting wants and needs
               (words, signs, or pictures), responding to their name, following
               simple directions
             </li>
             <li>
-              <strong>Imitation and play skills</strong> — copying actions,
+              <strong>Imitation and play skills</strong>: copying actions,
               taking turns, expanding how they play with toys and people
             </li>
             <li>
-              <strong>Daily routines</strong> — mealtimes, transitions,
+              <strong>Daily routines</strong>: mealtimes, transitions,
               tolerating haircuts or car seats, early self-help skills
             </li>
             <li>
-              <strong>Replacing frustration with communication</strong> —
+              <strong>Replacing frustration with communication</strong>, 
               because most challenging behavior at this age is a child telling
               you something without the words to say it
             </li>
@@ -202,7 +207,7 @@ export default function AbaTherapyForToddlersPage() {
             Certified Behavior Analyst and individualized to the child. As
             Madelyn Mason, one of our ABA clinicians, puts it:
             &ldquo;The biggest misconception I hear is that ABA is about
-            changing who someone is. Our goal is the opposite — we help
+            changing who someone is. Our goal is the opposite: we help
             individuals build communication, independence, and life skills
             while celebrating what makes them unique.&rdquo;
           </p>
@@ -221,7 +226,7 @@ export default function AbaTherapyForToddlersPage() {
             thing from nearly every family: &ldquo;The most common thing I
             hear from families is, &lsquo;We just want to know how to
             help.&rsquo; Parents are looking for practical strategies that
-            make life at home easier. That&rsquo;s where we focus — building
+            make life at home easier. That&rsquo;s where we focus, building
             meaningful, sustainable progress for the whole family.&rdquo;
           </p>
         </ArticleBody>
@@ -229,13 +234,13 @@ export default function AbaTherapyForToddlersPage() {
 
       <ArticleCtaBand
         title="Wondering whether ABA is right for your toddler?"
-        body="Talk it through with our clinical team — no waitlist required to ask questions."
+        body="Talk it through with our clinical team, no waitlist required to ask questions."
         ctaLabel="Request an Intake"
       />
 
       <Section tone="cream">
         <ArticleBody>
-          <h2 id="step-one-is-a-diagnosis-and-it-s-the-usual-bottleneck">Step one is a diagnosis — and it&rsquo;s the usual bottleneck</h2>
+          <h2 id="step-one-is-a-diagnosis-and-it-s-the-usual-bottleneck">Step one is a diagnosis, and it&rsquo;s the usual bottleneck</h2>
           <p>
             Health plans won&rsquo;t authorize ABA without a formal autism
             diagnosis, which makes the diagnostic evaluation the gate to
@@ -252,7 +257,7 @@ export default function AbaTherapyForToddlersPage() {
           </p>
           <ul>
             <li>
-              <strong>Starting at $795</strong> — the standard assessment covers
+              <strong>Starting at $795</strong>: the standard assessment covers
               evaluation, written report, and feedback session with no
               add-ons (here&rsquo;s{" "}
               <Link href="/blog/how-much-does-an-autism-evaluation-cost">
@@ -262,11 +267,11 @@ export default function AbaTherapyForToddlersPage() {
             </li>
             <li>
               <strong>Results in as little as two weeks</strong>, so therapy
-              and authorization can start while your child is still two — not
+              and authorization can start while your child is still two, not
               after their fourth birthday
             </li>
             <li>
-              <strong>EarliPoint&trade; eye-tracking</strong> — an
+              <strong>EarliPoint&trade; eye-tracking</strong>: an
               FDA-authorized evaluation tool for children up to age 8 that
               adds an objective, biology-based data point alongside clinical
               assessment by our integrated MD, PsyD, and BCBA team
@@ -299,7 +304,7 @@ export default function AbaTherapyForToddlersPage() {
             </li>
             <li>
               <strong>Start therapy.</strong> A BCBA builds your
-              toddler&rsquo;s individual plan, and sessions begin — with
+              toddler&rsquo;s individual plan, and sessions begin, with
               parent coaching woven in from day one.
             </li>
           </ol>

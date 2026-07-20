@@ -4,6 +4,7 @@ import { ArrowRight, Phone } from "lucide-react";
 import { CONTACT } from "@/lib/site";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { FundingSources } from "@/components/sections/FundingSources";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
@@ -12,7 +13,7 @@ import { CtaButton } from "@/components/ui/CtaButton";
 export const metadata: Metadata = {
   title: "Insurance & Funding",
   description:
-    "How families fund care at Strides — accepted insurance plans, Medicaid guidance for Washington and Oregon, and WA DDA / Oregon DDS programs.",
+    "How families fund care at Strides, accepted insurance plans, Medicaid guidance for Washington and Oregon, and WA DDA / Oregon DDS programs.",
   alternates: { canonical: "/insurance" },
 };
 
@@ -46,6 +47,10 @@ export default function InsuranceHubPage() {
         }}
       />
 
+      <div className="mx-auto max-w-6xl px-5 pt-6 lg:px-8">
+        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Insurance & Funding", path: "/insurance" }]} />
+      </div>
+
       <SectionBand
         eyebrow="Insurance & Funding"
         title="Paying for care, without the guesswork"
@@ -64,7 +69,7 @@ export default function InsuranceHubPage() {
         <Reveal className="mx-auto mt-8 max-w-2xl text-center text-muted">
           <p>
             Medicaid (Apple Health / OHP) participation is plan-specific and
-            changes over time — call{" "}
+            changes over time, so call{" "}
             <a href={CONTACT.phoneHref} className="font-medium text-moss">
               {CONTACT.phone}
             </a>{" "}
@@ -116,7 +121,7 @@ export default function InsuranceHubPage() {
         <Reveal className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-2xl text-lg text-muted">
             We navigate these systems every week and will walk through your
-            options honestly — including the ones we don&rsquo;t bill
+            options honestly, including the ones we don&rsquo;t bill
             directly. If a diagnosis is the missing piece, assessments start
             at $795 with results in as little as two weeks.
           </p>
@@ -128,7 +133,7 @@ export default function InsuranceHubPage() {
               href={CONTACT.phoneHref}
               className="inline-flex items-center gap-2 text-sm font-medium text-moss underline decoration-moss/30 underline-offset-4 hover:text-forest-deep"
             >
-              <Phone className="h-4 w-4" /> {CONTACT.phone} — {CONTACT.hours}
+              <Phone className="h-4 w-4" /> {CONTACT.phone}, {CONTACT.hours}
             </a>
           </div>
         </Reveal>

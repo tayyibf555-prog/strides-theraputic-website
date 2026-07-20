@@ -18,7 +18,7 @@ import {
 const PATH = "/blog/does-insurance-cover-aba-therapy";
 const TITLE = "Does Insurance Cover ABA Therapy? 2026 Parent Guide";
 const DESCRIPTION =
-  "Yes — most health plans cover ABA therapy for autism. What plans require, how to verify benefits, and the plans Strides accepts in Vancouver WA & Portland OR.";
+  "Yes, most health plans cover ABA therapy for autism. What plans require, how to verify benefits, and the plans Strides accepts in Vancouver WA & Portland OR.";
 const PUBLISHED = "2026-07-17";
 const UPDATED_LABEL = "July 17, 2026";
 
@@ -38,7 +38,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Is ABA therapy covered without an autism diagnosis?",
     answer:
-      "Generally no. Health plans authorize ABA as a treatment for autism spectrum disorder, so a formal diagnosis from a qualified evaluator is the prerequisite. That's why the diagnostic evaluation is the practical first step for families — Strides completes assessments for children up to age 8 starting at $795, with results in as little as two weeks.",
+      "Generally no. Health plans authorize ABA as a treatment for autism spectrum disorder, so a formal diagnosis from a qualified evaluator is the prerequisite. That's why the diagnostic evaluation is the practical first step for families, Strides completes assessments for children up to age 8 starting at $795, with results in as little as two weeks.",
   },
   {
     question: "How much does ABA cost with insurance?",
@@ -53,17 +53,17 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Does insurance cover the autism evaluation itself?",
     answer:
-      "Often yes — diagnostic testing is a covered medical service under many plans, subject to your cost-sharing and network rules. The practical constraint is usually access: covered evaluation slots can carry long waitlists. Many families choose a private-pay evaluation like Strides' assessment starting at $795 to get answers in weeks instead of months, then use insurance for therapy.",
+      "Often yes, diagnostic testing is a covered medical service under many plans, subject to your cost-sharing and network rules. The practical constraint is usually access: covered evaluation slots can carry long waitlists. Many families choose a private-pay evaluation like Strides' assessment starting at $795 to get answers in weeks instead of months, then use insurance for therapy.",
   },
   {
     question: "What if my plan denies ABA coverage?",
     answer:
-      "Denials can often be appealed, and plans must tell you the reason and the appeal process. Common fixable causes are incomplete documentation or a missing diagnosis report. Depending on your family's eligibility, state programs — DDA in Washington, DDS in Oregon — can fund behavior supports through a separate pathway. Call us and we'll help you figure out the next move.",
+      "Denials can often be appealed, and plans must tell you the reason and the appeal process. Common fixable causes are incomplete documentation or a missing diagnosis report. Depending on your family's eligibility, state programs, DDA in Washington, DDS in Oregon, can fund behavior supports through a separate pathway. Call us and we'll help you figure out the next move.",
   },
   {
     question: "Which insurance plans does Strides accept?",
     answer:
-      "Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, and is a confirmed provider for Washington DDA and Oregon DDS programs. For Medicaid (Apple Health/OHP), participation is plan-specific and changes over time — call (360) 622-2253 and we'll tell you exactly where things stand.",
+      "Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, and is a confirmed provider for Washington DDA and Oregon DDS programs. For Medicaid (Apple Health/OHP), participation is plan-specific and changes over time, so call (360) 622-2253 and we'll tell you exactly where things stand.",
     body: (
       <p>
         Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna,
@@ -71,7 +71,7 @@ const FAQS: ArticleFaq[] = [
         provider for <Link href="/services/wa-dda">Washington DDA</Link> and{" "}
         <Link href="/services/or-dds">Oregon DDS</Link> programs. For Medicaid
         (Apple Health/OHP), participation is plan-specific and changes over
-        time — our{" "}
+        time, our{" "}
         <Link href="/insurance/does-medicaid-cover-aba-therapy">
           Medicaid and ABA guide
         </Link>{" "}
@@ -128,6 +128,11 @@ export default function DoesInsuranceCoverAbaPage() {
         eyebrow="Insurance & Funding Guide"
         title="Does Insurance Cover ABA Therapy? How Coverage Actually Works"
         updated={UPDATED_LABEL}
+        crumbs={[
+          { name: "Home", path: "/" },
+              { name: "Parent Guides", path: "/blog" },
+              { name: "Does Insurance Cover ABA Therapy?", path: PATH },
+        ]}
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
@@ -135,7 +140,7 @@ export default function DoesInsuranceCoverAbaPage() {
         <ArticleBody>
           <ArticleAnswer>
             <p>
-              Yes — most health insurance plans cover ABA therapy for children
+              Yes, most health insurance plans cover ABA therapy for children
               with an autism diagnosis. Every U.S. state has an autism
               insurance mandate, and coverage typically requires three things:
               a formal autism diagnosis, a treatment plan from a Board
@@ -146,7 +151,7 @@ export default function DoesInsuranceCoverAbaPage() {
                 PacificSource, BlueCross BlueShield, Aetna, Cigna,
                 UnitedHealthcare, Kaiser Permanente, and TRICARE
               </strong>
-              , plus Washington DDA and Oregon DDS funding.
+             , plus Washington DDA and Oregon DDS funding.
             </p>
           </ArticleAnswer>
 
@@ -156,7 +161,7 @@ export default function DoesInsuranceCoverAbaPage() {
           <p>
             A decade-plus of state autism insurance mandates changed the
             landscape: every state now requires meaningful coverage of
-            autism treatment — including ABA — in state-regulated health
+            autism treatment, including ABA, in state-regulated health
             plans. Washington and Oregon both mandate coverage for
             medically necessary autism care.
           </p>
@@ -173,7 +178,7 @@ export default function DoesInsuranceCoverAbaPage() {
             <li>
               <strong>Self-funded employer plans</strong> (common at large
               companies) follow federal ERISA rules instead of state mandates
-              — most still cover ABA, but the details are set by the employer.
+            , most still cover ABA, but the details are set by the employer.
             </li>
             <li>
               <strong>TRICARE</strong> covers ABA through its own Autism Care
@@ -182,7 +187,7 @@ export default function DoesInsuranceCoverAbaPage() {
             <li>
               <strong>Medicaid</strong> (Apple Health in Washington, OHP in
               Oregon) covers ABA for eligible children through managed-care
-              plans — our{" "}
+              plans, our{" "}
               <Link href="/insurance/does-medicaid-cover-aba-therapy">
                 Medicaid and ABA guide
               </Link>{" "}
@@ -193,7 +198,7 @@ export default function DoesInsuranceCoverAbaPage() {
           <h2 id="the-three-things-every-plan-wants-before-approving-aba">The three things every plan wants before approving ABA</h2>
           <ol>
             <li>
-              <strong>A formal autism diagnosis.</strong> Not a screening — a
+              <strong>A formal autism diagnosis.</strong> Not a screening, a
               diagnostic evaluation by a qualified clinician. This is the gate,
               and it&rsquo;s where waitlists cost families the most time.
               Strides&rsquo;{" "}
@@ -210,7 +215,7 @@ export default function DoesInsuranceCoverAbaPage() {
             <li>
               <strong>A BCBA-written treatment plan.</strong> After diagnosis,
               a Board Certified Behavior Analyst assesses your child and
-              writes the plan — goals, settings, and recommended hours — that
+              writes the plan, goals, settings, and recommended hours, that
               the insurer reviews.
             </li>
             <li>
@@ -225,7 +230,7 @@ export default function DoesInsuranceCoverAbaPage() {
 
       <ArticleCtaBand
         title="Not sure what your plan covers?"
-        body="Call us — we work with these plans every week and can tell you what to ask for."
+        body="Call us, we work with these plans every week and can tell you what to ask for."
         ctaLabel="Request an Intake"
       />
 
@@ -242,12 +247,12 @@ export default function DoesInsuranceCoverAbaPage() {
             <li>&ldquo;Is my plan fully-insured or self-funded?&rdquo;</li>
             <li>&ldquo;What&rsquo;s required for prior authorization?&rdquo;</li>
             <li>&ldquo;What are my deductible, copay or coinsurance, and out-of-pocket maximum?&rdquo;</li>
-            <li>&ldquo;Is Strides Therapeutic Services in network?&rdquo; — and if not, &ldquo;what are my out-of-network benefits?&rdquo;</li>
+            <li>&ldquo;Is Strides Therapeutic Services in network?&rdquo;, and if not, &ldquo;what are my out-of-network benefits?&rdquo;</li>
             <li>&ldquo;Does the diagnostic evaluation itself require prior authorization?&rdquo;</li>
           </ul>
           <p>
             Ten minutes of questions can save weeks of surprises. And if the
-            answers are confusing — they often are — bring them to us and
+            answers are confusing, they often are, bring them to us and
             we&rsquo;ll translate.
           </p>
 
@@ -258,7 +263,7 @@ export default function DoesInsuranceCoverAbaPage() {
             your deductible, then copays or coinsurance until you reach your
             out-of-pocket maximum, after which the plan pays in full for the
             rest of the plan year. Because ABA is often an ongoing service,
-            many families hit their out-of-pocket max — which makes the
+            many families hit their out-of-pocket max, which makes the
             annual maximum, not the per-session copay, the number to budget
             around.
           </p>
@@ -266,8 +271,8 @@ export default function DoesInsuranceCoverAbaPage() {
           <h2 id="if-coverage-falls-through">If coverage falls through</h2>
           <p>
             A denial isn&rsquo;t the end of the road. Plans must state the
-            reason and offer an appeal path, and the most common causes —
-            missing documentation, no formal diagnosis on file — are fixable.
+            reason and offer an appeal path, and the most common causes, 
+            missing documentation, no formal diagnosis on file, are fixable.
             Separately, Washington&rsquo;s{" "}
             <Link href="/services/wa-dda">DDA</Link> and Oregon&rsquo;s{" "}
             <Link href="/services/or-dds">DDS</Link> programs fund behavior
@@ -290,7 +295,7 @@ export default function DoesInsuranceCoverAbaPage() {
           <p>
             Strides Therapeutic Services works with PacificSource, BlueCross
             BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and
-            TRICARE, plus WA DDA and Oregon DDS funding — serving Vancouver,
+            TRICARE, plus WA DDA and Oregon DDS funding, serving Vancouver,
             Camas, Clark County, and the Portland metro in clinic, home,
             school, and community settings. If the diagnosis is what&rsquo;s
             standing between your child and covered therapy, ask about the

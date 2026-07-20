@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CalendarDays, Phone, ShieldCheck } from "lucide-react";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CONTACT } from "@/lib/site";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SectionBand } from "@/components/sections/SectionBand";
@@ -19,16 +20,23 @@ export function ArticleHero({
   title,
   updated,
   reviewer = DEFAULT_REVIEWER,
+  crumbs,
 }: {
   eyebrow: string;
   title: string;
   updated: string; // human-readable date, e.g. "July 14, 2026"
   reviewer?: string;
+  crumbs?: Array<{ name: string; path: string }>;
 }) {
   return (
     <div className="bg-moss text-cream">
       <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20">
         <Reveal>
+          {crumbs && (
+            <div className="mb-5">
+              <Breadcrumbs items={crumbs} onDark />
+            </div>
+          )}
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cream/70">
             {eyebrow}
           </p>
@@ -66,26 +74,53 @@ export function ArticleToc({
   sections: Array<{ id: string; label: string }>;
 }) {
   return (
-    <nav
-      aria-label="On this page"
-      className="mx-auto mt-8 max-w-3xl rounded-card bg-cream-deep/60 p-5 ring-1 ring-sage-deep/40 lg:p-6"
-    >
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
-        On this page
-      </p>
-      <ul className="mt-3 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
-        {sections.map((sct) => (
-          <li key={sct.id}>
-            <a
-              href={`#${sct.id}`}
-              className="text-[0.92rem] font-medium text-ink/80 underline decoration-sage-deep underline-offset-4 transition-colors hover:text-moss hover:decoration-moss"
-            >
-              {sct.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      {/* Wide screens: fixed vertical rail to the left of the prose column */}
+      <nav
+        aria-label="On this page"
+        className="fixed top-32 hidden w-52 xl:block"
+        style={{ left: "max(1rem, calc(50vw - 40rem))" }}
+      >
+        <div className="rounded-card bg-cream p-4 shadow-sm ring-1 ring-sage-deep/40">
+          <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-moss">
+            On this page
+          </p>
+          <ul className="mt-3 space-y-2 border-l border-sage-deep/50 pl-3">
+            {sections.map((sct) => (
+              <li key={sct.id}>
+                <a
+                  href={`#${sct.id}`}
+                  className="block text-[0.82rem] font-medium leading-snug text-ink/75 transition-colors hover:text-moss"
+                >
+                  {sct.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+      {/* Narrow screens: inline box under the answer block */}
+      <nav
+        aria-label="On this page"
+        className="mx-auto mt-8 max-w-3xl rounded-card bg-cream-deep/60 p-5 ring-1 ring-sage-deep/40 lg:p-6 xl:hidden"
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
+          On this page
+        </p>
+        <ul className="mt-3 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
+          {sections.map((sct) => (
+            <li key={sct.id}>
+              <a
+                href={`#${sct.id}`}
+                className="text-[0.92rem] font-medium text-ink/80 underline decoration-sage-deep underline-offset-4 transition-colors hover:text-moss hover:decoration-moss"
+              >
+                {sct.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
   );
 }
 

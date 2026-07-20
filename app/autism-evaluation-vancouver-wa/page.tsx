@@ -4,13 +4,14 @@ import { BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
 import { CONTACT } from "@/lib/site";
 import { breadcrumbSchema, faqSchema, jsonLd, locationSchema } from "@/lib/schema";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { FaqSection, faqPlainText, type ArticleFaq } from "@/components/article/Article";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
 
 const PATH = "/autism-evaluation-vancouver-wa";
-const TITLE = "Autism Evaluation in Vancouver, WA — Results in ~2 Weeks";
+const TITLE = "Autism Evaluation in Vancouver, WA – Results in ~2 Weeks";
 const DESCRIPTION =
   "Autism diagnosis in Vancouver, WA without the waitlist: MD/PsyD/BCBA team, EarliPoint™ eye-tracking, ages up to 8, starting at $795 with results in as little as 2 weeks.";
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     title: "Request an intake",
-    body: "A short form or one phone call. We talk through your concerns, your child's age, and your funding picture — and get you scheduled.",
+    body: "A short form or one phone call. We talk through your concerns, your child's age, and your funding picture, and get you scheduled.",
   },
   {
     title: "Assessment appointments",
@@ -36,7 +37,7 @@ const STEPS = [
   },
   {
     title: "Report + feedback session",
-    body: "You leave with a written diagnostic report built to hold up with insurers, schools, and WA DDA — and a feedback session where you can ask everything.",
+    body: "You leave with a written diagnostic report built to hold up with insurers, schools, and WA DDA, and a feedback session where you can ask everything.",
   },
 ];
 
@@ -44,22 +45,22 @@ const FAQS: ArticleFaq[] = [
   {
     question: "How much does an autism evaluation cost in Vancouver, WA?",
     answer:
-      "Strides' diagnostic assessments start at $795 — the standard assessment is one number with no add-ons, covering the evaluation, written report, and feedback session. Compare that to typical private-pay evaluations of $1,000–$5,000 nationally. Insurance may also cover testing depending on your plan.",
+      "Strides' diagnostic assessments start at $795; the standard assessment is one number with no add-ons, covering the evaluation, written report, and feedback session. Compare that to typical private-pay evaluations of $1,000–$5,000 nationally. Insurance may also cover testing depending on your plan.",
   },
   {
     question: "How long is the wait for an autism diagnosis in Vancouver?",
     answer:
-      "Regional hospital systems commonly book evaluations months to over a year out. Strides' assessment process is typically completed in as little as two weeks from intake — that's the reason the program exists.",
+      "Regional hospital systems commonly book evaluations months to over a year out. Strides' assessment process is typically completed in as little as two weeks from intake, that's the reason the program exists.",
   },
   {
     question: "What ages do you evaluate?",
     answer:
-      "Children up to age 8 — the window where an early answer changes the most. Reliable diagnosis is possible from around 18–24 months. If your child is older, call (360) 622-2253 and we'll point you toward evaluators who can help.",
+      "Children up to age 8, the window where an early answer changes the most. Reliable diagnosis is possible from around 18–24 months. If your child is older, call (360) 622-2253 and we'll point you toward evaluators who can help.",
   },
   {
     question: "What is EarliPoint and why does it matter?",
     answer:
-      "EarliPoint™ (EarliTec Diagnostics) is an FDA-authorized eye-tracking evaluation for children up to age 8 that measures how a child visually attends to social information — an objective, biology-based data point alongside the clinical evaluation. Strides is among the first providers in the region using it.",
+      "EarliPoint™ (EarliTec Diagnostics) is an FDA-authorized eye-tracking evaluation for children up to age 8 that measures how a child visually attends to social information, an objective, biology-based data point alongside the clinical evaluation. Strides is among the first providers in the region using it.",
   },
   {
     question: "Will the diagnosis work for insurance, school, and DDA purposes?",
@@ -69,7 +70,7 @@ const FAQS: ArticleFaq[] = [
   {
     question: "Is the evaluation covered by insurance?",
     answer:
-      "Often, in some form — Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, and coverage for diagnostic testing varies by plan. Many families choose the private-pay path, starting at $795, specifically to skip authorization delays. Call and we'll help you compare.",
+      "Often, in some form, Strides works with PacificSource, BlueCross BlueShield, Aetna, Cigna, UnitedHealthcare, Kaiser Permanente, and TRICARE, and coverage for diagnostic testing varies by plan. Many families choose the private-pay path, starting at $795, specifically to skip authorization delays. Call and we'll help you compare.",
   },
 ];
 
@@ -82,7 +83,7 @@ export default function AutismEvalVancouverPage() {
           __html: jsonLd(
             locationSchema({
               path: PATH,
-              name: "Autism Diagnostic Evaluations — Strides Therapeutic Services, Vancouver WA",
+              name: "Autism Diagnostic Evaluations at Strides Therapeutic Services, Vancouver WA",
               description: DESCRIPTION,
               areaServed: ["Vancouver, WA", "Camas, WA", "Battle Ground, WA", "Ridgefield, WA", "Clark County, WA"],
             })
@@ -100,7 +101,7 @@ export default function AutismEvalVancouverPage() {
             breadcrumbSchema([
               { name: "Home", path: "/" },
               { name: "Locations", path: "/locations" },
-              { name: "Autism Evaluation — Vancouver, WA", path: PATH },
+              { name: "Autism Evaluation in Vancouver, WA", path: PATH },
             ])
           ),
         }}
@@ -110,11 +111,21 @@ export default function AutismEvalVancouverPage() {
       <div className="bg-moss text-cream">
         <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8 lg:py-20">
           <Reveal>
+            <div className="mb-5">
+              <Breadcrumbs
+                items={[
+                  { name: "Home", path: "/" },
+              { name: "Locations", path: "/locations" },
+              { name: "Autism Evaluation in Vancouver, WA", path: PATH },
+                ]}
+                onDark
+              />
+            </div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cream/70">
               Autism Diagnostic Evaluation · Vancouver, WA
             </p>
             <h1 className="mt-3 max-w-3xl font-display text-4xl font-medium leading-tight lg:text-5xl">
-              An Autism Diagnosis in Vancouver — Without the Year-Long Wait
+              An Autism Diagnosis in Vancouver, Without the Year-Long Wait
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-cream/85">
               MD, PsyD, and BCBA team · EarliPoint™ eye-tracking · children up
@@ -141,25 +152,25 @@ export default function AutismEvalVancouverPage() {
         </div>
       </div>
 
-      {/* Why this exists — local reality */}
+      {/* Why this exists, local reality */}
       <Section tone="cream">
         <div className="article-prose mx-auto max-w-3xl">
           <p>
             Ask any Clark County pediatrician where to get an autism
-            evaluation and you&rsquo;ll hear the same names — followed by the
+            evaluation and you&rsquo;ll hear the same names, followed by the
             same warning about the waitlist. For a family watching a
             two-year-old miss milestones, &ldquo;call back next year&rdquo;
             isn&rsquo;t an answer. Strides built its diagnostic program in
             East Vancouver specifically for this gap: local, fast, and
             rigorous enough that the report opens every door that comes after
-            — <Link href="/services/aba-therapy">insurance-funded ABA</Link>,
+          , <Link href="/services/aba-therapy">insurance-funded ABA</Link>,
             school supports, and{" "}
             <Link href="/services/wa-dda">Washington DDA</Link> eligibility
             work.
           </p>
           <p>
-            Families come from across the county — Camas, Battle Ground,
-            Ridgefield, Salmon Creek — and from{" "}
+            Families come from across the county, Camas, Battle Ground,
+            Ridgefield, Salmon Creek, and from{" "}
             <Link href="/locations/portland-or">across the river</Link>, since
             our East Vancouver clinic is often a shorter drive than
             Portland&rsquo;s own diagnostic centers. Wondering about cost
@@ -200,8 +211,8 @@ export default function AutismEvalVancouverPage() {
       <Section tone="cream">
         <Reveal className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-2xl text-lg text-muted">
-            Assessments start at $795 — the standard assessment is one number
-            with no add-ons — delivered by an integrated MD, PsyD, and BCBA
+            Assessments start at $795; the standard assessment is one number
+            with no add-ons, delivered by an integrated MD, PsyD, and BCBA
             team at our East Vancouver clinic.
           </p>
           <div className="flex flex-col items-center gap-4">
@@ -212,7 +223,7 @@ export default function AutismEvalVancouverPage() {
               href={CONTACT.phoneHref}
               className="text-sm font-medium text-moss underline decoration-moss/30 underline-offset-4 hover:text-forest-deep"
             >
-              Call {CONTACT.phone} — {CONTACT.hours}
+              Call {CONTACT.phone}, {CONTACT.hours}
             </a>
           </div>
         </Reveal>

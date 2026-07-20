@@ -261,7 +261,7 @@ export const SERVICES: Service[] = [
     ],
     title: "Autism Diagnostic Assessments",
     seoTitle:
-      "Autism Testing & Evaluation — Vancouver WA & Portland OR | From $795",
+      "Autism Testing & Evaluation – Vancouver WA & Portland OR | From $795",
     navLabel: "Autism Diagnostics",
     icon: ScanEye,
     tagline: "A Smarter, More Connected Approach to Autism Evaluation",
@@ -313,12 +313,12 @@ export const SERVICES: Service[] = [
       {
         question: "How much does an autism evaluation cost at Strides?",
         answer:
-          "Our autism diagnostic assessment starts at $795 — one transparent price for the standard assessment, with no surprise add-ons. Comprehensive assessments are also available upon consultation. Call (360) 622-2253 with any questions about what the fee covers.",
+          "Our autism diagnostic assessment starts at $795: one transparent price for the standard assessment, with no surprise add-ons. Comprehensive assessments are also available upon consultation. Call (360) 622-2253 with any questions about what the fee covers.",
       },
       {
         question: "How long does autism testing take?",
         answer:
-          "Families can complete the assessment process in as little as 2 weeks, compared to the months-long waitlists common for autism evaluations. That speed matters — earlier answers mean earlier access to intervention during critical developmental windows.",
+          "Families can complete the assessment process in as little as 2 weeks, compared to the months-long waitlists common for autism evaluations. That speed matters: earlier answers mean earlier access to intervention during critical developmental windows.",
       },
       {
         question: "What ages do you evaluate?",

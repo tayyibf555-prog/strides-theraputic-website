@@ -128,6 +128,11 @@ export default function MedicaidAbaCoveragePage() {
         eyebrow="Insurance & Funding Guide"
         title="Does Medicaid Cover ABA Therapy? What Families in Washington and Oregon Need to Know"
         updated={UPDATED_LABEL}
+        crumbs={[
+          { name: "Home", path: "/" },
+              { name: "Insurance & Funding", path: "/insurance" },
+              { name: "Medicaid & ABA Therapy", path: PATH },
+        ]}
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
@@ -162,7 +167,7 @@ export default function MedicaidAbaCoveragePage() {
             <strong>
               Apple Health and OHP plan participation changes over time
             </strong>
-            , so call us at <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to
+           , so call us at <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to
             verify current participation with your specific plan before
             assuming coverage either way. We do directly serve families funded
             through <strong>Washington DSHS-DDA and Oregon DHS-DDS</strong>,
@@ -283,7 +288,7 @@ export default function MedicaidAbaCoveragePage() {
           <p>
             Washington adds a distinctive step: the state has historically
             required that the diagnostic evaluation and order for ABA come from
-            a designated <strong>Center of Excellence (COE)</strong> —
+            a designated <strong>Center of Excellence (COE)</strong>, 
             providers the HCA recognizes as qualified to evaluate autism and
             prescribe ABA. Requirements evolve, so treat the HCA and your Apple
             Health managed care plan as the authority on the current process,
@@ -348,7 +353,7 @@ export default function MedicaidAbaCoveragePage() {
             <strong>
               Strides is currently in process to become an OHP provider
             </strong>{" "}
-            — call <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to verify
+          , call <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to verify
             current participation and timing before assuming coverage either
             way.
           </p>
@@ -430,7 +435,7 @@ export default function MedicaidAbaCoveragePage() {
               <Link href="/services/wa-dda">
                 Washington DDA services at Strides
               </Link>{" "}
-              — behavior support, positive behavior support plans, and related
+            , behavior support, positive behavior support plans, and related
               services for DDA clients in Vancouver, Camas, and across Clark
               County.
             </li>
@@ -438,7 +443,7 @@ export default function MedicaidAbaCoveragePage() {
               <Link href="/services/or-dds">
                 Oregon DDS services at Strides
               </Link>{" "}
-              — behavior consultation and support for DDS clients in the
+            , behavior consultation and support for DDS clients in the
               Portland metro.
             </li>
           </ul>

@@ -116,6 +116,11 @@ export default function AppleHealthAbaCoveragePage() {
         eyebrow="Insurance & Funding Guide"
         title="Does Apple Health Cover ABA Therapy? A Washington Medicaid Guide for Families"
         updated={UPDATED_LABEL}
+        crumbs={[
+          { name: "Home", path: "/" },
+              { name: "Insurance & Funding", path: "/insurance" },
+              { name: "Apple Health & ABA", path: PATH },
+        ]}
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 

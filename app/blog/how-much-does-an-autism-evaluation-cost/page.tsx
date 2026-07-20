@@ -119,6 +119,11 @@ export default function AutismEvaluationCostPage() {
         eyebrow="Costs & Insurance Guide"
         title="How Much Does an Autism Assessment Cost?"
         updated={UPDATED_LABEL}
+        crumbs={[
+          { name: "Home", path: "/" },
+              { name: "Parent Guides", path: "/blog" },
+              { name: "Autism Assessment Costs", path: PATH },
+        ]}
         reviewer="Elsie Herring, M.S., BCBA, LBA"
       />
 
@@ -370,7 +375,7 @@ export default function AutismEvaluationCostPage() {
             <Link href="/insurance/does-medicaid-cover-aba-therapy">
               whether Medicaid covers ABA therapy
             </Link>
-            , then calling us at{" "}
+           , then calling us at{" "}
             <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to verify current
             plan participation before you book anything.
           </p>
@@ -418,7 +423,7 @@ export default function AutismEvaluationCostPage() {
 
           <h2 id="how-strides-prices-an-autism-evaluation">How Strides prices an autism evaluation</h2>
           <p>
-            Starting at <strong>$795</strong> — the standard assessment is one
+            Starting at <strong>$795</strong>: the standard assessment is one
             number with no add-ons, covering the full diagnostic evaluation,
             written report, and feedback session; more comprehensive
             evaluations are quoted up front at consultation. Results arrive in

@@ -4,6 +4,7 @@ import { ArrowRight, MapPin, Phone } from "lucide-react";
 import { CONTACT } from "@/lib/site";
 import { breadcrumbSchema, jsonLd } from "@/lib/schema";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionBand } from "@/components/sections/SectionBand";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { CtaButton } from "@/components/ui/CtaButton";
@@ -20,7 +21,7 @@ const AREAS = [
     href: "/locations/vancouver-wa",
     title: "Vancouver, WA",
     blurb:
-      "Our home base — the East Vancouver clinic plus services across Camas, Washougal, Battle Ground, Ridgefield, and all of Clark County.",
+      "Our home base, the East Vancouver clinic plus services across Camas, Washougal, Battle Ground, Ridgefield, and all of Clark County.",
     tags: ["Clinic + in-home", "WA DDA provider", "Evaluations on-site"],
   },
   {
@@ -33,8 +34,8 @@ const AREAS = [
 ];
 
 const EVAL_PAGES = [
-  { href: "/autism-evaluation-vancouver-wa", label: "Autism Evaluation — Vancouver, WA" },
-  { href: "/autism-evaluation-portland-or", label: "Autism Testing — Portland, OR" },
+  { href: "/autism-evaluation-vancouver-wa", label: "Autism Evaluation, Vancouver, WA" },
+  { href: "/autism-evaluation-portland-or", label: "Autism Testing, Portland, OR" },
 ];
 
 export default function LocationsHubPage() {
@@ -52,10 +53,14 @@ export default function LocationsHubPage() {
         }}
       />
 
+      <div className="mx-auto max-w-6xl px-5 pt-6 lg:px-8">
+        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Locations", path: "/locations" }]} />
+      </div>
+
       <SectionBand
         eyebrow="Locations & Service Areas"
         title="One clinic, two states, wherever your family needs us"
-        subtitle="Strides is based in East Vancouver, WA and serves families throughout Clark County and the Portland metro — in clinic, at home, at school, and in the community."
+        subtitle="Strides is based in East Vancouver, WA and serves families throughout Clark County and the Portland metro, in clinic, at home, at school, and in the community."
       />
 
       <Section tone="cream">
@@ -114,7 +119,7 @@ export default function LocationsHubPage() {
       <Section tone="cream">
         <Reveal className="flex flex-col items-center gap-6 text-center">
           <p className="max-w-2xl text-lg text-muted">
-            Boundaries are fuzzy on purpose — tell us where you are and
+            Boundaries are fuzzy on purpose, tell us where you are and
             we&rsquo;ll tell you what&rsquo;s possible. {CONTACT.responseNote}
           </p>
           <div className="flex flex-col items-center gap-4">
@@ -125,7 +130,7 @@ export default function LocationsHubPage() {
               href={CONTACT.phoneHref}
               className="inline-flex items-center gap-2 text-sm font-medium text-moss underline decoration-moss/30 underline-offset-4 hover:text-forest-deep"
             >
-              <Phone className="h-4 w-4" /> {CONTACT.phone} — {CONTACT.hours}
+              <Phone className="h-4 w-4" /> {CONTACT.phone}, {CONTACT.hours}
             </a>
           </div>
         </Reveal>
