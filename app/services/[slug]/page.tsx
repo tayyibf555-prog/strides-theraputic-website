@@ -29,7 +29,7 @@ export async function generateMetadata({
     // seoTitle is a complete, keyword-targeted title — render it absolute so
     // the layout's "| Strides Therapeutic Services" template doesn't bloat it.
     title: service.seoTitle ? { absolute: service.seoTitle } : service.title,
-    description: service.tagline,
+    description: service.metaDescription ?? service.tagline,
     alternates: { canonical: `/services/${service.slug}` },
   };
 }
