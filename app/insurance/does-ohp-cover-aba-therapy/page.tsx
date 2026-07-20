@@ -150,8 +150,7 @@ export default function OhpAbaCoveragePage() {
             On that last point, two facts up front.{" "}
             <strong>
               Strides is currently in process to become an OHP provider
-            </strong>{" "}
-            &mdash; call <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to
+            </strong>, so call <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to
             verify current participation and timing. And for families stuck at
             the diagnosis stage, we offer a{" "}
             <strong>
@@ -310,7 +309,7 @@ export default function OhpAbaCoveragePage() {
             of learning and family life. Madelyn Mason, one of our ABA
             clinicians, describes it this way: &ldquo;The biggest
             misconception I hear is that ABA is about changing who someone
-            is. Our goal is the opposite&mdash;we help individuals build
+            is. Our goal is the opposite: we help individuals build
             communication, independence, and life skills while celebrating
             what makes them unique. The best therapy is the kind that makes
             everyday life easier for both the individual and their
@@ -339,8 +338,7 @@ export default function OhpAbaCoveragePage() {
             We&rsquo;d rather be straight with you than vague.{" "}
             <strong>
               Strides is currently in process to become an OHP provider
-            </strong>{" "}
-            &mdash; call <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to
+            </strong>, so call <a href={CONTACT.phoneHref}>{CONTACT.phone}</a> to
             verify current participation and timing before you make plans
             around it. Provider enrollment involves state and CCO steps that
             finalize on their schedule, not ours, so a phone call will always

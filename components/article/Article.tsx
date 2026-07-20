@@ -251,7 +251,7 @@ export function ArticleEndCta({
               href={CONTACT.phoneHref}
               className="text-sm font-medium text-moss underline decoration-moss/30 underline-offset-4 transition-colors hover:text-forest-deep hover:decoration-forest-deep"
             >
-              Call {CONTACT.phone} — {CONTACT.hours}
+              Call {CONTACT.phone} · {CONTACT.hours}
             </a>
           </div>
         </Reveal>
