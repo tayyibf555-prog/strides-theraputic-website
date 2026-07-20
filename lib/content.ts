@@ -67,11 +67,15 @@ export type Service = {
   // Related long-form guides. Rendered as a "Guides & Resources" band so
   // money pages link down into the content silo (interlinking audit 2026-07-17).
   guides?: { path: string; label: string }[];
+  // Search-result meta description (150-160 chars). Falls back to tagline.
+  metaDescription?: string;
 };
 
 export const SERVICES: Service[] = [
   {
     slug: "aba-therapy",
+    metaDescription:
+      "BCBA-designed ABA therapy in clinic, home, school, and community settings across Vancouver, WA and Portland, OR, building communication and independence.",
     guides: [
       { path: "/blog/aba-therapy-for-toddlers", label: "ABA Therapy for Toddlers: A Parent\u2019s Guide" },
       { path: "/blog/does-insurance-cover-aba-therapy", label: "Does Insurance Cover ABA Therapy?" },
@@ -142,6 +146,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "wa-dda",
+    metaDescription:
+      "Washington DDA provider in Vancouver, WA: behavior support, crisis stabilization, positive behavior support plans, and life skills for DDA clients.",
     guides: [
       { path: "/insurance/does-medicaid-cover-aba-therapy", label: "Medicaid vs. DDA: How the Funding Paths Differ" },
       { path: "/insurance/does-apple-health-cover-aba-therapy", label: "Does Apple Health Cover ABA Therapy?" },
@@ -252,6 +258,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "autism-diagnostic-assessments",
+    metaDescription:
+      "Autism evaluations for children up to age 8 with EarliPoint eye-tracking and an MD, PsyD, and BCBA team. Starting at $795, results in as little as 2 weeks.",
     guides: [
       { path: "/blog/how-much-does-an-autism-evaluation-cost", label: "How Much Does an Autism Assessment Cost?" },
       { path: "/blog/autism-evaluation-2-week-fast-track", label: "Inside the 2-Week Evaluation" },
@@ -339,6 +347,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "or-dds",
+    metaDescription:
+      "Confirmed Oregon DDS provider serving the Portland metro: behavior consultation, functional assessments, and positive behavior support plans for DDS clients.",
     guides: [
       { path: "/insurance/does-medicaid-cover-aba-therapy", label: "Medicaid & ABA Therapy in WA and OR" },
       { path: "/insurance/does-ohp-cover-aba-therapy", label: "Does OHP Cover ABA Therapy?" },
@@ -442,6 +452,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "consultation-training",
+    metaDescription:
+      "Behavior consultation and training for schools, providers, and care teams in Washington and Oregon, led by Board Certified Behavior Analysts at Strides.",
     title: "Consultation & Training",
     navLabel: "Consultation & Training",
     icon: Activity,
@@ -518,6 +530,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "social-groups-respite",
+    metaDescription:
+      "Social skills groups and community respite in Vancouver, WA: skill-building sessions and caregiver relief led by Board Certified Behavior Analysts.",
     guides: [
       { path: "/blog/aba-therapy-for-toddlers", label: "ABA Therapy for Toddlers: A Parent\u2019s Guide" },
     ],
