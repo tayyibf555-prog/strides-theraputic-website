@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CONTACT } from "@/lib/site";
 import { articleSchema, breadcrumbSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
@@ -9,6 +10,7 @@ import {
   ArticleCtaBand,
   ArticleEndCta,
   ArticleHero,
+  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -73,6 +75,16 @@ const FAQS: ArticleFaq[] = [
       </p>
     ),
   },
+];
+
+const TOC_SECTIONS = [
+  { id: "the-waitlist-problem", label: "The waitlist problem" },
+  { id: "what-waiting-costs", label: "What waiting actually costs" },
+  { id: "how-the-2-week-process-works", label: "How the 2-week evaluation works, step by step" },
+  { id: "what-as-little-as-2-weeks-means", label: "What “as little as 2 weeks” honestly means" },
+  { id: "what-the-report-makes-possible", label: "What the diagnostic report makes possible" },
+  { id: "what-it-costs", label: "What it costs: starting at $795" },
+  { id: "who-its-for-and-who-its-not", label: "Who the 2-week evaluation is for, and who it isn’t" },
 ];
 
 export default function AutismEvaluationFastTrackPage() {
@@ -140,6 +152,15 @@ export default function AutismEvaluationFastTrackPage() {
             </p>
           </ArticleAnswer>
 
+          <ArticleToc sections={TOC_SECTIONS} />
+          <Image
+            src="/images/articles/fasttrack-hero.png"
+            alt="Illustration of a parent and child walking toward an open doorway beside a calendar with two weeks circled"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
+          />
+
           <h2 id="the-waitlist-problem">The waitlist problem</h2>
           <p>
             If you&rsquo;ve started calling around Southwest Washington or the
@@ -205,6 +226,14 @@ export default function AutismEvaluationFastTrackPage() {
             next half-birthday. Nothing else in the process buys back time
             the way compressing the diagnosis does.
           </p>
+
+          <Image
+            src="/images/articles/fasttrack-inline.png"
+            alt="Illustration of a long queue of waiting chairs beside a short direct path to a clinic door"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
+          />
 
           <h2 id="how-the-2-week-process-works">
             How the 2-week evaluation works, step by step

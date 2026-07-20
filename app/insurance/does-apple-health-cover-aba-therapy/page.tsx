@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CONTACT } from "@/lib/site";
 import { articleSchema, breadcrumbSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
@@ -9,6 +10,7 @@ import {
   ArticleCtaBand,
   ArticleEndCta,
   ArticleHero,
+  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -79,6 +81,16 @@ const FAQS: ArticleFaq[] = [
   },
 ];
 
+const TOC_SECTIONS = [
+  { id: "what-apple-health-is", label: "What Apple Health Is (and Who Actually Runs It)" },
+  { id: "how-apple-health-covers-aba-therapy", label: "How Apple Health Covers ABA Therapy" },
+  { id: "the-center-of-excellence-evaluation-requirement", label: "The Center of Excellence Evaluation Requirement" },
+  { id: "what-aba-therapy-looks-like-once-its-approved", label: "What ABA Therapy Looks Like Once It’s Approved" },
+  { id: "how-to-verify-your-childs-apple-health-aba-coverage", label: "How to Verify Your Child’s Apple Health ABA Coverage" },
+  { id: "the-dda-alternative-funding-path", label: "The DDA Alternative: Funding That Doesn’t Run Through Your Health Plan" },
+  { id: "stuck-on-a-waitlist-the-795-fast-track-assessment", label: "Stuck on a Waitlist? The $795 Fast-Track Assessment" },
+];
+
 export default function AppleHealthAbaCoveragePage() {
   return (
     <>
@@ -140,6 +152,8 @@ export default function AppleHealthAbaCoveragePage() {
               your Apple Health managed care plan.
             </p>
           </ArticleAnswer>
+
+          <ArticleToc sections={TOC_SECTIONS} />
           <p>
             So the short answer to &ldquo;does Apple Health cover ABA
             therapy&rdquo; is yes for eligible children. The longer answer is
@@ -165,10 +179,13 @@ export default function AppleHealthAbaCoveragePage() {
             , for children up to age 8.
           </p>
           <p>Here&rsquo;s how the Washington system actually works.</p>
-          {/* [IMG: Parent reviewing an Apple Health services card at a kitchen
-              table while a young child plays nearby. Alt: "Parent checking a
-              Washington Apple Health card to verify ABA therapy coverage for
-              their child"] */}
+          <Image
+            src="/images/articles/applehealth-hero.png"
+            alt="Illustration of a parent holding a child under a leafy umbrella among evergreen trees, representing Apple Health coverage"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
+          />
 
           <h2 id="what-apple-health-is">
             What Apple Health Is (and Who Actually Runs It)
@@ -415,10 +432,13 @@ export default function AppleHealthAbaCoveragePage() {
             Camas, and Clark County today. Details are on our{" "}
             <Link href="/services/wa-dda">Washington DDA services page</Link>.
           </p>
-          {/* [IMG: Simple diagram showing two parallel funding doors, "Apple
-              Health managed care plan" and "DSHS DDA", both leading toward a
-              child receiving support. Alt: "Diagram of the two Washington
-              funding paths for autism services: Apple Health and DDA"] */}
+          <Image
+            src="/images/articles/applehealth-inline.png"
+            alt="Illustration of an apple beside a medical clipboard and coins, representing Washington Medicaid coverage and costs"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
+          />
 
           <h2 id="stuck-on-a-waitlist-the-795-fast-track-assessment">
             Stuck on a Waitlist? The $795 Fast-Track Assessment

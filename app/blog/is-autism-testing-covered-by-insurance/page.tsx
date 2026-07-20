@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CONTACT } from "@/lib/site";
 import { articleSchema, breadcrumbSchema, faqSchema, jsonLd } from "@/lib/schema";
 import { Section } from "@/components/ui/Section";
@@ -9,6 +10,7 @@ import {
   ArticleCtaBand,
   ArticleEndCta,
   ArticleHero,
+  ArticleToc,
   FaqSection,
   faqPlainText,
   type ArticleFaq,
@@ -80,6 +82,17 @@ const FAQS: ArticleFaq[] = [
   },
 ];
 
+const TOC_SECTIONS = [
+  { id: "testing-is-usually-covered", label: "Testing is usually covered. “Covered” is not the whole story." },
+  { id: "testing-coverage-vs-therapy-coverage", label: "Testing coverage works differently than therapy coverage" },
+  { id: "what-youll-actually-pay", label: "What you’ll actually pay: deductibles, coinsurance, and networks" },
+  { id: "referrals-and-prior-authorization", label: "Referrals and prior authorization for testing codes" },
+  { id: "why-covered-slots-have-waitlists", label: "Why covered evaluation slots have long waitlists" },
+  { id: "school-evaluations-vs-medical-diagnosis", label: "School evaluations vs. a medical diagnosis" },
+  { id: "how-to-verify-your-benefits", label: "How to verify your benefits: a five-minute call script" },
+  { id: "a-faster-route-starting-at-795", label: "The faster route: a diagnostic assessment starting at $795" },
+];
+
 export default function IsAutismTestingCoveredByInsurancePage() {
   return (
     <>
@@ -146,6 +159,15 @@ export default function IsAutismTestingCoveredByInsurancePage() {
             </p>
           </ArticleAnswer>
 
+          <ArticleToc sections={TOC_SECTIONS} />
+          <Image
+            src="/images/articles/testing-hero.png"
+            alt="Illustration of a parent on the phone holding an insurance card while a child plays with blocks nearby"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
+          />
+
           <h2 id="testing-is-usually-covered">
             Testing is usually covered. &ldquo;Covered&rdquo; is not the whole
             story.
@@ -210,6 +232,14 @@ export default function IsAutismTestingCoveredByInsurancePage() {
             waiting for an evaluation is a month of covered therapy your child
             can&rsquo;t start.
           </p>
+
+          <Image
+            src="/images/articles/testing-inline.png"
+            alt="Illustration of a checklist on a clipboard beside a stethoscope and a shield with a checkmark"
+            width={1600}
+            height={1600}
+            className="rounded-card w-full h-auto"
+          />
 
           <h2 id="what-youll-actually-pay">
             What you&rsquo;ll actually pay: deductibles, coinsurance, and
